@@ -1,0 +1,3506 @@
+
+
+LESSON FILES
+
+
+
+#IDX1+BIB+Th-tot.txt
+filetime=Wed Jul 20 08:29:13 2016
+filesize= 283110 bytes
+MD5 (IDX1+BIB+Th-tot.txt) = d84f494cfe7ad339f033f6af7258fc3d
+
+#IDX1+BIB+tis-tot.txt
+filetime=Tue Nov 15 12:15:12 2016
+filesize= 137547 bytes
+MD5 (IDX1+BIB+tis-tot.txt) = af6b436f7595794f519cea72cc835222
+
+#IDX1+DIC+dibenn
+filetime=Mon Feb  6 11:02:38 2017
+filesize= 3802 bytes
+MD5 (IDX1+DIC+dibenn) = 52b4ebca467f83e2959bf27fb5b85a4b
+
+#Tomaz_Jacquet_BF.dico
+filetime=Thu Jun 28 10:11:37 2018
+filesize= 2088820 bytes
+MD5 (Tomaz_Jacquet_BF.dico) = 08a684537e354aaa2f42ccb343b34a06
+
+#ee-1.txt
+filetime=Wed Apr 13 12:18:26 2016
+filesize= 5051 bytes
+MD5 (ee-1.txt) = 22f161130d2d2569d1d63a8e89a74d33
+
+#ee-10.txt
+filetime=Wed Apr 13 12:18:26 2016
+filesize= 10499 bytes
+MD5 (ee-10.txt) = b274f1519b80d072c94858fe7b4cbf7c
+
+#ee-2.txt
+filetime=Wed Apr 13 12:18:27 2016
+filesize= 14215 bytes
+MD5 (ee-2.txt) = 7b41eb1bda5aba1c26ded4765a1de3bd
+
+#ee-3.txt
+filetime=Wed Apr 13 12:18:27 2016
+filesize= 6944 bytes
+MD5 (ee-3.txt) = c95c156fdd72ed3fbd35847f61249def
+
+#ee-4.txt
+filetime=Wed Apr 13 12:18:28 2016
+filesize= 6572 bytes
+MD5 (ee-4.txt) = d387ccfc5171e9dca8e97aa47d39eed9
+
+#ee-5.txt
+filetime=Wed Dec 21 10:05:00 2016
+filesize= 5671 bytes
+MD5 (ee-5.txt) = 24e98d6aaa1da98916c22d462ff481fb
+
+#ee-6.txt
+filetime=Wed Apr 13 12:18:29 2016
+filesize= 13231 bytes
+MD5 (ee-6.txt) = cfe8c8d66d01f049fd6cead63d61e3df
+
+#ee-7.txt
+filetime=Wed Apr 13 12:18:29 2016
+filesize= 8382 bytes
+MD5 (ee-7.txt) = b8439f02c5c89939bc93a24ce442f33a
+
+#ee-8.txt
+filetime=Wed Apr 13 12:18:29 2016
+filesize= 9191 bytes
+MD5 (ee-8.txt) = ca717a7f9f135d6f92364bee43c373b4
+
+#ee-9.txt
+filetime=Wed Apr 13 12:18:30 2016
+filesize= 7972 bytes
+MD5 (ee-9.txt) = df1c30b63c93db7b04b38246ec86b7b6
+
+#ex2.txt
+filetime=Wed Apr 13 12:18:30 2016
+filesize= 6773 bytes
+MD5 (ex2.txt) = a0ae6fd0daedc39f872cd158c525c976
+
+#ex_simple_bis.txt
+filetime=Wed Apr 13 12:18:31 2016
+filesize= 1401 bytes
+MD5 (ex_simple_bis.txt) = 094a6580f1cf5b27d945782755e8f8aa
+
+#free_dict-fra-bre.tei
+filetime=Wed Apr 13 12:19:23 2016
+filesize= 6540594 bytes
+MD5 (free_dict-fra-bre.tei) = f0a617aa792889eff7de1605124afc5a
+
+#k1.txt
+filetime=Wed Jun 29 11:20:29 2016
+filesize= 3501 bytes
+MD5 (k1.txt) = c0ff76e24c8f8c1603be4352f5d67ba1
+
+#k10.txt
+filetime=Mon Feb  6 11:02:56 2017
+filesize= 4093 bytes
+MD5 (k10.txt) = faf65b740c6b9716aaaf0f87e0a8fd71
+
+#k100.txt
+filetime=Mon Apr 30 09:46:52 2018
+filesize= 6100 bytes
+MD5 (k100.txt) = 32b7206d71eb4492a3482f3b6881f4a1
+
+#k101.txt
+filetime=Thu Jun 28 10:11:38 2018
+filesize= 5941 bytes
+MD5 (k101.txt) = c761f09a827e2674df2bbebd0e5d3288
+
+#k11.txt
+filetime=Mon Feb  6 11:02:56 2017
+filesize= 3105 bytes
+MD5 (k11.txt) = 142ab147ef6bb3608ce544dee3451900
+
+#k12.txt
+filetime=Wed Feb 15 09:18:01 2017
+filesize= 3726 bytes
+MD5 (k12.txt) = 3d1bb5d4c02f895bddb258f7001f53e4
+
+#k13.txt
+filetime=Wed Feb 15 09:18:01 2017
+filesize= 3736 bytes
+MD5 (k13.txt) = f6d3f8ebd839e1ef202bfcc236606d3e
+
+#k14.txt
+filetime=Wed Feb 15 09:18:01 2017
+filesize= 3635 bytes
+MD5 (k14.txt) = 3c120223dcee7f7914da532fdb7fb6da
+
+#k15.txt
+filetime=Wed Feb 15 09:18:01 2017
+filesize= 4843 bytes
+MD5 (k15.txt) = d02a617361bb514b727ea34435f24fbf
+
+#k16.txt
+filetime=Wed Feb 15 09:18:01 2017
+filesize= 3516 bytes
+MD5 (k16.txt) = 260a33363e9c6067afb5e78d5520fed0
+
+#k17.txt
+filetime=Wed Feb 15 09:18:02 2017
+filesize= 3653 bytes
+MD5 (k17.txt) = b4ffebb0b2189e559fe596f045a8e03f
+
+#k18.txt
+filetime=Wed Feb 15 09:18:02 2017
+filesize= 3219 bytes
+MD5 (k18.txt) = 8286f09e4bef02710e83c6789fdec748
+
+#k19.txt
+filetime=Fri Mar  3 11:02:25 2017
+filesize= 3902 bytes
+MD5 (k19.txt) = fe44615a1adeb7f7f5b685c3fcf6f428
+
+#k2.txt
+filetime=Wed Oct  4 11:04:30 2017
+filesize= 3531 bytes
+MD5 (k2.txt) = b9cccd04b398df534b6b84c4d03d39e0
+
+#k20.txt
+filetime=Fri Mar  3 11:02:25 2017
+filesize= 4460 bytes
+MD5 (k20.txt) = 03ad1410a6608a5cf08804f7b7063db2
+
+#k21.txt
+filetime=Fri Mar  3 11:02:25 2017
+filesize= 4219 bytes
+MD5 (k21.txt) = dbdec22e82c7e27ddba9401d5de762d0
+
+#k22.txt
+filetime=Fri Mar  3 11:02:25 2017
+filesize= 4476 bytes
+MD5 (k22.txt) = 38e3411e56b211d81f6583ef9db9304c
+
+#k23.txt
+filetime=Fri Mar 23 11:05:45 2018
+filesize= 3945 bytes
+MD5 (k23.txt) = cbf85cd171009bf0add37ae24882cf05
+
+#k24.txt
+filetime=Fri Mar  3 11:02:26 2017
+filesize= 3624 bytes
+MD5 (k24.txt) = f7ce4ff221d27bb6a769d8c8cf501be0
+
+#k25.txt
+filetime=Fri Mar 31 09:22:27 2017
+filesize= 4780 bytes
+MD5 (k25.txt) = 789528c2ae30a30b6833d08ea23071a7
+
+#k26.txt
+filetime=Fri Mar 31 09:22:28 2017
+filesize= 5475 bytes
+MD5 (k26.txt) = 5d434439b4ea756388f2e196991ca659
+
+#k27.txt
+filetime=Fri Mar 31 09:22:28 2017
+filesize= 4167 bytes
+MD5 (k27.txt) = 74a6e924eca67a853ba1d35ed8e84f8e
+
+#k28.txt
+filetime=Fri Mar 31 09:22:28 2017
+filesize= 4232 bytes
+MD5 (k28.txt) = 8de431135333e9882d17ab3af1592ef6
+
+#k29.txt
+filetime=Fri Mar 31 09:22:28 2017
+filesize= 4220 bytes
+MD5 (k29.txt) = 6a07affaae25466c343362923a44e64c
+
+#k3.txt
+filetime=Fri Mar  3 11:02:26 2017
+filesize= 4281 bytes
+MD5 (k3.txt) = 2edb4a657ea4248786ca6e09a3f4e5ba
+
+#k30.txt
+filetime=Fri Mar 31 09:22:28 2017
+filesize= 3783 bytes
+MD5 (k30.txt) = cecb1f54c7ec8b7ad081e92984bdaf78
+
+#k31.txt
+filetime=Wed Apr  5 09:19:06 2017
+filesize= 3810 bytes
+MD5 (k31.txt) = cb534a17880503b111ff7861e6d2a0dc
+
+#k32.txt
+filetime=Mon Sep 11 11:25:50 2017
+filesize= 3431 bytes
+MD5 (k32.txt) = 7bf1ee9da67970228ab7d2a8e862e404
+
+#k33.txt
+filetime=Mon Sep 11 11:25:50 2017
+filesize= 3928 bytes
+MD5 (k33.txt) = 63eaf8a449200e51916be5f4ffcf65ff
+
+#k34.txt
+filetime=Mon Sep 11 11:25:50 2017
+filesize= 3400 bytes
+MD5 (k34.txt) = fcfb57d4f424ca54664130d9765fcbae
+
+#k35.txt
+filetime=Wed Oct  4 11:04:31 2017
+filesize= 3648 bytes
+MD5 (k35.txt) = 26d82381b054e6ef64db94e1c1cd912d
+
+#k36.txt
+filetime=Wed Oct  4 11:04:31 2017
+filesize= 2901 bytes
+MD5 (k36.txt) = fbd1478587d5e3b7890d8f70970b488f
+
+#k37.txt
+filetime=Wed Oct  4 11:04:31 2017
+filesize= 3845 bytes
+MD5 (k37.txt) = f0a3dff37e5a363608d2fa062fb348fd
+
+#k38.txt
+filetime=Wed Oct  4 11:04:31 2017
+filesize= 4151 bytes
+MD5 (k38.txt) = 306a0d59663dfeb816c9929c1f7ce88e
+
+#k39.txt
+filetime=Wed Oct  4 11:04:31 2017
+filesize= 4671 bytes
+MD5 (k39.txt) = b99466b0c9670784aa098c807374382c
+
+#k4.txt
+filetime=Wed Jun 29 11:20:31 2016
+filesize= 4244 bytes
+MD5 (k4.txt) = 99e30cd6ce0015a951f6410574a70aa2
+
+#k40.txt
+filetime=Wed Oct  4 11:04:32 2017
+filesize= 4088 bytes
+MD5 (k40.txt) = 5a4f106c33cad208f842af7f50f7b912
+
+#k41.txt
+filetime=Wed Oct  4 11:04:32 2017
+filesize= 4062 bytes
+MD5 (k41.txt) = ded94708e62a3c38e32844531a7f6e92
+
+#k42.txt
+filetime=Wed Oct  4 11:04:32 2017
+filesize= 4548 bytes
+MD5 (k42.txt) = 6bfad146877428f758c7317f700439e2
+
+#k43.txt
+filetime=Wed Oct  4 11:04:32 2017
+filesize= 4225 bytes
+MD5 (k43.txt) = 6b58e96345f943c8d4502b8577fc400d
+
+#k44.txt
+filetime=Thu Oct 19 10:40:00 2017
+filesize= 4070 bytes
+MD5 (k44.txt) = 187846f67236e80c3decb488aaf13ce5
+
+#k45.txt
+filetime=Thu Oct 19 10:40:00 2017
+filesize= 4099 bytes
+MD5 (k45.txt) = 6e76415c2efe5c1ef72642a5e2e45236
+
+#k46.txt
+filetime=Thu Oct 19 10:40:01 2017
+filesize= 4820 bytes
+MD5 (k46.txt) = 2978ddc67e8d60d4757057385d02b3b1
+
+#k47.txt
+filetime=Fri Mar 23 11:05:46 2018
+filesize= 4128 bytes
+MD5 (k47.txt) = 16262a306dd227e06180d537eeaf0a7b
+
+#k48.txt
+filetime=Thu Oct 19 10:40:01 2017
+filesize= 4473 bytes
+MD5 (k48.txt) = e8e72b5719e5bdd296cfa25cba0dcd96
+
+#k49.txt
+filetime=Mon Apr  2 10:49:44 2018
+filesize= 3858 bytes
+MD5 (k49.txt) = 799a62d6c54da733f8165cce49ce6344
+
+#k5.txt
+filetime=Fri Mar 23 11:05:46 2018
+filesize= 4480 bytes
+MD5 (k5.txt) = 3bddee20bce3de89a137f56e341fd12c
+
+#k50.txt
+filetime=Mon Apr  2 10:49:44 2018
+filesize= 3652 bytes
+MD5 (k50.txt) = 3cf7f4e1c75aaed0686e5f358e32c09f
+
+#k51.txt
+filetime=Mon Apr  2 10:49:44 2018
+filesize= 3304 bytes
+MD5 (k51.txt) = a257060f1bbd6a4c41c4d96897fc9e3c
+
+#k52.txt
+filetime=Mon Apr  2 10:49:44 2018
+filesize= 4094 bytes
+MD5 (k52.txt) = f58e24c074b305abd525c27c515fcbda
+
+#k53.txt
+filetime=Mon Apr  2 10:49:45 2018
+filesize= 3669 bytes
+MD5 (k53.txt) = d80f02a2559d6effdf1cf14200775634
+
+#k54.txt
+filetime=Mon Apr  2 10:49:45 2018
+filesize= 4891 bytes
+MD5 (k54.txt) = 16ccdf47b6169656c7cea135a77004b0
+
+#k55.txt
+filetime=Mon Apr  2 10:49:45 2018
+filesize= 5032 bytes
+MD5 (k55.txt) = 2bfbe9e1f6430818f8b692114f1b2f6f
+
+#k56.txt
+filetime=Fri Apr 13 10:00:34 2018
+filesize= 4045 bytes
+MD5 (k56.txt) = f1842da5c7facc683eca823a7488c446
+
+#k57.txt
+filetime=Fri Apr 13 10:00:35 2018
+filesize= 4946 bytes
+MD5 (k57.txt) = 809b567cc374dafab1134d6c75162d13
+
+#k58.txt
+filetime=Fri Apr 13 10:00:35 2018
+filesize= 5052 bytes
+MD5 (k58.txt) = 0dee544a15c090e6f78e00c1b49d36a9
+
+#k59.txt
+filetime=Fri Apr 13 10:00:35 2018
+filesize= 6041 bytes
+MD5 (k59.txt) = bffd1c601eeb981fef5060d0c618ea38
+
+#k6.txt
+filetime=Tue Nov 15 12:15:09 2016
+filesize= 3598 bytes
+MD5 (k6.txt) = 7e969ac4a077d45d20d901df9bf07a37
+
+#k60.txt
+filetime=Fri Apr 13 10:00:35 2018
+filesize= 4740 bytes
+MD5 (k60.txt) = d9808ce4ce93ef7bb1fec344c421f2d7
+
+#k61.txt
+filetime=Thu Jun 28 10:11:38 2018
+filesize= 4718 bytes
+MD5 (k61.txt) = e0b28e0809baa915086432c0d2334306
+
+#k62.txt
+filetime=Wed Apr 13 12:19:53 2016
+filesize= 8472 bytes
+MD5 (k62.txt) = 27fca6a50e18484443f531babb42126d
+
+#k63.txt
+filetime=Sat Oct 22 11:16:05 2016
+filesize= 8383 bytes
+MD5 (k63.txt) = 7cea06caf9e2d4c35dc3cc320ef8a844
+
+#k64.txt
+filetime=Wed Apr 13 12:19:54 2016
+filesize= 8885 bytes
+MD5 (k64.txt) = 861f6a6c8954c54d56aa43793e1a870d
+
+#k65.txt
+filetime=Wed Apr 13 12:19:54 2016
+filesize= 7826 bytes
+MD5 (k65.txt) = 17f0aedc835e989d02e4140f93eba1e3
+
+#k66.txt
+filetime=Wed Apr 13 12:19:55 2016
+filesize= 6861 bytes
+MD5 (k66.txt) = 7d90e3a361898d15f254fa656dc02ba6
+
+#k67.txt
+filetime=Wed Apr 13 12:19:55 2016
+filesize= 8442 bytes
+MD5 (k67.txt) = 9c308dffa80ea26d366fc42be7004384
+
+#k68.txt
+filetime=Wed Apr 13 12:19:56 2016
+filesize= 7848 bytes
+MD5 (k68.txt) = 969394f18ee4111988bd39e0ef6f1a39
+
+#k69.txt
+filetime=Wed Apr 13 12:19:56 2016
+filesize= 9457 bytes
+MD5 (k69.txt) = 0592a392b3604103097db3bb6d08d7ce
+
+#k7.txt
+filetime=Wed Oct  4 11:04:33 2017
+filesize= 3462 bytes
+MD5 (k7.txt) = 9d55e333912a741784271f0704d8c101
+
+#k70.txt
+filetime=Wed Apr 13 12:19:57 2016
+filesize= 7987 bytes
+MD5 (k70.txt) = 7d5863108297974db8eed9aaa002d693
+
+#k71.txt
+filetime=Thu Jun 28 10:11:38 2018
+filesize= 7742 bytes
+MD5 (k71.txt) = 377d61507541d45b3d284e9fa17c4b4e
+
+#k72.txt
+filetime=Wed Apr 13 12:19:58 2016
+filesize= 7772 bytes
+MD5 (k72.txt) = c2428eb8527a2c526732bc0fb5188a64
+
+#k73.txt
+filetime=Wed Apr 13 12:19:59 2016
+filesize= 8192 bytes
+MD5 (k73.txt) = 0ecadd4555a832ebefe830f4140a7687
+
+#k74.txt
+filetime=Wed Apr 13 12:19:59 2016
+filesize= 8461 bytes
+MD5 (k74.txt) = 8b251dc465e45e8bc138619c83153104
+
+#k75.txt
+filetime=Wed Apr 13 12:20:00 2016
+filesize= 7964 bytes
+MD5 (k75.txt) = 91b43bc33434b01e447bda2d195de0b5
+
+#k76.txt
+filetime=Wed Apr 13 12:20:00 2016
+filesize= 7696 bytes
+MD5 (k76.txt) = ce6e4597062360102fce2d2bd8ef7aae
+
+#k77.txt
+filetime=Wed Apr 13 12:20:00 2016
+filesize= 8146 bytes
+MD5 (k77.txt) = d7d5d9e3ac54db217b6312e767bf7919
+
+#k78.txt
+filetime=Wed Apr 13 12:20:01 2016
+filesize= 7615 bytes
+MD5 (k78.txt) = a131ac83daf84de74108f4834a6a694a
+
+#k79.txt
+filetime=Wed Apr 13 12:20:01 2016
+filesize= 4140 bytes
+MD5 (k79.txt) = 8174caece4e35758f628e50e28bc566c
+
+#k8.txt
+filetime=Mon Feb  6 11:02:57 2017
+filesize= 3580 bytes
+MD5 (k8.txt) = 3e29ae2c7c4af22c1efb678f20a3a8be
+
+#k80.txt
+filetime=Wed Apr 13 12:20:02 2016
+filesize= 4362 bytes
+MD5 (k80.txt) = 205f86d4b57402da4f8e5982e5f73530
+
+#k81.txt
+filetime=Fri Mar 31 09:22:29 2017
+filesize= 4320 bytes
+MD5 (k81.txt) = 915c8bea1c0eda1c84712919685d3719
+
+#k82.txt
+filetime=Mon Feb  6 11:02:57 2017
+filesize= 3297 bytes
+MD5 (k82.txt) = ae0d537481c2a508fbc6be80e7351aee
+
+#k83.txt
+filetime=Mon Feb  6 11:02:57 2017
+filesize= 3332 bytes
+MD5 (k83.txt) = 6f911ae621c28c233e05429207029cd9
+
+#k84.txt
+filetime=Wed Apr 13 12:20:04 2016
+filesize= 4177 bytes
+MD5 (k84.txt) = 1d082594e05e7d30f2e2cead2b870eb6
+
+#k85.txt
+filetime=Wed Apr 13 12:20:04 2016
+filesize= 6739 bytes
+MD5 (k85.txt) = 57e1ffa07a9f99e597ae10a55b5de20a
+
+#k86.txt
+filetime=Fri Mar  3 11:02:26 2017
+filesize= 5524 bytes
+MD5 (k86.txt) = 12b397f900cbc7d3a2afb6f3a0c42c1b
+
+#k87.txt
+filetime=Wed Apr 13 12:20:05 2016
+filesize= 6752 bytes
+MD5 (k87.txt) = ade2946c27a71c2e7ea6d56edb671024
+
+#k88.txt
+filetime=Wed Apr 13 12:20:06 2016
+filesize= 6439 bytes
+MD5 (k88.txt) = f0dad88504dffdceb0624c6c6f778dc6
+
+#k89.txt
+filetime=Wed Apr 13 12:20:06 2016
+filesize= 7060 bytes
+MD5 (k89.txt) = 17ae5ae2ebc8f0ba3aa205dc18c85575
+
+#k9.txt
+filetime=Mon Feb  6 11:02:58 2017
+filesize= 3613 bytes
+MD5 (k9.txt) = e1a99ea4ed231fb726ac51799bdd4a1e
+
+#k90.txt
+filetime=Wed Apr 13 12:20:07 2016
+filesize= 5807 bytes
+MD5 (k90.txt) = be35b06c4d7ba18b8968df9f9afffad9
+
+#k91.txt
+filetime=Fri Mar 23 11:05:46 2018
+filesize= 11093 bytes
+MD5 (k91.txt) = 042cff2fdd9a8a37a6031503deb4277c
+
+#k92.txt
+filetime=Fri Mar 23 11:05:47 2018
+filesize= 12693 bytes
+MD5 (k92.txt) = 0f307846066c93f3e16b190a0f0fe392
+
+#k93.txt
+filetime=Fri Mar 23 11:05:47 2018
+filesize= 6291 bytes
+MD5 (k93.txt) = 69a70e35df5f11c7ce233b98477ff35a
+
+#k94.txt
+filetime=Fri Mar 23 11:05:47 2018
+filesize= 6901 bytes
+MD5 (k94.txt) = 5e8540b4ffda5965274dcbff28e8c374
+
+#k95.txt
+filetime=Fri Mar 23 11:05:51 2018
+filesize= 6047 bytes
+MD5 (k95.txt) = 4a8db822296a9681056a5b2b4ed7da6f
+
+#k96.txt
+filetime=Fri Mar 23 11:05:52 2018
+filesize= 6366 bytes
+MD5 (k96.txt) = e9f59ca3189cfca9689acf30e5a39514
+
+#k97.txt
+filetime=Fri Mar 23 11:05:52 2018
+filesize= 5675 bytes
+MD5 (k97.txt) = 8682ed0ec08a6c83cdff5ded290e4c14
+
+#k98.txt
+filetime=Thu Jun 28 10:11:39 2018
+filesize= 7262 bytes
+MD5 (k98.txt) = f501aaa9d3b479a3a18c16918f31647e
+
+#k99.txt
+filetime=Fri Mar 23 11:05:52 2018
+filesize= 6367 bytes
+MD5 (k99.txt) = fc16e987d7a9b78bf5b23e0f4647477c
+
+#ke-1.txt
+filetime=Wed Apr 13 12:20:08 2016
+filesize= 4227 bytes
+MD5 (ke-1.txt) = 2a2765ee575d883b96fa95ab8bcbbadd
+
+#ke-10.txt
+filetime=Wed Apr 13 12:20:08 2016
+filesize= 4329 bytes
+MD5 (ke-10.txt) = ded059b7b47b8f56fd39832d808b22c9
+
+#ke-11.txt
+filetime=Wed Apr 13 12:20:08 2016
+filesize= 3960 bytes
+MD5 (ke-11.txt) = 2d0d90795772f2cfa7f36c1b7e706d4d
+
+#ke-12.txt
+filetime=Sat Oct 22 11:16:05 2016
+filesize= 4254 bytes
+MD5 (ke-12.txt) = 0517992771b9c5f617573c749d5bd491
+
+#ke-13.txt
+filetime=Wed Apr 13 12:20:09 2016
+filesize= 3939 bytes
+MD5 (ke-13.txt) = bbb60f77c82deb35b8beeff5c68283a3
+
+#ke-14.txt
+filetime=Wed Apr 13 12:20:10 2016
+filesize= 4101 bytes
+MD5 (ke-14.txt) = 77e932d3922f489932e5cb5deb079c9e
+
+#ke-15.txt
+filetime=Sat Oct 22 11:16:05 2016
+filesize= 3817 bytes
+MD5 (ke-15.txt) = ea95d85fd541be60c17cb21a774baf75
+
+#ke-16.txt
+filetime=Wed Apr 13 12:20:11 2016
+filesize= 3880 bytes
+MD5 (ke-16.txt) = 3cef50597f9275a7fa56976a9bbfde81
+
+#ke-17.txt
+filetime=Thu Jun 28 10:11:39 2018
+filesize= 4453 bytes
+MD5 (ke-17.txt) = b76714cff3f4932837cff6903e4ee660
+
+#ke-18.txt
+filetime=Wed Apr 13 12:20:12 2016
+filesize= 3942 bytes
+MD5 (ke-18.txt) = a5bcd26448e883ac70e736f49357491c
+
+#ke-19.txt
+filetime=Wed Apr 13 12:20:12 2016
+filesize= 4483 bytes
+MD5 (ke-19.txt) = 218f6e074aa669aa5c225623c48f857e
+
+#ke-2.txt
+filetime=Wed Apr 13 12:20:12 2016
+filesize= 3994 bytes
+MD5 (ke-2.txt) = 1c0e1996824161ee3506d0f044ac8290
+
+#ke-20.txt
+filetime=Wed Apr 13 12:20:13 2016
+filesize= 4023 bytes
+MD5 (ke-20.txt) = c6dc8b5c5ab6f54f4f405ec3ac8febc4
+
+#ke-21.txt
+filetime=Wed Apr 13 12:20:13 2016
+filesize= 3895 bytes
+MD5 (ke-21.txt) = c6cfcc6d0154d0fa44256ec56e751f71
+
+#ke-22.txt
+filetime=Fri Mar 23 11:05:47 2018
+filesize= 3624 bytes
+MD5 (ke-22.txt) = df6a7005e1ba19d540e3a5a812f04e1b
+
+#ke-23.txt
+filetime=Wed Apr 13 12:20:14 2016
+filesize= 2897 bytes
+MD5 (ke-23.txt) = 7b818ce5b7f7faec69a22ae58e9a5277
+
+#ke-24.txt
+filetime=Wed Apr 13 12:20:14 2016
+filesize= 2780 bytes
+MD5 (ke-24.txt) = f419c9435615d0c80ec900d03a3e8744
+
+#ke-25.txt
+filetime=Wed Apr 13 12:20:15 2016
+filesize= 4048 bytes
+MD5 (ke-25.txt) = 2e445f0e8d4f491b894f95de48406d26
+
+#ke-26.txt
+filetime=Fri Mar 23 11:05:47 2018
+filesize= 3413 bytes
+MD5 (ke-26.txt) = e79e7b1ecef0b9e3f6a9fec53a6d11ea
+
+#ke-27.txt
+filetime=Thu Jun 28 10:11:39 2018
+filesize= 4346 bytes
+MD5 (ke-27.txt) = 40307a6d2fba50dbc877d30705242306
+
+#ke-28.txt
+filetime=Wed Apr 13 12:20:16 2016
+filesize= 4120 bytes
+MD5 (ke-28.txt) = fc5c99d42fdab7b2e478acb8b95e3fce
+
+#ke-29.txt
+filetime=Wed Apr 13 12:20:17 2016
+filesize= 3889 bytes
+MD5 (ke-29.txt) = a0fa81cff62b52b4c3852efd0c51e4b9
+
+#ke-3.txt
+filetime=Wed Apr 13 12:20:17 2016
+filesize= 4014 bytes
+MD5 (ke-3.txt) = 70837f78aef234bbfaa8f8892039ebe1
+
+#ke-30.txt
+filetime=Fri Mar  3 11:02:26 2017
+filesize= 4338 bytes
+MD5 (ke-30.txt) = b9fd465a9711b1d0d73dd341ca2f9774
+
+#ke-31.txt
+filetime=Wed Apr 13 12:20:18 2016
+filesize= 3909 bytes
+MD5 (ke-31.txt) = 81db5166ce58b1848070eead6462d9aa
+
+#ke-32.txt
+filetime=Wed Apr 13 12:20:18 2016
+filesize= 4053 bytes
+MD5 (ke-32.txt) = 4791e0fd95c4788d75420b7b3bce9418
+
+#ke-33.txt
+filetime=Wed Apr 13 12:20:19 2016
+filesize= 4157 bytes
+MD5 (ke-33.txt) = 9df414a34b5f1d7d52903ebe5539e2cd
+
+#ke-34.txt
+filetime=Wed Apr 13 12:20:19 2016
+filesize= 3777 bytes
+MD5 (ke-34.txt) = 81ef5a9c74d1a79fd63469770a1f3108
+
+#ke-35.txt
+filetime=Wed Jun 29 11:20:32 2016
+filesize= 3303 bytes
+MD5 (ke-35.txt) = 54525f011245cbeb5be37f2fe7c08996
+
+#ke-36.txt
+filetime=Wed Apr 13 12:20:20 2016
+filesize= 3582 bytes
+MD5 (ke-36.txt) = b78d20767ba5abc52eaf8080cb0e3247
+
+#ke-37.txt
+filetime=Wed Apr 13 12:20:20 2016
+filesize= 3348 bytes
+MD5 (ke-37.txt) = 788cd067ee741d8ae258006968343b3f
+
+#ke-38.txt
+filetime=Wed Apr 13 12:20:21 2016
+filesize= 3816 bytes
+MD5 (ke-38.txt) = c8ae5afdc49f0ea48ae83ea79e5c733d
+
+#ke-39.txt
+filetime=Wed Apr 13 12:20:21 2016
+filesize= 3869 bytes
+MD5 (ke-39.txt) = e33489402c7aa4eff8234020c8e1e6a2
+
+#ke-4.txt
+filetime=Fri Mar  3 11:02:27 2017
+filesize= 3640 bytes
+MD5 (ke-4.txt) = e356e73d06f5cc3a6d862cde9be7f207
+
+#ke-40.txt
+filetime=Sat Oct 22 11:16:05 2016
+filesize= 4016 bytes
+MD5 (ke-40.txt) = a1c13ccf66f401a7cb8d0f506b26cdeb
+
+#ke-41.txt
+filetime=Wed Apr 13 12:20:23 2016
+filesize= 4709 bytes
+MD5 (ke-41.txt) = 3b9dfb220b4408911b44efe956e0aa66
+
+#ke-42.txt
+filetime=Wed Apr 13 12:20:23 2016
+filesize= 4727 bytes
+MD5 (ke-42.txt) = 2434b3428cbf727d962900672286ffe3
+
+#ke-43.txt
+filetime=Wed Apr 13 12:20:24 2016
+filesize= 3874 bytes
+MD5 (ke-43.txt) = 827a1a919038f6bc0da431e2ba02617e
+
+#ke-44.txt
+filetime=Wed Apr 13 12:20:24 2016
+filesize= 3629 bytes
+MD5 (ke-44.txt) = fc6b055df882b16bf676797b91cf5194
+
+#ke-45.txt
+filetime=Wed Apr 13 12:20:24 2016
+filesize= 3609 bytes
+MD5 (ke-45.txt) = 18781259eb96b0dce34ce311c2d56156
+
+#ke-46.txt
+filetime=Wed Apr 13 12:20:25 2016
+filesize= 4075 bytes
+MD5 (ke-46.txt) = 9fe1f195648eed48b3303ee9dc6a7a74
+
+#ke-47.txt
+filetime=Wed Apr 13 12:20:25 2016
+filesize= 4166 bytes
+MD5 (ke-47.txt) = 46ec9f79e32129cb1e4c3b793ff3e928
+
+#ke-48.txt
+filetime=Wed Apr 13 12:20:26 2016
+filesize= 4001 bytes
+MD5 (ke-48.txt) = a8c9257e828b3b5eb316985a68705667
+
+#ke-49.txt
+filetime=Wed Apr 13 12:20:26 2016
+filesize= 4112 bytes
+MD5 (ke-49.txt) = a2629322b99910c3ded6d724c12122a4
+
+#ke-5.txt
+filetime=Thu Jul 13 10:50:16 2017
+filesize= 3778 bytes
+MD5 (ke-5.txt) = 3e8c1491bde84c76f76309ddfbed5008
+
+#ke-50.txt
+filetime=Wed Apr 13 12:20:27 2016
+filesize= 3948 bytes
+MD5 (ke-50.txt) = 5e042c2415b6cbed67f829207dcc51ce
+
+#ke-51.txt
+filetime=Wed Apr 13 12:20:27 2016
+filesize= 3712 bytes
+MD5 (ke-51.txt) = 984e7e231248462b0fae2b4aa828f74a
+
+#ke-52.txt
+filetime=Wed Apr 13 12:20:28 2016
+filesize= 3660 bytes
+MD5 (ke-52.txt) = 254b0c2b5df05a774964160188247a6d
+
+#ke-53.txt
+filetime=Wed Apr 13 12:20:28 2016
+filesize= 3890 bytes
+MD5 (ke-53.txt) = d3dfc0027aa20e3c901712cc40e3c9e7
+
+#ke-54.txt
+filetime=Wed Apr 13 12:20:29 2016
+filesize= 3499 bytes
+MD5 (ke-54.txt) = 10bc9ab013f7660b8860357e346670d8
+
+#ke-55.txt
+filetime=Wed Apr 13 12:20:29 2016
+filesize= 3697 bytes
+MD5 (ke-55.txt) = 78e14bb88859f277c9ab783b3c242742
+
+#ke-56.txt
+filetime=Wed Apr 13 12:20:29 2016
+filesize= 3655 bytes
+MD5 (ke-56.txt) = ec989b213c63fc3bae26521d41dab737
+
+#ke-57.txt
+filetime=Wed Oct  4 11:04:33 2017
+filesize= 4026 bytes
+MD5 (ke-57.txt) = bdfa237b511b291dbe28e0ce0e92e113
+
+#ke-58.txt
+filetime=Wed Apr 13 12:20:30 2016
+filesize= 4703 bytes
+MD5 (ke-58.txt) = ce39e0429a2ef874d4706fb2a9089ab2
+
+#ke-59.txt
+filetime=Wed Apr 13 12:20:31 2016
+filesize= 4190 bytes
+MD5 (ke-59.txt) = b59f5dd9017c968be49255bb48aa49c4
+
+#ke-6.txt
+filetime=Sat Oct 22 11:16:06 2016
+filesize= 4214 bytes
+MD5 (ke-6.txt) = c0b0ff33d1d151167c8ba3a041838a3f
+
+#ke-60.txt
+filetime=Wed Apr 13 12:20:32 2016
+filesize= 3204 bytes
+MD5 (ke-60.txt) = b97c1f8ac580adeb185f953037f64fa5
+
+#ke-61.txt
+filetime=Wed Apr 13 12:20:32 2016
+filesize= 3757 bytes
+MD5 (ke-61.txt) = b3b46c1daf4f91f8f123fe7fb1f00e91
+
+#ke-62.txt
+filetime=Mon Feb  6 11:02:58 2017
+filesize= 4076 bytes
+MD5 (ke-62.txt) = 4d36f827f409b17e5a01d49dcfa4d508
+
+#ke-63.txt
+filetime=Wed Apr 13 12:20:33 2016
+filesize= 3533 bytes
+MD5 (ke-63.txt) = 9c2c72b465714347fc0758ced7654917
+
+#ke-64.txt
+filetime=Wed Apr 13 12:20:33 2016
+filesize= 3745 bytes
+MD5 (ke-64.txt) = 2e737ecb99745856753d3a7df5527fa7
+
+#ke-65.txt
+filetime=Wed Apr 13 12:20:34 2016
+filesize= 3441 bytes
+MD5 (ke-65.txt) = dfd50cb82d9442c7e8f7d406067c0b60
+
+#ke-66.txt
+filetime=Wed Apr 13 12:20:34 2016
+filesize= 2715 bytes
+MD5 (ke-66.txt) = 28035380428266b34330a93c0ebb55ea
+
+#ke-67.txt
+filetime=Wed Apr 13 12:20:35 2016
+filesize= 3030 bytes
+MD5 (ke-67.txt) = 200f21e57f3ac20b8c521319ac90f017
+
+#ke-68.txt
+filetime=Wed Apr 13 12:20:35 2016
+filesize= 4187 bytes
+MD5 (ke-68.txt) = 22d08869c65b3ad07af41b3d76b3feeb
+
+#ke-69.txt
+filetime=Wed Apr 13 12:20:35 2016
+filesize= 4264 bytes
+MD5 (ke-69.txt) = 37214ffac5944d3e25dbbf7fcb1af5c9
+
+#ke-7.txt
+filetime=Wed Apr 13 12:20:36 2016
+filesize= 3790 bytes
+MD5 (ke-7.txt) = 60d5a43e9114695b8eaf642b61622d46
+
+#ke-70.txt
+filetime=Wed Apr 13 12:20:36 2016
+filesize= 3697 bytes
+MD5 (ke-70.txt) = 0d4cfc3e3a4f0f6b473acbba79f4a0af
+
+#ke-71.txt
+filetime=Wed Apr 13 12:20:37 2016
+filesize= 3704 bytes
+MD5 (ke-71.txt) = e411ab79afa660382b63e895aaa35afd
+
+#ke-72.txt
+filetime=Wed Apr 13 12:20:37 2016
+filesize= 4095 bytes
+MD5 (ke-72.txt) = 8274478283137f6128c5f1b83ca31dbf
+
+#ke-73.txt
+filetime=Wed Jul 20 08:29:29 2016
+filesize= 3436 bytes
+MD5 (ke-73.txt) = c666a29a5bb9aa0576d7c6491df759eb
+
+#ke-74.txt
+filetime=Wed Apr 13 12:20:38 2016
+filesize= 3002 bytes
+MD5 (ke-74.txt) = ea0070eedf19b0985c222cab08ee7f58
+
+#ke-75.txt
+filetime=Wed Apr 13 12:20:39 2016
+filesize= 5437 bytes
+MD5 (ke-75.txt) = b50b3ecdbb5624a4c4bb3f794589108d
+
+#ke-76.txt
+filetime=Wed Apr 13 12:20:39 2016
+filesize= 4263 bytes
+MD5 (ke-76.txt) = 879ec236f90096b896b76ac039e3de91
+
+#ke-8.txt
+filetime=Wed Apr 13 12:20:39 2016
+filesize= 3835 bytes
+MD5 (ke-8.txt) = 1a0b53f95e40ee2bc9de4ddeafaa7681
+
+#ke-9.txt
+filetime=Wed Apr 13 12:20:40 2016
+filesize= 4051 bytes
+MD5 (ke-9.txt) = 088f199103b074376447662f2e0efc8c
+
+#kk1-1.txt
+filetime=Wed Apr 13 12:20:40 2016
+filesize= 4049 bytes
+MD5 (kk1-1.txt) = 83847d6fa63197263ad8861bbb02cd00
+
+#kk1-2.txt
+filetime=Wed Jul 20 08:29:29 2016
+filesize= 4062 bytes
+MD5 (kk1-2.txt) = 82fb58485cc3075b98fd91a29efad319
+
+#kk1-3.txt
+filetime=Mon Apr  2 10:49:45 2018
+filesize= 4189 bytes
+MD5 (kk1-3.txt) = d790dd384bb4b0292c88c1e6aa015257
+
+#kk10-1.txt
+filetime=Wed Apr 13 12:20:42 2016
+filesize= 5067 bytes
+MD5 (kk10-1.txt) = 2bc95664de44b1356d39907fabfd22e1
+
+#kk10-2.txt
+filetime=Mon Jun 20 11:18:32 2016
+filesize= 5864 bytes
+MD5 (kk10-2.txt) = db5daae3aba5b6da477cefd61268a372
+
+#kk10-3.txt
+filetime=Fri Apr 13 10:00:36 2018
+filesize= 4897 bytes
+MD5 (kk10-3.txt) = d0b1912e190e6bf4e03dbbcdf3b903bc
+
+#kk11-1.txt
+filetime=Wed Apr 13 12:20:43 2016
+filesize= 5234 bytes
+MD5 (kk11-1.txt) = caeaa68e1a4c0fb318aa2fa0fc5c29b5
+
+#kk11-2.txt
+filetime=Fri Mar 23 11:05:48 2018
+filesize= 4921 bytes
+MD5 (kk11-2.txt) = e0d20c59ff05fa9b81c7bab6c3df013a
+
+#kk11-3.txt
+filetime=Wed Apr 13 12:20:44 2016
+filesize= 4877 bytes
+MD5 (kk11-3.txt) = 161168f2de18bd2e098475268f8a2658
+
+#kk12-1.txt
+filetime=Wed Apr 13 12:20:44 2016
+filesize= 5963 bytes
+MD5 (kk12-1.txt) = 002b134faa76cf39ff4316ec8f997a5d
+
+#kk12-2.txt
+filetime=Wed Apr 13 12:20:45 2016
+filesize= 5421 bytes
+MD5 (kk12-2.txt) = 50791ebc2bccf008cb7f484b8f2b2259
+
+#kk12-3.txt
+filetime=Wed Apr 13 12:20:45 2016
+filesize= 4898 bytes
+MD5 (kk12-3.txt) = 17a478eaeabf8f84844007d4510fbc2b
+
+#kk13-1.txt
+filetime=Wed Apr 13 12:20:46 2016
+filesize= 5284 bytes
+MD5 (kk13-1.txt) = 18033f0a21b0d011d99718d14a0f09d7
+
+#kk13-2.txt
+filetime=Wed Oct  4 11:04:33 2017
+filesize= 5445 bytes
+MD5 (kk13-2.txt) = 4a92e2d771478714b811e2e2252ff51f
+
+#kk13-3.txt
+filetime=Wed Apr 13 12:20:46 2016
+filesize= 6010 bytes
+MD5 (kk13-3.txt) = 9f2f64d48fe83a74647924e15478623c
+
+#kk14-1.txt
+filetime=Fri Mar 23 11:05:48 2018
+filesize= 5184 bytes
+MD5 (kk14-1.txt) = 7fad500f2e4cc0f974fe3de3c007157c
+
+#kk14-2.txt
+filetime=Wed Apr 13 12:20:47 2016
+filesize= 5576 bytes
+MD5 (kk14-2.txt) = 576ba4243a019ae176f54f2239212e7d
+
+#kk14-3.txt
+filetime=Wed Apr 13 12:20:48 2016
+filesize= 4972 bytes
+MD5 (kk14-3.txt) = f87a3513736961ce76998d797d1c0a51
+
+#kk15-1.txt
+filetime=Wed Apr 13 12:20:48 2016
+filesize= 4765 bytes
+MD5 (kk15-1.txt) = 641d00fdea98515eeb2a87d675ae8250
+
+#kk15-2.txt
+filetime=Wed Apr 13 12:20:49 2016
+filesize= 4833 bytes
+MD5 (kk15-2.txt) = 6580ca4219cf5e499d2c3484d10f8c03
+
+#kk15-3.txt
+filetime=Fri Mar 23 11:05:48 2018
+filesize= 4986 bytes
+MD5 (kk15-3.txt) = dcf39fd83f2e7a8223128260c9fd9bc5
+
+#kk16-1.txt
+filetime=Tue Mar 14 11:40:05 2017
+filesize= 6131 bytes
+MD5 (kk16-1.txt) = b6240061f9368a583fab917f50043a36
+
+#kk16-2.txt
+filetime=Wed Apr 13 12:20:50 2016
+filesize= 4583 bytes
+MD5 (kk16-2.txt) = 376fdc6fcf9124769d020501b8cec92a
+
+#kk16-3.txt
+filetime=Wed Apr 13 12:20:51 2016
+filesize= 5793 bytes
+MD5 (kk16-3.txt) = b0d8488c31888abc0401c5289b47f740
+
+#kk17-1.txt
+filetime=Wed Apr 13 12:20:51 2016
+filesize= 5019 bytes
+MD5 (kk17-1.txt) = 7f0cbac77f66ec78d5edd46201c2aee3
+
+#kk17-2.txt
+filetime=Wed Apr 13 12:20:51 2016
+filesize= 5122 bytes
+MD5 (kk17-2.txt) = 3b6165fa3204c82657970b07e0d7e6b7
+
+#kk17-3.txt
+filetime=Wed Apr 13 12:20:52 2016
+filesize= 4424 bytes
+MD5 (kk17-3.txt) = fbbf03bad7b3c2389654a5f3b61e9e1f
+
+#kk18-1.txt
+filetime=Wed Apr 13 12:20:52 2016
+filesize= 5135 bytes
+MD5 (kk18-1.txt) = 7548ba4d0bd17278b142dfb88a4c8614
+
+#kk18-2.txt
+filetime=Mon Feb  6 11:02:58 2017
+filesize= 5351 bytes
+MD5 (kk18-2.txt) = 96fde48337795b0f5a9f36640a0df592
+
+#kk18-3.txt
+filetime=Wed Apr 13 12:20:53 2016
+filesize= 4648 bytes
+MD5 (kk18-3.txt) = a6b302230d3a227727db3abd5abd8412
+
+#kk19-1.txt
+filetime=Wed Apr 13 12:20:54 2016
+filesize= 4172 bytes
+MD5 (kk19-1.txt) = 2b1360430c365ebda85e1a887cc97781
+
+#kk19-2.txt
+filetime=Wed Apr 13 12:20:54 2016
+filesize= 4613 bytes
+MD5 (kk19-2.txt) = 5353949b174bf1bef00e6be7c5d0d6c7
+
+#kk19-3.txt
+filetime=Wed Apr 13 12:20:55 2016
+filesize= 4786 bytes
+MD5 (kk19-3.txt) = cea0c11cfb956e55a2f92115434a4eff
+
+#kk2-1.txt
+filetime=Wed Apr 13 12:20:55 2016
+filesize= 4641 bytes
+MD5 (kk2-1.txt) = 15ca956523bf633c4f5ad4933d1d7b47
+
+#kk2-2.txt
+filetime=Wed Apr 13 12:20:55 2016
+filesize= 4015 bytes
+MD5 (kk2-2.txt) = da2016222ddc25287ff397dd7071c804
+
+#kk2-3.txt
+filetime=Fri Mar 23 11:05:48 2018
+filesize= 4722 bytes
+MD5 (kk2-3.txt) = 8335de29d4ad64027cc7082b6d36754d
+
+#kk20-1.txt
+filetime=Wed Apr 13 12:20:56 2016
+filesize= 5120 bytes
+MD5 (kk20-1.txt) = 1af60d2baa9067ab8a9a0a05ff454f40
+
+#kk20-2.txt
+filetime=Wed Apr 13 12:20:57 2016
+filesize= 5065 bytes
+MD5 (kk20-2.txt) = 5999034843fc9453438b1837eabe792d
+
+#kk20-3.txt
+filetime=Wed Apr 13 12:20:57 2016
+filesize= 5293 bytes
+MD5 (kk20-3.txt) = 73864996256b3a1d6882905fc8473349
+
+#kk21-1.txt
+filetime=Wed Apr 13 12:20:58 2016
+filesize= 9243 bytes
+MD5 (kk21-1.txt) = 6dae3bb7c3f887a9dbc4774ad63ab40f
+
+#kk21-2.txt
+filetime=Fri Mar 23 11:05:49 2018
+filesize= 8474 bytes
+MD5 (kk21-2.txt) = 9abb741f531456710809917deb1e454f
+
+#kk21-3.txt
+filetime=Mon Jun 20 11:18:32 2016
+filesize= 8269 bytes
+MD5 (kk21-3.txt) = 24fd3c08530206ffc70ac55ee8e1b0d1
+
+#kk22-1.txt
+filetime=Fri Mar 23 11:05:49 2018
+filesize= 8680 bytes
+MD5 (kk22-1.txt) = c3b53852f0bace9a9c6675019a43c36c
+
+#kk22-2.txt
+filetime=Wed Apr 13 12:21:00 2016
+filesize= 8800 bytes
+MD5 (kk22-2.txt) = bd0cd4bda9dccad50b130572bfa4ef1e
+
+#kk22-3.txt
+filetime=Wed Apr 13 12:25:48 2016
+filesize= 7989 bytes
+MD5 (kk22-3.txt) = 3561eaf2933664868318d698be91f7d0
+
+#kk23-1.txt
+filetime=Wed Apr 13 12:21:01 2016
+filesize= 9134 bytes
+MD5 (kk23-1.txt) = 44057397bd6fe6228390d63a868d6a73
+
+#kk23-2.txt
+filetime=Wed Apr 13 12:21:01 2016
+filesize= 9823 bytes
+MD5 (kk23-2.txt) = 12bc82ab709de0da067af8451d341f0b
+
+#kk23-3.txt
+filetime=Wed Jul 20 08:29:30 2016
+filesize= 4896 bytes
+MD5 (kk23-3.txt) = eb4c3931e22d02292c0b8f6e07ea8fd7
+
+#kk24-1.txt
+filetime=Sat Oct 22 11:16:06 2016
+filesize= 9355 bytes
+MD5 (kk24-1.txt) = 81c23e520f8c69270d54857d251bda5e
+
+#kk24-2.txt
+filetime=Wed Apr 13 12:21:03 2016
+filesize= 9463 bytes
+MD5 (kk24-2.txt) = c084d4b08a85c50ddec0647ecbed415e
+
+#kk24-3.txt
+filetime=Wed Apr 13 12:21:03 2016
+filesize= 8842 bytes
+MD5 (kk24-3.txt) = 6311ad6f0a1d7ca3e8c6d28d09212a42
+
+#kk25-1.txt
+filetime=Fri Mar 23 11:05:49 2018
+filesize= 8472 bytes
+MD5 (kk25-1.txt) = 2212476fc821afd0eac4b8ccf5cc5bf0
+
+#kk25-2.txt
+filetime=Wed Apr 13 12:21:04 2016
+filesize= 8736 bytes
+MD5 (kk25-2.txt) = 4eb4006ded9b8512a064e9adc9930ec4
+
+#kk25-3.txt
+filetime=Wed Apr 13 12:21:04 2016
+filesize= 8946 bytes
+MD5 (kk25-3.txt) = 6ed8c359f5e3a0e7b72881be2f518f6d
+
+#kk26-1.txt
+filetime=Wed Apr 13 12:21:05 2016
+filesize= 8873 bytes
+MD5 (kk26-1.txt) = 30324bad5c6d426907190662220c9aec
+
+#kk26-2.txt
+filetime=Wed Apr 13 12:21:05 2016
+filesize= 10561 bytes
+MD5 (kk26-2.txt) = c7d2192b93e265f48e708a6242578d54
+
+#kk26-3.txt
+filetime=Wed Apr 13 12:21:06 2016
+filesize= 8767 bytes
+MD5 (kk26-3.txt) = e90edc304d4ba8b2feb81819245c5d8f
+
+#kk27-1.txt
+filetime=Wed Apr 13 12:21:06 2016
+filesize= 8643 bytes
+MD5 (kk27-1.txt) = 35503eb00966e14df32c475926f6b719
+
+#kk27-2.txt
+filetime=Wed Apr 13 12:21:07 2016
+filesize= 9479 bytes
+MD5 (kk27-2.txt) = ae3411fc65530850144e0ef2d57385d7
+
+#kk27-3.txt
+filetime=Wed Apr 13 12:21:07 2016
+filesize= 9717 bytes
+MD5 (kk27-3.txt) = 173e5c99d5e90aeff6379b959dedc0c5
+
+#kk28-1.txt
+filetime=Wed Apr 13 12:21:08 2016
+filesize= 9670 bytes
+MD5 (kk28-1.txt) = 05a28116f2147600378df5a449f4ecb8
+
+#kk28-2.txt
+filetime=Wed Apr 13 12:21:08 2016
+filesize= 9858 bytes
+MD5 (kk28-2.txt) = fe225b974f23a0625956944dbb90f909
+
+#kk28-3.txt
+filetime=Wed Apr 13 12:21:09 2016
+filesize= 9614 bytes
+MD5 (kk28-3.txt) = 5150c89cabf8f2845cb16599b882e42d
+
+#kk29-1.txt
+filetime=Wed Apr 13 12:21:09 2016
+filesize= 9554 bytes
+MD5 (kk29-1.txt) = b946a5adbe279c49ade41a84410782f2
+
+#kk29-2.txt
+filetime=Wed Apr 13 12:21:10 2016
+filesize= 9780 bytes
+MD5 (kk29-2.txt) = 23dbda78846ee9b6c31ab9812719cdb6
+
+#kk29-3.txt
+filetime=Wed Apr 13 12:21:10 2016
+filesize= 9097 bytes
+MD5 (kk29-3.txt) = eb02bd506074017e9cee34b1e3ed4805
+
+#kk3-1.txt
+filetime=Mon Feb  6 11:02:58 2017
+filesize= 5541 bytes
+MD5 (kk3-1.txt) = d3d3a17df5236304c9a2aa2b76086421
+
+#kk3-2.txt
+filetime=Wed Apr 13 12:21:11 2016
+filesize= 4986 bytes
+MD5 (kk3-2.txt) = 831a89f1a6f8c6b7e3b2995c863d70e6
+
+#kk3-3.txt
+filetime=Wed Apr 13 12:21:12 2016
+filesize= 4573 bytes
+MD5 (kk3-3.txt) = 9d59573cc86f220de741be509f025953
+
+#kk30-1.txt
+filetime=Wed Apr 13 12:21:12 2016
+filesize= 9988 bytes
+MD5 (kk30-1.txt) = aeac847e4f6cb4e7d8167e046ee4c73f
+
+#kk30-2.txt
+filetime=Fri Mar 23 11:05:49 2018
+filesize= 9378 bytes
+MD5 (kk30-2.txt) = 655cb55ae80741badb513d6b7f80d102
+
+#kk30-3.txt
+filetime=Wed Jul 20 08:29:30 2016
+filesize= 9423 bytes
+MD5 (kk30-3.txt) = cd3c49cac3abbfcee11910e7b2795de8
+
+#kk31-1.txt
+filetime=Wed Apr 13 12:21:13 2016
+filesize= 9599 bytes
+MD5 (kk31-1.txt) = 7eb8647ef1ec9270ec81280cb05e2442
+
+#kk31-2.txt
+filetime=Mon Feb  6 11:02:59 2017
+filesize= 10042 bytes
+MD5 (kk31-2.txt) = 95fe338136b61d8b40ec6c24875e38e5
+
+#kk31-3.txt
+filetime=Wed Apr 13 12:21:14 2016
+filesize= 9273 bytes
+MD5 (kk31-3.txt) = 889bd7f0beb2f9561e4d39b16802b1f3
+
+#kk32-1.txt
+filetime=Wed Apr 13 12:21:15 2016
+filesize= 9715 bytes
+MD5 (kk32-1.txt) = 03a6a0e4ce6bbb4f25daa7485d759947
+
+#kk32-2.txt
+filetime=Wed Apr 13 12:21:15 2016
+filesize= 9402 bytes
+MD5 (kk32-2.txt) = 1c4afecfaba1d03af5546b8f0ad79f91
+
+#kk32-3.txt
+filetime=Wed Apr 13 12:21:16 2016
+filesize= 9882 bytes
+MD5 (kk32-3.txt) = c4fa02cc0b9d2d2431ad018629280893
+
+#kk33-1.txt
+filetime=Wed Apr 13 12:21:16 2016
+filesize= 9725 bytes
+MD5 (kk33-1.txt) = a7aacb0b5708a0743cb512ab55c29050
+
+#kk33-2.txt
+filetime=Thu Jul 13 10:50:16 2017
+filesize= 9416 bytes
+MD5 (kk33-2.txt) = fa3befa255b42c6975583e895c05c98b
+
+#kk33-3.txt
+filetime=Wed Apr 13 12:21:17 2016
+filesize= 9792 bytes
+MD5 (kk33-3.txt) = e4d4a83d660539581d4b4784a9f1ab80
+
+#kk34-1.txt
+filetime=Wed Apr 13 12:21:18 2016
+filesize= 10369 bytes
+MD5 (kk34-1.txt) = e12be36347d982137c2ecbc7c9185371
+
+#kk34-2.txt
+filetime=Wed Apr 13 12:21:18 2016
+filesize= 11533 bytes
+MD5 (kk34-2.txt) = 4c32c92c0ee878e84c5f603ede5c1b41
+
+#kk34-3.txt
+filetime=Wed Apr 13 12:21:19 2016
+filesize= 9389 bytes
+MD5 (kk34-3.txt) = 00d23dcb0e4b5f1543f46dd4ab4a23f7
+
+#kk35-1.txt
+filetime=Wed Apr 13 12:21:19 2016
+filesize= 9768 bytes
+MD5 (kk35-1.txt) = 35a6ccae55701aeeb7473031f79fea4c
+
+#kk35-2.txt
+filetime=Wed Apr 13 12:21:20 2016
+filesize= 10075 bytes
+MD5 (kk35-2.txt) = 8cf810e55a89fb04d56f61de48c80cf0
+
+#kk35-3.txt
+filetime=Wed Apr 13 12:21:20 2016
+filesize= 10129 bytes
+MD5 (kk35-3.txt) = 3cf9aa7f4b56fba1b97a17c04bae6ad5
+
+#kk36-1.txt
+filetime=Wed Apr 13 12:21:21 2016
+filesize= 10666 bytes
+MD5 (kk36-1.txt) = 9c6b5ffb565ca68c136ee7d70ba16667
+
+#kk36-2.txt
+filetime=Wed Apr 13 12:21:21 2016
+filesize= 9429 bytes
+MD5 (kk36-2.txt) = bf8f23d022feaae791202afe79622f23
+
+#kk36-3.txt
+filetime=Mon Feb  6 11:03:00 2017
+filesize= 9848 bytes
+MD5 (kk36-3.txt) = 5de1de107afad34953b7678853d83384
+
+#kk37-1.txt
+filetime=Wed Apr 13 12:21:22 2016
+filesize= 9812 bytes
+MD5 (kk37-1.txt) = c4ecca422b42771d636be0d2d4da1a7d
+
+#kk37-2.txt
+filetime=Wed Apr 13 12:21:23 2016
+filesize= 10138 bytes
+MD5 (kk37-2.txt) = f855914ef603a5df917d31dece8c4289
+
+#kk37-3.txt
+filetime=Wed Apr 13 12:21:23 2016
+filesize= 10451 bytes
+MD5 (kk37-3.txt) = 22016c436bb6a125997d9da9f76052b6
+
+#kk38-1.txt
+filetime=Wed Apr 13 12:21:24 2016
+filesize= 11449 bytes
+MD5 (kk38-1.txt) = 3973762e7cf20b4911c7d32488937fb4
+
+#kk38-2.txt
+filetime=Wed Apr 13 12:21:24 2016
+filesize= 10981 bytes
+MD5 (kk38-2.txt) = 73d327647b8175bb8be23aa7043ad059
+
+#kk38-3.txt
+filetime=Wed Apr 13 12:21:25 2016
+filesize= 11038 bytes
+MD5 (kk38-3.txt) = c9a28d96409becd0b58aefa1772d9129
+
+#kk39-1.txt
+filetime=Wed Apr 13 12:21:25 2016
+filesize= 9904 bytes
+MD5 (kk39-1.txt) = a406eaf13a1c049c0b9b7260a359bd21
+
+#kk39-2.txt
+filetime=Wed Apr 13 12:21:26 2016
+filesize= 10974 bytes
+MD5 (kk39-2.txt) = e8bd7a160b4dc53c654b7ff50fe05c2e
+
+#kk39-3.txt
+filetime=Wed Apr 13 12:21:26 2016
+filesize= 10208 bytes
+MD5 (kk39-3.txt) = ac8bb6c4ffa19dafa81445ff14977491
+
+#kk4-1.txt
+filetime=Wed Apr 13 12:21:27 2016
+filesize= 5258 bytes
+MD5 (kk4-1.txt) = 6091b64fb2d59eba8272adb6dc044747
+
+#kk4-2.txt
+filetime=Wed Apr 13 12:21:27 2016
+filesize= 6510 bytes
+MD5 (kk4-2.txt) = aeec70e38ad8ce63d671a394d2902b4e
+
+#kk4-3.txt
+filetime=Wed Apr 13 12:21:27 2016
+filesize= 5665 bytes
+MD5 (kk4-3.txt) = 99a618f3d9c1a1748243123158463ca2
+
+#kk40-1.txt
+filetime=Wed Apr 13 12:21:28 2016
+filesize= 10470 bytes
+MD5 (kk40-1.txt) = a30f81df6f7b85a08cad4cc5b03d6e35
+
+#kk40-2.txt
+filetime=Wed Apr 13 12:21:28 2016
+filesize= 9935 bytes
+MD5 (kk40-2.txt) = ac8ab1c136e2ebc02640a32bdd672df7
+
+#kk40-3.txt
+filetime=Wed Apr 13 12:21:29 2016
+filesize= 10448 bytes
+MD5 (kk40-3.txt) = 028460952e01959f53e68fb3cf1e14cd
+
+#kk41-1.txt
+filetime=Wed Apr 13 12:21:29 2016
+filesize= 11325 bytes
+MD5 (kk41-1.txt) = eaf5f2afddd384e03c49a257fa6fcd40
+
+#kk41-2.txt
+filetime=Wed Apr 13 12:21:30 2016
+filesize= 11146 bytes
+MD5 (kk41-2.txt) = b2aea72bfd5c0c1d33bbd857b230bec9
+
+#kk41-3.txt
+filetime=Wed Apr 13 12:21:30 2016
+filesize= 10325 bytes
+MD5 (kk41-3.txt) = 2b7055e9f0309e7d4b2a802956da8a27
+
+#kk42-1.txt
+filetime=Wed Apr 13 12:21:31 2016
+filesize= 9861 bytes
+MD5 (kk42-1.txt) = 896d6fcdbd26d93ab00ecf0c707057f3
+
+#kk42-2.txt
+filetime=Wed Apr 13 12:21:31 2016
+filesize= 10846 bytes
+MD5 (kk42-2.txt) = b500829a7156db779b7cd563bb37b1ef
+
+#kk42-3.txt
+filetime=Mon May 30 17:59:44 2016
+filesize= 9772 bytes
+MD5 (kk42-3.txt) = 2da78291ed544a81bec23f1164273cad
+
+#kk43-1.txt
+filetime=Wed Apr 13 12:21:32 2016
+filesize= 10661 bytes
+MD5 (kk43-1.txt) = c94cfe5d856cd97993fff89ee2e8fcb1
+
+#kk43-2.txt
+filetime=Mon May 30 17:59:44 2016
+filesize= 10738 bytes
+MD5 (kk43-2.txt) = d09b8feb459dfc8156a46a0211b87683
+
+#kk43-3.txt
+filetime=Wed Apr 13 12:21:33 2016
+filesize= 11243 bytes
+MD5 (kk43-3.txt) = d7c26b7cbf26b3da870620bae8354fe9
+
+#kk44-1.txt
+filetime=Wed Apr 13 12:21:34 2016
+filesize= 11322 bytes
+MD5 (kk44-1.txt) = 3fe5e32c0afdbe7d0db26522cdf8b0e1
+
+#kk44-2.txt
+filetime=Mon Feb  6 11:03:00 2017
+filesize= 11434 bytes
+MD5 (kk44-2.txt) = b233cf54a601c4f50ede65a5ed4f75c1
+
+#kk44-3.txt
+filetime=Wed Apr 13 12:21:35 2016
+filesize= 12498 bytes
+MD5 (kk44-3.txt) = 51ebc60f54748d370b0429f790de87df
+
+#kk45-1.txt
+filetime=Wed Apr 13 12:21:35 2016
+filesize= 10863 bytes
+MD5 (kk45-1.txt) = 7d808662bb0482c7eea96e341145294e
+
+#kk45-2.txt
+filetime=Mon Feb  6 11:03:01 2017
+filesize= 10607 bytes
+MD5 (kk45-2.txt) = edf4b06c40ef6a2230f40bfa70bb9888
+
+#kk45-3.txt
+filetime=Mon May 30 17:59:45 2016
+filesize= 10904 bytes
+MD5 (kk45-3.txt) = 084cb19810dc87de90471ce256e3f167
+
+#kk46-1.txt
+filetime=Fri Apr 13 10:00:36 2018
+filesize= 10884 bytes
+MD5 (kk46-1.txt) = 30efd08e98871702a1f06e1532a83965
+
+#kk46-2.txt
+filetime=Mon Feb  6 11:03:01 2017
+filesize= 11089 bytes
+MD5 (kk46-2.txt) = 54c5fead1a1b578c88f396af6bab3098
+
+#kk46-3.txt
+filetime=Mon Jun 20 11:18:33 2016
+filesize= 11070 bytes
+MD5 (kk46-3.txt) = 856f2225f681e2d55c0201dea7329dd4
+
+#kk47-1.txt
+filetime=Mon May 30 17:59:46 2016
+filesize= 11566 bytes
+MD5 (kk47-1.txt) = ff800455e8b037b998f1ebe9a3cda2b3
+
+#kk47-2.txt
+filetime=Wed Apr 13 12:21:39 2016
+filesize= 10408 bytes
+MD5 (kk47-2.txt) = bcac0b666365fd77ea8479b6bfdf8d8e
+
+#kk47-3.txt
+filetime=Wed Apr 13 12:21:39 2016
+filesize= 10234 bytes
+MD5 (kk47-3.txt) = 530e87885f2db253659bd5003d34883f
+
+#kk48-1.txt
+filetime=Mon May 30 17:59:47 2016
+filesize= 9872 bytes
+MD5 (kk48-1.txt) = 022c94db91e774296faa612812d7740e
+
+#kk48-2.txt
+filetime=Wed Apr 13 12:21:40 2016
+filesize= 10178 bytes
+MD5 (kk48-2.txt) = 5f612524930f121f02f7ddfdc5584e96
+
+#kk48-3.txt
+filetime=Wed Apr 13 12:21:41 2016
+filesize= 9765 bytes
+MD5 (kk48-3.txt) = c2fabec6b3d9f120236d3846181f1bb9
+
+#kk49-1.txt
+filetime=Mon May 30 17:59:47 2016
+filesize= 11597 bytes
+MD5 (kk49-1.txt) = aff9b9b8c7015069882f2a2f3df6dc1c
+
+#kk49-2.txt
+filetime=Sat Oct 22 11:16:06 2016
+filesize= 10821 bytes
+MD5 (kk49-2.txt) = 00ca24f50be5c028664c4cb49a11d057
+
+#kk49-3.txt
+filetime=Mon May 30 17:59:48 2016
+filesize= 11132 bytes
+MD5 (kk49-3.txt) = 8199172fb27389403866d4155a1608df
+
+#kk5-1.txt
+filetime=Wed Apr 13 12:21:42 2016
+filesize= 5501 bytes
+MD5 (kk5-1.txt) = cea9410dca467a60002d1c1c7192c6c1
+
+#kk5-2.txt
+filetime=Wed Apr 13 12:21:43 2016
+filesize= 4908 bytes
+MD5 (kk5-2.txt) = d0e17517ac7ab4761f9688da5268cc01
+
+#kk5-3.txt
+filetime=Mon May 30 17:59:49 2016
+filesize= 4734 bytes
+MD5 (kk5-3.txt) = e8568ef442af98dfac6c7abb46634fe0
+
+#kk50-1.txt
+filetime=Mon Jun 20 11:18:34 2016
+filesize= 11503 bytes
+MD5 (kk50-1.txt) = efc0e5638b3f72c80d68eb689a8dd54f
+
+#kk50-2.txt
+filetime=Mon Feb  6 11:03:02 2017
+filesize= 11740 bytes
+MD5 (kk50-2.txt) = a28047527b141cf6cb4a5bb4d1b281cf
+
+#kk50-3.txt
+filetime=Wed Jul 20 08:29:31 2016
+filesize= 11160 bytes
+MD5 (kk50-3.txt) = b9736e2913e2cc4822c5755276970a8f
+
+#kk51-1.txt
+filetime=Wed Jul 20 08:29:31 2016
+filesize= 10814 bytes
+MD5 (kk51-1.txt) = c9a4af03a3c84752bd757aa9491e4a61
+
+#kk51-2.txt
+filetime=Mon Feb  6 11:03:02 2017
+filesize= 12051 bytes
+MD5 (kk51-2.txt) = 64a8d83e8b863aa31aff602113bf0cae
+
+#kk51-3.txt
+filetime=Mon Feb  6 11:03:02 2017
+filesize= 11970 bytes
+MD5 (kk51-3.txt) = dc0c1bd5052bddf5864a1d57372f3599
+
+#kk52-1.txt
+filetime=Mon Feb  6 11:03:03 2017
+filesize= 10588 bytes
+MD5 (kk52-1.txt) = 4b16f3af99a11e4d491afcd7c2d9760e
+
+#kk52-2.txt
+filetime=Fri Mar 31 09:22:29 2017
+filesize= 10652 bytes
+MD5 (kk52-2.txt) = 9213b6faf790cdeef5b00ac9cd0389f2
+
+#kk52-3.txt
+filetime=Fri Mar 23 11:05:50 2018
+filesize= 11087 bytes
+MD5 (kk52-3.txt) = 4b083ee2ad8bf00238748f31b9b816c6
+
+#kk6-1.txt
+filetime=Wed Apr 13 12:21:44 2016
+filesize= 5535 bytes
+MD5 (kk6-1.txt) = d2dd0309313e5c8d1f7b9e00962e2baf
+
+#kk6-2.txt
+filetime=Wed Apr 13 12:21:44 2016
+filesize= 5253 bytes
+MD5 (kk6-2.txt) = 74aeb04865f6128079e7195a5d5fac52
+
+#kk6-3.txt
+filetime=Wed Apr 13 12:21:44 2016
+filesize= 4979 bytes
+MD5 (kk6-3.txt) = 82411198816723fbc86f3daef6bed591
+
+#kk7-1.txt
+filetime=Wed Apr 13 12:21:45 2016
+filesize= 4693 bytes
+MD5 (kk7-1.txt) = 699feee8eabcd23735610905ea22b18c
+
+#kk7-2.txt
+filetime=Wed Feb 15 09:18:03 2017
+filesize= 5018 bytes
+MD5 (kk7-2.txt) = 99585dfa0a5aee20156d000e7d216e30
+
+#kk7-3.txt
+filetime=Wed Apr 13 12:21:46 2016
+filesize= 4785 bytes
+MD5 (kk7-3.txt) = 545370dc90483e446066d1ae522f73cb
+
+#kk8-1.txt
+filetime=Wed Apr 13 12:21:46 2016
+filesize= 5068 bytes
+MD5 (kk8-1.txt) = 84f00e6689888cc2b134648a5e45a529
+
+#kk8-2.txt
+filetime=Wed Jul 20 08:29:32 2016
+filesize= 4231 bytes
+MD5 (kk8-2.txt) = 2b359ad088a10545f9abd69e1c7f0897
+
+#kk8-3.txt
+filetime=Wed Apr 13 12:21:47 2016
+filesize= 5497 bytes
+MD5 (kk8-3.txt) = b8ec49673f2ae31f46fba4d5252a3942
+
+#kk9-1.txt
+filetime=Wed Apr 13 12:21:48 2016
+filesize= 5255 bytes
+MD5 (kk9-1.txt) = 0ef3b6130bbd03a00102cb70c63b177d
+
+#kk9-2.txt
+filetime=Wed Apr 13 12:21:48 2016
+filesize= 4622 bytes
+MD5 (kk9-2.txt) = 71a4011c1cb565b76af34994732a3d11
+
+#kk9-3.txt
+filetime=Wed Apr  5 09:19:07 2017
+filesize= 5025 bytes
+MD5 (kk9-3.txt) = a5859e30acf5869a88b401d6b97c1b09
+
+#kozh_skridou.dicqr
+filetime=Thu Jun 28 10:11:39 2018
+filesize= 10432 bytes
+MD5 (kozh_skridou.dicqr) = 892cafc2984c11550dbb9ac79a4502a3
+
+#ks53.txt
+filetime=Wed Apr 13 12:21:49 2016
+filesize= 2060 bytes
+MD5 (ks53.txt) = 3df1c38798c22dcd4c70282bad9679b8
+
+#yezh.dicqr
+filetime=Thu Jun 28 10:11:40 2018
+filesize= 36276 bytes
+MD5 (yezh.dicqr) = 35f09f527a184648deb3a05e496741d2
+
+
+SOUND FILES
+
+
+
+#aln-ex2.ogg
+filetime=Wed Apr 13 12:25:52 2016
+filesize= 202718 bytes
+MD5 (aln-ex2.ogg) = 91f36aa349fb7110302bc25e13cbd196
+
+#aln-k1.ogg
+filetime=Wed Jun 29 11:21:11 2016
+filesize= 605120 bytes
+MD5 (aln-k1.ogg) = 292175bb56410903f3da1542f88b34ee
+
+#aln-k10.ogg
+filetime=Wed Apr 13 12:25:59 2016
+filesize= 853518 bytes
+MD5 (aln-k10.ogg) = 22c634f91759ec316a00f7b56bd73afb
+
+#aln-k100.ogg
+filetime=Fri Mar 23 11:07:08 2018
+filesize= 1047480 bytes
+MD5 (aln-k100.ogg) = c321c489c7f86d7eeb08cf8c08ffcdad
+
+#aln-k101.ogg
+filetime=Thu Jun 28 10:12:11 2018
+filesize= 1020883 bytes
+MD5 (aln-k101.ogg) = 5ff57148158d813dc14ac171f1d13f4d
+
+#aln-k11.ogg
+filetime=Wed Apr 13 12:26:03 2016
+filesize= 487345 bytes
+MD5 (aln-k11.ogg) = a592f54617a1de0062ec1ea300d78d8c
+
+#aln-k12.ogg
+filetime=Wed Apr 13 12:26:10 2016
+filesize= 838602 bytes
+MD5 (aln-k12.ogg) = b744c8e549a69d0b3bcd017179a09166
+
+#aln-k13.ogg
+filetime=Wed Apr 13 12:26:18 2016
+filesize= 873842 bytes
+MD5 (aln-k13.ogg) = 01d34195b7c110608023ffc8ae1fabca
+
+#aln-k14.ogg
+filetime=Wed Apr 13 12:26:24 2016
+filesize= 759354 bytes
+MD5 (aln-k14.ogg) = 2c0501db1f08cc74d6298cbafb947116
+
+#aln-k15.ogg
+filetime=Wed Feb 15 09:18:32 2017
+filesize= 953581 bytes
+MD5 (aln-k15.ogg) = 96f37fbf877d92c59be212023145a14c
+
+#aln-k16.ogg
+filetime=Wed Apr 13 12:26:37 2016
+filesize= 650631 bytes
+MD5 (aln-k16.ogg) = d8155a04cc7030b492fa987b782e4026
+
+#aln-k17.ogg
+filetime=Wed Apr 13 12:26:44 2016
+filesize= 788085 bytes
+MD5 (aln-k17.ogg) = 5fb12893886f3dfedcfa8dcc1826875b
+
+#aln-k18.ogg
+filetime=Wed Apr 13 12:26:49 2016
+filesize= 508242 bytes
+MD5 (aln-k18.ogg) = d6014dbdf28acc79069ef28769623049
+
+#aln-k19.ogg
+filetime=Wed Apr 13 12:26:56 2016
+filesize= 835751 bytes
+MD5 (aln-k19.ogg) = a852c7f55ec843939593aa5e564f60b3
+
+#aln-k2.ogg
+filetime=Wed Jun 29 11:21:15 2016
+filesize= 482521 bytes
+MD5 (aln-k2.ogg) = 9a4cd2b19fcf074f5ff00a4da65c8a98
+
+#aln-k20.ogg
+filetime=Wed Apr 13 12:27:05 2016
+filesize= 1029244 bytes
+MD5 (aln-k20.ogg) = 5169a56a8e073abc48e49d2894a2dc4a
+
+#aln-k21.ogg
+filetime=Wed Apr 13 12:27:14 2016
+filesize= 936440 bytes
+MD5 (aln-k21.ogg) = f2531a88934687c4d6a7791947142070
+
+#aln-k22.ogg
+filetime=Wed Apr 13 12:27:22 2016
+filesize= 838484 bytes
+MD5 (aln-k22.ogg) = c8de50a3c7457533322eeeac79c67da6
+
+#aln-k23.ogg
+filetime=Wed Apr 13 12:27:28 2016
+filesize= 698392 bytes
+MD5 (aln-k23.ogg) = d060e509cbe0c7cfd5a5ef63ed69fa86
+
+#aln-k24.ogg
+filetime=Wed Apr 13 12:27:33 2016
+filesize= 701282 bytes
+MD5 (aln-k24.ogg) = 6e712121a31c3e05a5329775accd86b7
+
+#aln-k25.ogg
+filetime=Wed Apr 13 12:27:40 2016
+filesize= 731135 bytes
+MD5 (aln-k25.ogg) = 602451794a6314083f099eee54e1b233
+
+#aln-k26.ogg
+filetime=Wed Apr 13 12:27:48 2016
+filesize= 991370 bytes
+MD5 (aln-k26.ogg) = 37dee72253503fec7fb7978b29be4850
+
+#aln-k27.ogg
+filetime=Wed Apr 13 12:27:54 2016
+filesize= 675397 bytes
+MD5 (aln-k27.ogg) = 4f89256ef7090d450c7f0e848f657bc7
+
+#aln-k28.ogg
+filetime=Wed Apr 13 12:28:00 2016
+filesize= 781753 bytes
+MD5 (aln-k28.ogg) = 4a445cdfa3a376cd95e8fb8cc6af27b7
+
+#aln-k29.ogg
+filetime=Wed Apr 13 12:28:08 2016
+filesize= 831238 bytes
+MD5 (aln-k29.ogg) = ca4f59d404623275c66707fd9c83244d
+
+#aln-k3.ogg
+filetime=Fri Mar  3 11:02:55 2017
+filesize= 618791 bytes
+MD5 (aln-k3.ogg) = b3e7ba9c45727dd186e8743ae6fb1935
+
+#aln-k30.ogg
+filetime=Wed Apr 13 12:28:12 2016
+filesize= 559772 bytes
+MD5 (aln-k30.ogg) = 4e44e2a43f30537f1ff7d0152be56d42
+
+#aln-k31.ogg
+filetime=Wed Apr 13 12:28:17 2016
+filesize= 566844 bytes
+MD5 (aln-k31.ogg) = 23792c36c1a06f1ba2cbe9ba205ec252
+
+#aln-k32.ogg
+filetime=Wed Apr 13 12:28:22 2016
+filesize= 552448 bytes
+MD5 (aln-k32.ogg) = 02daded858b79419fcacb719bda5c9ba
+
+#aln-k33.ogg
+filetime=Wed Apr 13 12:28:28 2016
+filesize= 661802 bytes
+MD5 (aln-k33.ogg) = ebc37da3762865fe3aabf84a44ffe985
+
+#aln-k34.ogg
+filetime=Wed Apr 13 12:28:34 2016
+filesize= 682142 bytes
+MD5 (aln-k34.ogg) = cace2b01088ffae86c9c4268ddb7f928
+
+#aln-k35.ogg
+filetime=Wed Apr 13 12:28:39 2016
+filesize= 653020 bytes
+MD5 (aln-k35.ogg) = 1279b70c58a613f9669815bcdc9611f3
+
+#aln-k36.ogg
+filetime=Wed Apr 13 12:28:42 2016
+filesize= 323122 bytes
+MD5 (aln-k36.ogg) = bc20788d4e346215c5114682db280d7c
+
+#aln-k37.ogg
+filetime=Wed Apr 13 12:28:47 2016
+filesize= 601867 bytes
+MD5 (aln-k37.ogg) = 6a16faa5116b26e97c74340f3e6c2d6b
+
+#aln-k38.ogg
+filetime=Wed Apr 13 12:28:53 2016
+filesize= 608281 bytes
+MD5 (aln-k38.ogg) = 70faedb61eb0137a61bddca0983659ac
+
+#aln-k39.ogg
+filetime=Sat Oct 22 11:16:34 2016
+filesize= 807112 bytes
+MD5 (aln-k39.ogg) = df5ffe00d026daf9bebf817d9a8624ae
+
+#aln-k4.ogg
+filetime=Wed Apr 13 12:29:05 2016
+filesize= 695803 bytes
+MD5 (aln-k4.ogg) = 358a26c1308f5f65967102cc6a2534d8
+
+#aln-k40.ogg
+filetime=Fri Oct  6 08:15:24 2017
+filesize= 542878 bytes
+MD5 (aln-k40.ogg) = 23bc97c96a2df07d63bba60e2b9345b1
+
+#aln-k41.ogg
+filetime=Wed Apr 13 12:29:15 2016
+filesize= 611309 bytes
+MD5 (aln-k41.ogg) = 7838a4f5236608d2bb48408deefbef7c
+
+#aln-k42.ogg
+filetime=Wed Apr 13 12:29:22 2016
+filesize= 785855 bytes
+MD5 (aln-k42.ogg) = 9941c72960d251fffa0599634d3c41ed
+
+#aln-k43.ogg
+filetime=Thu Oct 19 10:40:28 2017
+filesize= 596532 bytes
+MD5 (aln-k43.ogg) = f2bb402b9ec5a11a77e07d1353b5cf19
+
+#aln-k44.ogg
+filetime=Wed Apr 13 12:29:35 2016
+filesize= 931837 bytes
+MD5 (aln-k44.ogg) = 9704432d3931060755f5426041476d3a
+
+#aln-k45.ogg
+filetime=Wed Apr 13 12:29:40 2016
+filesize= 593997 bytes
+MD5 (aln-k45.ogg) = 6cffecb05f17409c8fbd2270393de3c7
+
+#aln-k46.ogg
+filetime=Wed Apr 13 12:29:47 2016
+filesize= 790846 bytes
+MD5 (aln-k46.ogg) = f0b3769f820475f7e94b3c2e48d1a5d5
+
+#aln-k47.ogg
+filetime=Wed Apr 13 12:29:52 2016
+filesize= 609270 bytes
+MD5 (aln-k47.ogg) = d9cd017e09a505d433a6deac9fbfa256
+
+#aln-k48.ogg
+filetime=Wed Apr 13 12:29:59 2016
+filesize= 805836 bytes
+MD5 (aln-k48.ogg) = a2dadadc4969d5e1b4aeb12f212be99e
+
+#aln-k49.ogg
+filetime=Wed Apr 13 12:30:04 2016
+filesize= 643247 bytes
+MD5 (aln-k49.ogg) = c9c762aba58ceb8e52218d4d6ad07744
+
+#aln-k5.ogg
+filetime=Wed Apr 13 12:30:11 2016
+filesize= 822875 bytes
+MD5 (aln-k5.ogg) = 170b8bd8bba12ddffc093a697c32cb78
+
+#aln-k50.ogg
+filetime=Wed Apr 13 12:30:15 2016
+filesize= 397097 bytes
+MD5 (aln-k50.ogg) = efa35d8386272c8f92166a373b2a65cc
+
+#aln-k51.ogg
+filetime=Wed Apr 13 12:30:19 2016
+filesize= 450465 bytes
+MD5 (aln-k51.ogg) = f7d449e8f9f5b696cea3413a2a8f7473
+
+#aln-k52.ogg
+filetime=Wed Apr 13 12:30:24 2016
+filesize= 566081 bytes
+MD5 (aln-k52.ogg) = 53b6536cf1e53b5f99f6b41736c34f90
+
+#aln-k53.ogg
+filetime=Wed Apr 13 12:30:29 2016
+filesize= 594276 bytes
+MD5 (aln-k53.ogg) = 9677861678ede33af3aa4b69f9c18f0d
+
+#aln-k54.ogg
+filetime=Wed Apr 13 12:30:35 2016
+filesize= 750641 bytes
+MD5 (aln-k54.ogg) = f09b96b5c0b96210c9670f4c67c2b49e
+
+#aln-k55.ogg
+filetime=Wed Apr 13 12:30:41 2016
+filesize= 647074 bytes
+MD5 (aln-k55.ogg) = fc3d66fc954054fe2598823592e7f12f
+
+#aln-k56.ogg
+filetime=Wed Apr 13 12:30:47 2016
+filesize= 692416 bytes
+MD5 (aln-k56.ogg) = 65c04f37a34afd3ce638eb12b3296b77
+
+#aln-k57.ogg
+filetime=Wed Apr 13 12:30:54 2016
+filesize= 854990 bytes
+MD5 (aln-k57.ogg) = a59fa4ee0d7c59bfd77971c8d78c012b
+
+#aln-k58.ogg
+filetime=Wed Apr 13 12:31:00 2016
+filesize= 728844 bytes
+MD5 (aln-k58.ogg) = e79f186d2aafad46bc98f3b762515574
+
+#aln-k59.ogg
+filetime=Thu Apr 14 17:49:32 2016
+filesize= 951179 bytes
+MD5 (aln-k59.ogg) = 71dd0de70d3a691c771af6999fc21ac2
+
+#aln-k6.ogg
+filetime=Wed Apr 13 12:31:06 2016
+filesize= 568876 bytes
+MD5 (aln-k6.ogg) = ff8af4833e12f75b5791b18d76953e94
+
+#aln-k60.ogg
+filetime=Wed Apr 13 12:31:12 2016
+filesize= 746481 bytes
+MD5 (aln-k60.ogg) = be782b19dc423fe0c6bb2cb3c9fc7158
+
+#aln-k61.ogg
+filetime=Wed Apr 13 12:31:19 2016
+filesize= 758460 bytes
+MD5 (aln-k61.ogg) = cb81959a956c4acda05f49cdb2dc10fb
+
+#aln-k62.ogg
+filetime=Wed Apr 13 12:31:24 2016
+filesize= 686733 bytes
+MD5 (aln-k62.ogg) = bf744c58a13b1894ff0b1ecb313781b3
+
+#aln-k63.ogg
+filetime=Wed Apr 13 12:31:30 2016
+filesize= 717723 bytes
+MD5 (aln-k63.ogg) = 452a0f9f41a254ca2a1947db399deaf9
+
+#aln-k64.ogg
+filetime=Wed Apr 13 12:31:39 2016
+filesize= 993691 bytes
+MD5 (aln-k64.ogg) = 440487de8de54e69e63507937a491c2a
+
+#aln-k65.ogg
+filetime=Wed Apr 13 12:31:43 2016
+filesize= 507954 bytes
+MD5 (aln-k65.ogg) = 567d74b3ba59e6caff535df801a1b7a9
+
+#aln-k66.ogg
+filetime=Wed Apr 13 12:31:46 2016
+filesize= 301556 bytes
+MD5 (aln-k66.ogg) = b48662e4e59d3944fdbc2692c19c555f
+
+#aln-k67.ogg
+filetime=Wed Apr 13 12:31:53 2016
+filesize= 760368 bytes
+MD5 (aln-k67.ogg) = 15d470c24cd46e9169e089ad7cb451fb
+
+#aln-k68.ogg
+filetime=Wed Apr 13 12:31:57 2016
+filesize= 519009 bytes
+MD5 (aln-k68.ogg) = 54ff5f415d9860feafc00d10ddf98741
+
+#aln-k69.ogg
+filetime=Wed Apr 13 12:32:06 2016
+filesize= 1018923 bytes
+MD5 (aln-k69.ogg) = 1c31bc7dfd8a2019e758cafbabfb7c85
+
+#aln-k7.ogg
+filetime=Wed Apr 13 12:32:11 2016
+filesize= 560450 bytes
+MD5 (aln-k7.ogg) = 5dfeee7c975d90ff4483cb0e096d644e
+
+#aln-k70.ogg
+filetime=Wed Apr 13 12:32:15 2016
+filesize= 538937 bytes
+MD5 (aln-k70.ogg) = 68e522e51e63506d0e3716a4652ef1cd
+
+#aln-k71.ogg
+filetime=Wed Apr 13 12:32:19 2016
+filesize= 423959 bytes
+MD5 (aln-k71.ogg) = 6aa25fcef0df096e0c4a4fa10aaa5360
+
+#aln-k72.ogg
+filetime=Wed Apr 13 12:32:23 2016
+filesize= 453713 bytes
+MD5 (aln-k72.ogg) = cf11f58a8cf01df2ff37ea5a9db004a6
+
+#aln-k73.ogg
+filetime=Wed Apr 13 12:32:28 2016
+filesize= 573166 bytes
+MD5 (aln-k73.ogg) = 1d47648d262ca41660bba2c6aa875cac
+
+#aln-k74.ogg
+filetime=Wed Apr 13 12:32:36 2016
+filesize= 860879 bytes
+MD5 (aln-k74.ogg) = 1bef72ee3de59b61d1ea96a08d1a0e8f
+
+#aln-k75.ogg
+filetime=Wed Apr 13 12:32:40 2016
+filesize= 541750 bytes
+MD5 (aln-k75.ogg) = 8fe0fe7bb7813f416383b161bd84d320
+
+#aln-k76.ogg
+filetime=Wed Apr 13 12:32:45 2016
+filesize= 464913 bytes
+MD5 (aln-k76.ogg) = 4c2b9f2d70ae81d9438621016d95ed2d
+
+#aln-k77.ogg
+filetime=Wed Apr 13 12:32:48 2016
+filesize= 420293 bytes
+MD5 (aln-k77.ogg) = ba4434001ed721adcd7ed57c1c0e1590
+
+#aln-k78.ogg
+filetime=Wed Apr 13 12:32:53 2016
+filesize= 465593 bytes
+MD5 (aln-k78.ogg) = 9325a0aa7a6f56f99d609321a1a0a18c
+
+#aln-k8.ogg
+filetime=Wed Apr 13 12:32:59 2016
+filesize= 805367 bytes
+MD5 (aln-k8.ogg) = 216b667417e18d9f6c6c66b91baaf133
+
+#aln-k81.ogg
+filetime=Wed Apr 13 12:33:06 2016
+filesize= 744123 bytes
+MD5 (aln-k81.ogg) = 130392e1ddee5d6d54b6f0170e345734
+
+#aln-k85.ogg
+filetime=Wed Apr 13 12:33:13 2016
+filesize= 863680 bytes
+MD5 (aln-k85.ogg) = b0556478cbf4681e9dd3042cbb7d6572
+
+#aln-k87.ogg
+filetime=Wed Apr 13 12:33:18 2016
+filesize= 638618 bytes
+MD5 (aln-k87.ogg) = ba1f47978fac277f7eb065aee3140370
+
+#aln-k88.ogg
+filetime=Wed Apr 13 12:33:27 2016
+filesize= 968298 bytes
+MD5 (aln-k88.ogg) = bc0cf747fe5c9ebf76ff0d67986aa62a
+
+#aln-k89.ogg
+filetime=Wed Apr 13 12:33:35 2016
+filesize= 959276 bytes
+MD5 (aln-k89.ogg) = 24c62c079416e4749e662cbedcada784
+
+#aln-k9.ogg
+filetime=Wed Apr 13 12:33:41 2016
+filesize= 770851 bytes
+MD5 (aln-k9.ogg) = 00afaeb8ea72f4b5477680f306392dd3
+
+#aln-k90.ogg
+filetime=Wed Apr 13 12:33:47 2016
+filesize= 678962 bytes
+MD5 (aln-k90.ogg) = 67d494626ff6b250fc2419c77a8b54c6
+
+#aln-k91.ogg
+filetime=Fri Mar 23 11:06:24 2018
+filesize= 1275819 bytes
+MD5 (aln-k91.ogg) = c58ad79bf064faee3852c99b7dd6e1c1
+
+#aln-k92.ogg
+filetime=Fri Mar 23 11:06:38 2018
+filesize= 1745105 bytes
+MD5 (aln-k92.ogg) = 35eb9868839fdee9c80fbb0005ac30b4
+
+#aln-k93.ogg
+filetime=Fri Mar 23 11:06:47 2018
+filesize= 1108719 bytes
+MD5 (aln-k93.ogg) = 16f6653fee8e3f60a3a1c7d09ec4ca96
+
+#aln-k94.ogg
+filetime=Fri Mar 23 11:06:59 2018
+filesize= 1383477 bytes
+MD5 (aln-k94.ogg) = 1591abe2e00c8449aac2b896be8c650a
+
+#aln-k95.ogg
+filetime=Fri Mar 23 11:07:17 2018
+filesize= 1129554 bytes
+MD5 (aln-k95.ogg) = bdf4a568caae7ea19a86075977ca9011
+
+#aln-k96.ogg
+filetime=Fri Mar 23 11:07:27 2018
+filesize= 1150040 bytes
+MD5 (aln-k96.ogg) = 396a74a550324f49092b46b067af285c
+
+#aln-k97.ogg
+filetime=Fri Mar 23 11:07:34 2018
+filesize= 875658 bytes
+MD5 (aln-k97.ogg) = 06d6f0ffc65ed1045544c678312c4999
+
+#aln-k98.ogg
+filetime=Fri Mar 23 11:07:46 2018
+filesize= 1429225 bytes
+MD5 (aln-k98.ogg) = 56871ae420628d8522831b5201892cd2
+
+#aln-k99.ogg
+filetime=Fri Mar 23 11:07:56 2018
+filesize= 1106394 bytes
+MD5 (aln-k99.ogg) = 9a7351a3e4ff184833e276653eb2d0be
+
+#aln-ke-1.ogg
+filetime=Wed Apr 13 12:33:52 2016
+filesize= 519142 bytes
+MD5 (aln-ke-1.ogg) = 3ce6422e439ad059739ba15381b45e39
+
+#aln-ke-10.ogg
+filetime=Wed Apr 13 12:33:58 2016
+filesize= 801517 bytes
+MD5 (aln-ke-10.ogg) = 0b7b35ba127061f1e69eca7610791188
+
+#aln-ke-11.ogg
+filetime=Wed Apr 13 12:34:05 2016
+filesize= 755624 bytes
+MD5 (aln-ke-11.ogg) = 217ed4aeca363a03661396879f8e9b79
+
+#aln-ke-12.ogg
+filetime=Wed Apr 13 12:34:12 2016
+filesize= 847702 bytes
+MD5 (aln-ke-12.ogg) = cd5a0e8421868d8315175c5a74c7ec3e
+
+#aln-ke-13.ogg
+filetime=Wed Apr 13 12:34:20 2016
+filesize= 984227 bytes
+MD5 (aln-ke-13.ogg) = e31949d1a3f31573aa25a63bcba0b5a1
+
+#aln-ke-14.ogg
+filetime=Wed Apr 13 12:34:29 2016
+filesize= 1033701 bytes
+MD5 (aln-ke-14.ogg) = 4dd8a6128f38d54daba5424f5ef18323
+
+#aln-ke-15.ogg
+filetime=Wed Apr 13 12:34:37 2016
+filesize= 925827 bytes
+MD5 (aln-ke-15.ogg) = 30d8df0186e02a503ab348af0ce29bff
+
+#aln-ke-16.ogg
+filetime=Wed Apr 13 12:34:44 2016
+filesize= 827596 bytes
+MD5 (aln-ke-16.ogg) = 99c09c7c653e02ad61028f80fd77398c
+
+#aln-ke-17.ogg
+filetime=Wed Apr 13 12:34:51 2016
+filesize= 902986 bytes
+MD5 (aln-ke-17.ogg) = 97677b9f82ec1085064722e2e622810a
+
+#aln-ke-18.ogg
+filetime=Wed Apr 13 12:34:59 2016
+filesize= 864985 bytes
+MD5 (aln-ke-18.ogg) = 28232b550244b9cec5a453511114cc59
+
+#aln-ke-19.ogg
+filetime=Wed Apr 13 12:35:08 2016
+filesize= 1071645 bytes
+MD5 (aln-ke-19.ogg) = 5ac11910263e17709c9ac7148e651c5e
+
+#aln-ke-2.ogg
+filetime=Wed Apr 13 12:35:13 2016
+filesize= 622367 bytes
+MD5 (aln-ke-2.ogg) = bed95a075c9af68e32e4a62ce1a1cc40
+
+#aln-ke-20.ogg
+filetime=Wed Apr 13 12:35:18 2016
+filesize= 566599 bytes
+MD5 (aln-ke-20.ogg) = 884fc62540dd497a224f0e1cd68cde5e
+
+#aln-ke-21.ogg
+filetime=Wed Apr 13 12:35:24 2016
+filesize= 786582 bytes
+MD5 (aln-ke-21.ogg) = d522be3d418228b31801a0626c9d0e3c
+
+#aln-ke-22.ogg
+filetime=Wed Apr 13 12:35:29 2016
+filesize= 469491 bytes
+MD5 (aln-ke-22.ogg) = 9295e7424263c3f0f4ec5a028b7c98f2
+
+#aln-ke-23.ogg
+filetime=Wed Apr 13 12:35:32 2016
+filesize= 334167 bytes
+MD5 (aln-ke-23.ogg) = 3398d0c0c9ffcfb9dac6211c9c02501e
+
+#aln-ke-24.ogg
+filetime=Wed Apr 13 12:35:35 2016
+filesize= 351566 bytes
+MD5 (aln-ke-24.ogg) = 14cfa1d9dcbf69c0bd1a9a2dcc916fa6
+
+#aln-ke-25.ogg
+filetime=Wed Apr 13 12:35:40 2016
+filesize= 614986 bytes
+MD5 (aln-ke-25.ogg) = f0ce2c930279151118e61e1165fa337f
+
+#aln-ke-26.ogg
+filetime=Wed Apr 13 12:35:45 2016
+filesize= 589718 bytes
+MD5 (aln-ke-26.ogg) = 21fb80b60991d668c6d504dcd2263381
+
+#aln-ke-27.ogg
+filetime=Wed Apr 13 12:35:52 2016
+filesize= 820064 bytes
+MD5 (aln-ke-27.ogg) = 2e3983f411b03f539ab7bbb437b439d2
+
+#aln-ke-28.ogg
+filetime=Wed Apr 13 12:36:01 2016
+filesize= 988626 bytes
+MD5 (aln-ke-28.ogg) = 30642d707bf2bc033c70d4e7b545b84a
+
+#aln-ke-29.ogg
+filetime=Wed Apr 13 12:36:09 2016
+filesize= 954258 bytes
+MD5 (aln-ke-29.ogg) = 631289c29a46122a75d0227b87888c3f
+
+#aln-ke-3.ogg
+filetime=Wed Apr 13 12:36:16 2016
+filesize= 863388 bytes
+MD5 (aln-ke-3.ogg) = e2b2e716b84fd42a6b0f8036740215cd
+
+#aln-ke-30.ogg
+filetime=Wed Apr 13 12:36:23 2016
+filesize= 864646 bytes
+MD5 (aln-ke-30.ogg) = d9946ecfd714972521660ad0369d21c2
+
+#aln-ke-31.ogg
+filetime=Wed Apr 13 12:36:31 2016
+filesize= 953456 bytes
+MD5 (aln-ke-31.ogg) = 1e3a47bbd9926ab90208f54732bc7ede
+
+#aln-ke-32.ogg
+filetime=Wed Apr 13 12:36:39 2016
+filesize= 903364 bytes
+MD5 (aln-ke-32.ogg) = 993d4af6c0fad1c24bbcaeeea5fdfee2
+
+#aln-ke-33.ogg
+filetime=Wed Apr 13 12:36:47 2016
+filesize= 972204 bytes
+MD5 (aln-ke-33.ogg) = 4f17553539f6fcbdfa586c9f208f1d5c
+
+#aln-ke-34.ogg
+filetime=Wed Apr 13 12:36:55 2016
+filesize= 973088 bytes
+MD5 (aln-ke-34.ogg) = 4466652aa81b090b6c7da0a370b15d49
+
+#aln-ke-35.ogg
+filetime=Wed Apr 13 12:36:59 2016
+filesize= 396139 bytes
+MD5 (aln-ke-35.ogg) = bb93c559e118838cc684b990d604224c
+
+#aln-ke-36.ogg
+filetime=Wed Apr 13 12:37:04 2016
+filesize= 614863 bytes
+MD5 (aln-ke-36.ogg) = 964a0400d358d7b45bf3012f03112d75
+
+#aln-ke-37.ogg
+filetime=Wed Apr 13 12:37:08 2016
+filesize= 402082 bytes
+MD5 (aln-ke-37.ogg) = 583f5ba604d49f78f38fa95468b3be92
+
+#aln-ke-38.ogg
+filetime=Wed Apr 13 12:37:13 2016
+filesize= 612811 bytes
+MD5 (aln-ke-38.ogg) = 8559f1ff737ba39329dd55cb1f15946b
+
+#aln-ke-39.ogg
+filetime=Wed Apr 13 12:37:21 2016
+filesize= 931475 bytes
+MD5 (aln-ke-39.ogg) = 4f370e1bd55bcc324196cc4ac73832c2
+
+#aln-ke-4.ogg
+filetime=Wed Apr 13 12:37:27 2016
+filesize= 678325 bytes
+MD5 (aln-ke-4.ogg) = f5575b83a76473d5b90ebe81a95cb2b0
+
+#aln-ke-40.ogg
+filetime=Wed Apr 13 12:37:33 2016
+filesize= 742973 bytes
+MD5 (aln-ke-40.ogg) = 445636552e3654d02328faebd7c222ff
+
+#aln-ke-41.ogg
+filetime=Wed Apr 13 12:37:42 2016
+filesize= 1117671 bytes
+MD5 (aln-ke-41.ogg) = d1e4059e0c6c9f5ccbed7a82a22ea82a
+
+#aln-ke-42.ogg
+filetime=Wed Apr 13 12:37:50 2016
+filesize= 921842 bytes
+MD5 (aln-ke-42.ogg) = 2f95c617ca16c69dbbbfa2925d50775d
+
+#aln-ke-43.ogg
+filetime=Wed Apr 13 12:37:58 2016
+filesize= 960863 bytes
+MD5 (aln-ke-43.ogg) = 1cf369b1f2dd9f826decb839a5547982
+
+#aln-ke-44.ogg
+filetime=Wed Apr 13 12:38:06 2016
+filesize= 876145 bytes
+MD5 (aln-ke-44.ogg) = a2b56540def13952f00a3e28fd103d52
+
+#aln-ke-45.ogg
+filetime=Wed Apr 13 12:38:11 2016
+filesize= 606471 bytes
+MD5 (aln-ke-45.ogg) = 78f457139535485139f68a3e5590f18a
+
+#aln-ke-46.ogg
+filetime=Wed Apr 13 12:38:16 2016
+filesize= 570712 bytes
+MD5 (aln-ke-46.ogg) = 803abebe12342de24cddfed992a49ae0
+
+#aln-ke-47.ogg
+filetime=Wed Apr 13 12:38:23 2016
+filesize= 807642 bytes
+MD5 (aln-ke-47.ogg) = 629e0280d240f12d2a39914239cbbd1f
+
+#aln-ke-48.ogg
+filetime=Wed Apr 13 12:38:32 2016
+filesize= 1051707 bytes
+MD5 (aln-ke-48.ogg) = 1409090a9c1d862800f2f59fa2350aa2
+
+#aln-ke-49.ogg
+filetime=Wed Apr 13 12:38:40 2016
+filesize= 1003506 bytes
+MD5 (aln-ke-49.ogg) = 0b9d0f516e5580e245b68d532f679713
+
+#aln-ke-5.ogg
+filetime=Wed Apr 13 12:38:46 2016
+filesize= 678823 bytes
+MD5 (aln-ke-5.ogg) = cc1e269950ef840479de9ad1d0596bdc
+
+#aln-ke-50.ogg
+filetime=Wed Apr 13 12:38:55 2016
+filesize= 1015710 bytes
+MD5 (aln-ke-50.ogg) = e43a2b13a3e16eaf98aca352803919de
+
+#aln-ke-51.ogg
+filetime=Wed Apr 13 12:39:05 2016
+filesize= 1201204 bytes
+MD5 (aln-ke-51.ogg) = fa30a744a6e145df43fe897c686ae653
+
+#aln-ke-52.ogg
+filetime=Wed Apr 13 12:39:11 2016
+filesize= 704480 bytes
+MD5 (aln-ke-52.ogg) = 176b8358c49a2278f6d0adca5aac6668
+
+#aln-ke-53.ogg
+filetime=Wed Apr 13 12:39:17 2016
+filesize= 721949 bytes
+MD5 (aln-ke-53.ogg) = 274f4e8b374e87ed24daf11e6015da0d
+
+#aln-ke-54.ogg
+filetime=Wed Apr 13 12:39:22 2016
+filesize= 586099 bytes
+MD5 (aln-ke-54.ogg) = 8997a4d9e491d4d9d498ea2cb6793a50
+
+#aln-ke-55.ogg
+filetime=Wed Apr 13 12:39:27 2016
+filesize= 570720 bytes
+MD5 (aln-ke-55.ogg) = fc4a49cb546e4f344967d085ca151586
+
+#aln-ke-56.ogg
+filetime=Wed Apr 13 12:39:33 2016
+filesize= 793362 bytes
+MD5 (aln-ke-56.ogg) = c248d06be777a7fc104d55ffdf1c363b
+
+#aln-ke-57.ogg
+filetime=Wed Apr 13 12:39:42 2016
+filesize= 1044920 bytes
+MD5 (aln-ke-57.ogg) = 925921299ef0f40fff781e6209c8d3e4
+
+#aln-ke-58.ogg
+filetime=Wed Apr 13 12:39:51 2016
+filesize= 1091526 bytes
+MD5 (aln-ke-58.ogg) = dcf998b6984ff70b1a1514b2ac758441
+
+#aln-ke-59.ogg
+filetime=Wed Apr 13 12:39:59 2016
+filesize= 898417 bytes
+MD5 (aln-ke-59.ogg) = 76e265fcf4daf40820a9bd4afa70c739
+
+#aln-ke-6.ogg
+filetime=Wed Apr 13 12:40:04 2016
+filesize= 520020 bytes
+MD5 (aln-ke-6.ogg) = 7a417d006d4d036ee05325852c05896a
+
+#aln-ke-60.ogg
+filetime=Wed Apr 13 12:40:08 2016
+filesize= 483940 bytes
+MD5 (aln-ke-60.ogg) = e581c31fccb20ea53d6a38cd2fb3f70a
+
+#aln-ke-61.ogg
+filetime=Wed Apr 13 12:40:15 2016
+filesize= 806219 bytes
+MD5 (aln-ke-61.ogg) = bbb8c6cf439a268828ac6ad257f81a21
+
+#aln-ke-62.ogg
+filetime=Wed Apr 13 12:40:23 2016
+filesize= 976622 bytes
+MD5 (aln-ke-62.ogg) = 6f16a706751aac0e2b25c7104d055c31
+
+#aln-ke-63.ogg
+filetime=Wed Apr 13 12:40:28 2016
+filesize= 579454 bytes
+MD5 (aln-ke-63.ogg) = 401d50bfabe77e6957a2327c30ef1c8d
+
+#aln-ke-64.ogg
+filetime=Wed Apr 13 12:40:36 2016
+filesize= 984054 bytes
+MD5 (aln-ke-64.ogg) = 8c56d510f75f6146b5fe38793fd2d80b
+
+#aln-ke-65.ogg
+filetime=Wed Apr 13 12:40:41 2016
+filesize= 512784 bytes
+MD5 (aln-ke-65.ogg) = 602bfa588d1e12d9324e0b0f3d71ba2e
+
+#aln-ke-66.ogg
+filetime=Wed Apr 13 12:40:44 2016
+filesize= 377496 bytes
+MD5 (aln-ke-66.ogg) = cd1ac0c43e4f8fc8ff73215fbd39783d
+
+#aln-ke-67.ogg
+filetime=Wed Apr 13 12:40:48 2016
+filesize= 440931 bytes
+MD5 (aln-ke-67.ogg) = 60a13667e8fe8197cbf37d7313dc00bf
+
+#aln-ke-68.ogg
+filetime=Wed Apr 13 12:40:57 2016
+filesize= 1018856 bytes
+MD5 (aln-ke-68.ogg) = d86d5af24cd467751a7bb4540b3f07d2
+
+#aln-ke-69.ogg
+filetime=Wed Apr 13 12:41:05 2016
+filesize= 996669 bytes
+MD5 (aln-ke-69.ogg) = fd73b77a7345f3fa922e52b8ff6dca31
+
+#aln-ke-7.ogg
+filetime=Wed Apr 13 12:41:10 2016
+filesize= 619463 bytes
+MD5 (aln-ke-7.ogg) = 723d9542c9dce9922cc909cb05b58d95
+
+#aln-ke-70.ogg
+filetime=Wed Apr 13 12:41:15 2016
+filesize= 555815 bytes
+MD5 (aln-ke-70.ogg) = 144f92f9f41c24ae2e84624bdc3d0134
+
+#aln-ke-71.ogg
+filetime=Wed Apr 13 12:41:20 2016
+filesize= 575008 bytes
+MD5 (aln-ke-71.ogg) = 37e9d4eee8630e62f7564301058d1806
+
+#aln-ke-72.ogg
+filetime=Wed Apr 13 12:41:26 2016
+filesize= 728633 bytes
+MD5 (aln-ke-72.ogg) = 54d5b2402816cc3ac011d47e1f2ae847
+
+#aln-ke-73.ogg
+filetime=Wed Apr 13 12:41:31 2016
+filesize= 570527 bytes
+MD5 (aln-ke-73.ogg) = 9dfdf8896993080da0ebcba700aa50ee
+
+#aln-ke-74.ogg
+filetime=Wed Apr 13 12:41:35 2016
+filesize= 405852 bytes
+MD5 (aln-ke-74.ogg) = 730f5b579fcea9c92dc72fb96e07d3d0
+
+#aln-ke-75.ogg
+filetime=Wed Apr 13 12:41:42 2016
+filesize= 818272 bytes
+MD5 (aln-ke-75.ogg) = d2c7965ae4f3dc07d327c503ebb112e8
+
+#aln-ke-76.ogg
+filetime=Wed Apr 13 12:41:50 2016
+filesize= 1042667 bytes
+MD5 (aln-ke-76.ogg) = 8ba1016e28dfd7d3776adccd415828e9
+
+#aln-ke-8.ogg
+filetime=Wed Apr 13 12:41:56 2016
+filesize= 688264 bytes
+MD5 (aln-ke-8.ogg) = d69d4a03da44d4ee067f957fb9f5f570
+
+#aln-ke-9.ogg
+filetime=Wed Apr 13 12:42:01 2016
+filesize= 526557 bytes
+MD5 (aln-ke-9.ogg) = 3905c70700422346fb1d213f474c7cd8
+
+#aln-kk1-1.ogg
+filetime=Wed Apr 13 12:42:08 2016
+filesize= 882437 bytes
+MD5 (aln-kk1-1.ogg) = 47ea290eef81adb23e5fc92b8f52c995
+
+#aln-kk1-2.ogg
+filetime=Wed Apr 13 12:42:12 2016
+filesize= 365435 bytes
+MD5 (aln-kk1-2.ogg) = 44d9ec6002b9d79c834f6e651d305948
+
+#aln-kk1-3.ogg
+filetime=Wed Apr 13 12:42:18 2016
+filesize= 759161 bytes
+MD5 (aln-kk1-3.ogg) = 9596e13611655bcec44b976145f6cd9a
+
+#aln-kk10-1.ogg
+filetime=Wed Apr 13 12:42:26 2016
+filesize= 967459 bytes
+MD5 (aln-kk10-1.ogg) = a7b7ccb563313dae5eec81179293aa70
+
+#aln-kk10-2.ogg
+filetime=Wed Apr 13 12:42:33 2016
+filesize= 783420 bytes
+MD5 (aln-kk10-2.ogg) = 2ba54ff88fbcab460db4d57e75e9631f
+
+#aln-kk10-3.ogg
+filetime=Wed Apr 13 12:42:38 2016
+filesize= 618430 bytes
+MD5 (aln-kk10-3.ogg) = d4442fc109c7b365e8e243456d3e8f0d
+
+#aln-kk11-1.ogg
+filetime=Wed Apr 13 12:42:47 2016
+filesize= 989529 bytes
+MD5 (aln-kk11-1.ogg) = 3821109e88b1436147b7d5fa5b15cc60
+
+#aln-kk11-2.ogg
+filetime=Wed Apr 13 12:42:54 2016
+filesize= 826527 bytes
+MD5 (aln-kk11-2.ogg) = 7665a1c6de858ac1de520d269eb9115c
+
+#aln-kk11-3.ogg
+filetime=Wed Apr 13 12:42:59 2016
+filesize= 681818 bytes
+MD5 (aln-kk11-3.ogg) = e1067597d031c7967f3e6c51d5f7c313
+
+#aln-kk12-1.ogg
+filetime=Wed Apr 13 12:43:07 2016
+filesize= 851102 bytes
+MD5 (aln-kk12-1.ogg) = e514987eecd1b85920fb3ac3d9fcd1ce
+
+#aln-kk12-2.ogg
+filetime=Wed Apr 13 12:43:15 2016
+filesize= 933087 bytes
+MD5 (aln-kk12-2.ogg) = fe4357c4208c9c9160fe11938f043974
+
+#aln-kk12-3.ogg
+filetime=Wed Apr 13 12:43:22 2016
+filesize= 857614 bytes
+MD5 (aln-kk12-3.ogg) = ba80d1bbc02120197310d158ef4fce50
+
+#aln-kk13-1.ogg
+filetime=Wed Apr 13 12:43:30 2016
+filesize= 952765 bytes
+MD5 (aln-kk13-1.ogg) = 6a4f4ed5e383e6020afdc1fd9da6ef06
+
+#aln-kk13-2.ogg
+filetime=Wed Apr 13 12:43:38 2016
+filesize= 957029 bytes
+MD5 (aln-kk13-2.ogg) = 3c8de7b6b37ad7364266c5bb866a63f4
+
+#aln-kk13-3.ogg
+filetime=Wed Apr 13 12:43:46 2016
+filesize= 906004 bytes
+MD5 (aln-kk13-3.ogg) = e1740ea3052d70a703b7ab7238009020
+
+#aln-kk14-1.ogg
+filetime=Wed Apr 13 12:43:53 2016
+filesize= 882191 bytes
+MD5 (aln-kk14-1.ogg) = 8a9d5c8128a62309dfa107b7c676c7fa
+
+#aln-kk14-2.ogg
+filetime=Wed Apr 13 12:44:02 2016
+filesize= 1030386 bytes
+MD5 (aln-kk14-2.ogg) = 577f22905d9baf52070e03fe3ea4eada
+
+#aln-kk14-3.ogg
+filetime=Wed Apr 13 12:44:09 2016
+filesize= 819306 bytes
+MD5 (aln-kk14-3.ogg) = 8bb5c3a79b9885d184ac9e9858ddd40f
+
+#aln-kk15-1.ogg
+filetime=Wed Apr 13 12:44:15 2016
+filesize= 767125 bytes
+MD5 (aln-kk15-1.ogg) = 22fca9bc134a5c75f83e2feec2e1bbe2
+
+#aln-kk15-2.ogg
+filetime=Wed Apr 13 12:44:22 2016
+filesize= 801674 bytes
+MD5 (aln-kk15-2.ogg) = 05bdaf7c60af1af4dc8592cdabead88d
+
+#aln-kk15-3.ogg
+filetime=Wed Apr 13 12:44:30 2016
+filesize= 880120 bytes
+MD5 (aln-kk15-3.ogg) = 7849679fa050d1bd6b05524d0a9120e8
+
+#aln-kk16-1.ogg
+filetime=Wed Apr 13 12:44:38 2016
+filesize= 1019772 bytes
+MD5 (aln-kk16-1.ogg) = 86fd28a85d9ded1a99661e8ebd8a6221
+
+#aln-kk16-2.ogg
+filetime=Wed Apr 13 12:44:46 2016
+filesize= 896269 bytes
+MD5 (aln-kk16-2.ogg) = 749b755344f258c769dc4293b7b508d0
+
+#aln-kk16-3.ogg
+filetime=Wed Apr 13 12:44:54 2016
+filesize= 1011175 bytes
+MD5 (aln-kk16-3.ogg) = abc66060d8af29f88677b3890f265da8
+
+#aln-kk17-1.ogg
+filetime=Wed Apr 13 12:45:01 2016
+filesize= 782892 bytes
+MD5 (aln-kk17-1.ogg) = 6f86f561a876bfe31ccfbadbc66d37fc
+
+#aln-kk17-2.ogg
+filetime=Wed Apr 13 12:45:10 2016
+filesize= 970565 bytes
+MD5 (aln-kk17-2.ogg) = f0c4f499f802c93f89fec45320d28f56
+
+#aln-kk17-3.ogg
+filetime=Wed Apr 13 12:45:16 2016
+filesize= 743947 bytes
+MD5 (aln-kk17-3.ogg) = 52a4cad7c3a849ce2db4204f5e69663a
+
+#aln-kk18-1.ogg
+filetime=Wed Apr 13 12:45:23 2016
+filesize= 879151 bytes
+MD5 (aln-kk18-1.ogg) = 2d0ad0d09a3e2fbd815319b0e4accdd1
+
+#aln-kk18-2.ogg
+filetime=Wed Apr 13 12:45:30 2016
+filesize= 705993 bytes
+MD5 (aln-kk18-2.ogg) = 84e00918699a1ac2c727c19fe58d50b4
+
+#aln-kk18-3.ogg
+filetime=Wed Apr 13 12:45:39 2016
+filesize= 1117145 bytes
+MD5 (aln-kk18-3.ogg) = f178347e371211586e180ec6c14cb59c
+
+#aln-kk19-1.ogg
+filetime=Wed Apr 13 12:45:44 2016
+filesize= 682064 bytes
+MD5 (aln-kk19-1.ogg) = ead45cce5f1c6e800c09ce55b7dcb41f
+
+#aln-kk19-2.ogg
+filetime=Wed Apr 13 12:45:52 2016
+filesize= 888928 bytes
+MD5 (aln-kk19-2.ogg) = daf5d0d104e062a050f99357123634d6
+
+#aln-kk19-3.ogg
+filetime=Wed Apr 13 12:45:59 2016
+filesize= 790433 bytes
+MD5 (aln-kk19-3.ogg) = 0aa41a952f2c47350a2eaf51a2ff2767
+
+#aln-kk2-1.ogg
+filetime=Wed Apr 13 12:46:03 2016
+filesize= 462514 bytes
+MD5 (aln-kk2-1.ogg) = 784dd2e2d6e82039ed3a07ce297d4fb1
+
+#aln-kk2-2.ogg
+filetime=Wed Apr 13 12:46:08 2016
+filesize= 568263 bytes
+MD5 (aln-kk2-2.ogg) = 1ab15e46da65fcbdbbb6761fa68289b2
+
+#aln-kk2-3.ogg
+filetime=Wed Apr 13 12:46:13 2016
+filesize= 603562 bytes
+MD5 (aln-kk2-3.ogg) = 4825fbcc9f82f457a0081185283cd945
+
+#aln-kk20-1.ogg
+filetime=Wed Apr 13 12:46:19 2016
+filesize= 694912 bytes
+MD5 (aln-kk20-1.ogg) = 8f7c1c7b789376e7458f3a2940c200d5
+
+#aln-kk20-2.ogg
+filetime=Wed Apr 13 12:46:26 2016
+filesize= 786037 bytes
+MD5 (aln-kk20-2.ogg) = e3d08ad47dcbb02eb61a56a218f8c3d0
+
+#aln-kk20-3.ogg
+filetime=Wed Apr 13 12:46:34 2016
+filesize= 984056 bytes
+MD5 (aln-kk20-3.ogg) = 4aeac75747fc9a61af53fa641ae2935c
+
+#aln-kk21-1.ogg
+filetime=Wed Apr 13 12:46:41 2016
+filesize= 875024 bytes
+MD5 (aln-kk21-1.ogg) = 9f89e5dfd7ac13bf824ec533da8677a5
+
+#aln-kk21-2.ogg
+filetime=Wed Apr 13 12:46:48 2016
+filesize= 766844 bytes
+MD5 (aln-kk21-2.ogg) = fe34cde6765c0c2e3c7e8f440fb29e2d
+
+#aln-kk21-3.ogg
+filetime=Wed Apr 13 12:46:53 2016
+filesize= 646191 bytes
+MD5 (aln-kk21-3.ogg) = 29e784c03e1f4cb542c516fdadb43750
+
+#aln-kk22-1.ogg
+filetime=Wed Apr 13 12:47:01 2016
+filesize= 892404 bytes
+MD5 (aln-kk22-1.ogg) = 26974579be0bf93a60cd333737fb49ff
+
+#aln-kk22-2.ogg
+filetime=Wed Apr 13 12:47:10 2016
+filesize= 1049307 bytes
+MD5 (aln-kk22-2.ogg) = a77e38a32c2dab57288376af2e22cab9
+
+#aln-kk22-3.ogg
+filetime=Wed Apr 13 12:47:15 2016
+filesize= 649152 bytes
+MD5 (aln-kk22-3.ogg) = d076617984136be4c5440efd5ec2d57d
+
+#aln-kk23-1.ogg
+filetime=Wed Apr 13 12:47:22 2016
+filesize= 800971 bytes
+MD5 (aln-kk23-1.ogg) = 807f9062b40d0b0ac75a8310ac75a54b
+
+#aln-kk23-2.ogg
+filetime=Wed Apr 13 12:47:30 2016
+filesize= 956020 bytes
+MD5 (aln-kk23-2.ogg) = 9b6399dd5ca5359b3b49c15695c5c72e
+
+#aln-kk23-3.ogg
+filetime=Wed Apr 13 12:47:36 2016
+filesize= 740361 bytes
+MD5 (aln-kk23-3.ogg) = c9d5b1b53060bee69494c9b719e5f10d
+
+#aln-kk24-1.ogg
+filetime=Wed Apr 13 12:47:43 2016
+filesize= 796358 bytes
+MD5 (aln-kk24-1.ogg) = f966b9db7a68dafe935943a01664651d
+
+#aln-kk24-2.ogg
+filetime=Wed Apr 13 12:47:52 2016
+filesize= 1005367 bytes
+MD5 (aln-kk24-2.ogg) = 28368ef47470fad4b2137d0d9fc753c4
+
+#aln-kk24-3.ogg
+filetime=Wed Apr 13 12:47:59 2016
+filesize= 926822 bytes
+MD5 (aln-kk24-3.ogg) = 7e61af9b67f90d9249bc3df9419040dc
+
+#aln-kk25-1.ogg
+filetime=Wed Apr 13 12:48:04 2016
+filesize= 569407 bytes
+MD5 (aln-kk25-1.ogg) = 881b61f9b2a3ccade8e32b882f1819b2
+
+#aln-kk25-2.ogg
+filetime=Wed Apr 13 12:48:10 2016
+filesize= 663969 bytes
+MD5 (aln-kk25-2.ogg) = 5fe408770adccb347c90c17cfa915407
+
+#aln-kk25-3.ogg
+filetime=Wed Apr 13 12:48:17 2016
+filesize= 749176 bytes
+MD5 (aln-kk25-3.ogg) = 3817142261e69dee1e6dccad842b932f
+
+#aln-kk26-1.ogg
+filetime=Wed Apr 13 12:48:22 2016
+filesize= 639406 bytes
+MD5 (aln-kk26-1.ogg) = aba4a936ff1f7c0a72f23b4287dec2d0
+
+#aln-kk26-2.ogg
+filetime=Wed Apr 13 12:48:30 2016
+filesize= 941524 bytes
+MD5 (aln-kk26-2.ogg) = f1c31948ca1de0c264b2c0ba2f1d73ff
+
+#aln-kk26-3.ogg
+filetime=Wed Apr 13 12:48:36 2016
+filesize= 730254 bytes
+MD5 (aln-kk26-3.ogg) = 7c48f0426821ced88952110b93314f66
+
+#aln-kk27-1.ogg
+filetime=Wed Apr 13 12:48:43 2016
+filesize= 829578 bytes
+MD5 (aln-kk27-1.ogg) = 2b181395841d7a594b0e77c66aa70691
+
+#aln-kk27-2.ogg
+filetime=Wed Apr 13 12:48:51 2016
+filesize= 894579 bytes
+MD5 (aln-kk27-2.ogg) = 6c98d32df60ff32993844d04a26d12ef
+
+#aln-kk27-3.ogg
+filetime=Wed Apr 13 12:48:58 2016
+filesize= 800482 bytes
+MD5 (aln-kk27-3.ogg) = f044c818685cd820fb4d872028a3a7e0
+
+#aln-kk28-1.ogg
+filetime=Wed Apr 13 12:49:05 2016
+filesize= 890003 bytes
+MD5 (aln-kk28-1.ogg) = 7ae7e186cf36f9ce143a016a54e38ad4
+
+#aln-kk28-2.ogg
+filetime=Wed Apr 13 12:49:13 2016
+filesize= 900550 bytes
+MD5 (aln-kk28-2.ogg) = 4d4e984ae2cf821a45587cefe469fbfb
+
+#aln-kk28-3.ogg
+filetime=Wed Apr 13 12:49:20 2016
+filesize= 826463 bytes
+MD5 (aln-kk28-3.ogg) = ed40844f7edefc6f6bc0cfacf71b6a21
+
+#aln-kk29-1.ogg
+filetime=Wed Apr 13 12:49:27 2016
+filesize= 806890 bytes
+MD5 (aln-kk29-1.ogg) = a7634ffa927b49c892556498589925f2
+
+#aln-kk29-2.ogg
+filetime=Wed Apr 13 12:49:34 2016
+filesize= 780349 bytes
+MD5 (aln-kk29-2.ogg) = 5e73ca2658bd04e7bdf5673506b2119a
+
+#aln-kk29-3.ogg
+filetime=Wed Apr 13 12:49:41 2016
+filesize= 814502 bytes
+MD5 (aln-kk29-3.ogg) = fadc04ce31b0dba7bec778e65662c177
+
+#aln-kk3-1.ogg
+filetime=Wed Apr 13 12:49:46 2016
+filesize= 657733 bytes
+MD5 (aln-kk3-1.ogg) = fbd9edb7208741e5de5b991dcd1fd233
+
+#aln-kk3-2.ogg
+filetime=Wed Apr 13 12:49:52 2016
+filesize= 558947 bytes
+MD5 (aln-kk3-2.ogg) = 15be08e622cd11a85a9191c473e0e167
+
+#aln-kk3-3.ogg
+filetime=Wed Apr 13 12:49:58 2016
+filesize= 713896 bytes
+MD5 (aln-kk3-3.ogg) = fca4844261bff579810a322a86d5cc62
+
+#aln-kk30-1.ogg
+filetime=Wed Apr 13 12:50:04 2016
+filesize= 735208 bytes
+MD5 (aln-kk30-1.ogg) = 206210a420110738b449c48aa1c887ac
+
+#aln-kk30-2.ogg
+filetime=Wed Apr 13 12:50:11 2016
+filesize= 761118 bytes
+MD5 (aln-kk30-2.ogg) = 0aeeb320afdfc865e8f7e212bd6bdf45
+
+#aln-kk30-3.ogg
+filetime=Wed Apr 13 12:50:17 2016
+filesize= 775604 bytes
+MD5 (aln-kk30-3.ogg) = cdbd8b6bb7a0ad534b17f2827f95393e
+
+#aln-kk31-1.ogg
+filetime=Wed Apr 13 12:50:24 2016
+filesize= 824955 bytes
+MD5 (aln-kk31-1.ogg) = 8b627f3314ffd93719032d21a8a7c3c1
+
+#aln-kk31-2.ogg
+filetime=Wed Apr 13 12:50:32 2016
+filesize= 993282 bytes
+MD5 (aln-kk31-2.ogg) = 4c0b59860c6a2dfd0c1191bdaa382931
+
+#aln-kk31-3.ogg
+filetime=Wed Apr 13 12:50:38 2016
+filesize= 643648 bytes
+MD5 (aln-kk31-3.ogg) = 50765d0ffaee414b341e915b2bfa2dce
+
+#aln-kk32-1.ogg
+filetime=Wed Apr 13 12:50:45 2016
+filesize= 866614 bytes
+MD5 (aln-kk32-1.ogg) = 03bc2046a4612742d4be5013b507df2a
+
+#aln-kk32-2.ogg
+filetime=Wed Apr 13 12:50:52 2016
+filesize= 773844 bytes
+MD5 (aln-kk32-2.ogg) = 91e4a913ad5145a4d1755bda6c725851
+
+#aln-kk32-3.ogg
+filetime=Wed Apr 13 12:50:58 2016
+filesize= 744874 bytes
+MD5 (aln-kk32-3.ogg) = 73e4f49dbc18ace7f67493113c7f08eb
+
+#aln-kk33-1.ogg
+filetime=Wed Apr 13 12:51:04 2016
+filesize= 653966 bytes
+MD5 (aln-kk33-1.ogg) = 7ff422a1e6dd1d10f806637957d48d76
+
+#aln-kk33-2.ogg
+filetime=Wed Apr 13 12:51:09 2016
+filesize= 631440 bytes
+MD5 (aln-kk33-2.ogg) = 1d0f258fa1005a899edcc48d34369ce9
+
+#aln-kk33-3.ogg
+filetime=Wed Apr 13 12:51:17 2016
+filesize= 891305 bytes
+MD5 (aln-kk33-3.ogg) = bc66f41d436f0c0d876556b77ac9c721
+
+#aln-kk34-1.ogg
+filetime=Wed Apr 13 12:51:25 2016
+filesize= 943412 bytes
+MD5 (aln-kk34-1.ogg) = ac1b904a291f1c4fdba505462fc87b67
+
+#aln-kk34-2.ogg
+filetime=Wed Apr 13 12:51:34 2016
+filesize= 1007447 bytes
+MD5 (aln-kk34-2.ogg) = 9d2acfdc140bcfb6765ab4b1cedb875a
+
+#aln-kk34-3.ogg
+filetime=Wed Apr 13 12:51:40 2016
+filesize= 682680 bytes
+MD5 (aln-kk34-3.ogg) = ad9247c7ae22b47104ba1732ac981c47
+
+#aln-kk35-1.ogg
+filetime=Wed Apr 13 12:51:47 2016
+filesize= 925482 bytes
+MD5 (aln-kk35-1.ogg) = f68bf3f60e02db647c7cb39f4356fa23
+
+#aln-kk35-2.ogg
+filetime=Wed Apr 13 12:51:54 2016
+filesize= 840699 bytes
+MD5 (aln-kk35-2.ogg) = 65b6c55b9aa4022ee0c2998eaa8fe25e
+
+#aln-kk35-3.ogg
+filetime=Wed Apr 13 12:52:01 2016
+filesize= 854062 bytes
+MD5 (aln-kk35-3.ogg) = 4128ac5fc8f4ed7c6cb733308e96c84f
+
+#aln-kk36-1.ogg
+filetime=Wed Apr 13 12:52:10 2016
+filesize= 989318 bytes
+MD5 (aln-kk36-1.ogg) = 3f68c63ecb340da1cb915ec19ab0871b
+
+#aln-kk36-2.ogg
+filetime=Wed Apr 13 12:52:16 2016
+filesize= 758495 bytes
+MD5 (aln-kk36-2.ogg) = 818aa04b221772e1260707e620859785
+
+#aln-kk36-3.ogg
+filetime=Wed Apr 13 12:52:22 2016
+filesize= 727585 bytes
+MD5 (aln-kk36-3.ogg) = 853489171420ed52e05fccea0417a54d
+
+#aln-kk37-1.ogg
+filetime=Wed Apr 13 12:52:29 2016
+filesize= 805465 bytes
+MD5 (aln-kk37-1.ogg) = 9849f5ac876a41322e24c1ef5896837e
+
+#aln-kk37-2.ogg
+filetime=Wed Apr 13 12:52:36 2016
+filesize= 766683 bytes
+MD5 (aln-kk37-2.ogg) = 670e8473df1f8871cda7a20b629e5f96
+
+#aln-kk37-3.ogg
+filetime=Wed Apr 13 12:52:43 2016
+filesize= 911174 bytes
+MD5 (aln-kk37-3.ogg) = 52aa82ae63bfcbd38b135d90e33888d9
+
+#aln-kk38-1.ogg
+filetime=Wed Apr 13 12:52:52 2016
+filesize= 1047817 bytes
+MD5 (aln-kk38-1.ogg) = ba7c552131ca469ff338a0c1b5e899de
+
+#aln-kk38-2.ogg
+filetime=Wed Apr 13 12:52:59 2016
+filesize= 798216 bytes
+MD5 (aln-kk38-2.ogg) = c20ac0b1603d98f06cd94f0d51588269
+
+#aln-kk38-3.ogg
+filetime=Wed Apr 13 12:53:06 2016
+filesize= 808459 bytes
+MD5 (aln-kk38-3.ogg) = 7e00f719735ad2e3d974e77b1b0c4d8d
+
+#aln-kk39-1.ogg
+filetime=Wed Apr 13 12:53:13 2016
+filesize= 794041 bytes
+MD5 (aln-kk39-1.ogg) = bbb7ba4e438b4856ca574fb395bb4a94
+
+#aln-kk39-2.ogg
+filetime=Wed Apr 13 12:53:20 2016
+filesize= 843310 bytes
+MD5 (aln-kk39-2.ogg) = e1ca5cfa47dbcfa1ddff1b602a30ff87
+
+#aln-kk39-3.ogg
+filetime=Wed Apr 13 12:53:26 2016
+filesize= 740498 bytes
+MD5 (aln-kk39-3.ogg) = e8732213840cc577eb214dee821ca47f
+
+#aln-kk4-1.ogg
+filetime=Wed Apr 13 12:53:33 2016
+filesize= 767856 bytes
+MD5 (aln-kk4-1.ogg) = 45571f258a09232d8a71fd8fa78377e5
+
+#aln-kk4-2.ogg
+filetime=Wed Apr 13 12:53:40 2016
+filesize= 883416 bytes
+MD5 (aln-kk4-2.ogg) = e268956103bfee0250bd2588a379c303
+
+#aln-kk4-3.ogg
+filetime=Wed Apr 13 12:53:48 2016
+filesize= 901389 bytes
+MD5 (aln-kk4-3.ogg) = 88e88a5965a1a6a7309cfdc6b3791d6b
+
+#aln-kk40-1.ogg
+filetime=Wed Apr 13 12:53:54 2016
+filesize= 696881 bytes
+MD5 (aln-kk40-1.ogg) = 0527e06dcedbb1ceaf87dd9f3039afa5
+
+#aln-kk40-2.ogg
+filetime=Wed Apr 13 12:54:00 2016
+filesize= 795495 bytes
+MD5 (aln-kk40-2.ogg) = f3eb2bbf6effc3c58e70354dc818f074
+
+#aln-kk40-3.ogg
+filetime=Wed Apr 13 12:54:06 2016
+filesize= 652256 bytes
+MD5 (aln-kk40-3.ogg) = 8d44ebdb6148dac9461b61c0674acc64
+
+#aln-kk41-1.ogg
+filetime=Wed Apr 13 12:54:15 2016
+filesize= 993585 bytes
+MD5 (aln-kk41-1.ogg) = a3cd6af58a6c28fde3975b4871ab7643
+
+#aln-kk41-2.ogg
+filetime=Wed Apr 13 12:54:23 2016
+filesize= 981189 bytes
+MD5 (aln-kk41-2.ogg) = 530783f22a649c52623129b503ec0d35
+
+#aln-kk41-3.ogg
+filetime=Wed Apr 13 12:54:30 2016
+filesize= 887566 bytes
+MD5 (aln-kk41-3.ogg) = fe49fbd12bf0d3adef1aa577cb17d780
+
+#aln-kk42-1.ogg
+filetime=Wed Apr 13 12:54:37 2016
+filesize= 772814 bytes
+MD5 (aln-kk42-1.ogg) = e46a813bceabbbfb18b23b8065c8c830
+
+#aln-kk42-2.ogg
+filetime=Wed Apr 13 12:54:44 2016
+filesize= 867171 bytes
+MD5 (aln-kk42-2.ogg) = ee4b74f375415b74f7c5d7acb1c00f0c
+
+#aln-kk42-3.ogg
+filetime=Wed Apr 13 12:54:51 2016
+filesize= 732654 bytes
+MD5 (aln-kk42-3.ogg) = f32005f1b09d8e51c735a4cd2f762dac
+
+#aln-kk43-1.ogg
+filetime=Wed Apr 13 12:54:57 2016
+filesize= 778159 bytes
+MD5 (aln-kk43-1.ogg) = 6edc178c05f9f3a205b2f3ffba9b3017
+
+#aln-kk43-2.ogg
+filetime=Wed Apr 13 12:55:05 2016
+filesize= 877411 bytes
+MD5 (aln-kk43-2.ogg) = ba0bd5570b95ec8e7ad694e3565d84da
+
+#aln-kk43-3.ogg
+filetime=Wed Apr 13 12:55:15 2016
+filesize= 1199159 bytes
+MD5 (aln-kk43-3.ogg) = 559a2a6ce820126df6769763ca559e44
+
+#aln-kk44-1.ogg
+filetime=Wed Apr 13 12:55:23 2016
+filesize= 1053635 bytes
+MD5 (aln-kk44-1.ogg) = 00b84fd0e441827e6a0b63239c49f505
+
+#aln-kk44-2.ogg
+filetime=Wed Apr 13 12:55:32 2016
+filesize= 1041858 bytes
+MD5 (aln-kk44-2.ogg) = c899ff43f5fda473c7223cc288b45c6a
+
+#aln-kk44-3.ogg
+filetime=Wed Apr 13 12:55:44 2016
+filesize= 1435578 bytes
+MD5 (aln-kk44-3.ogg) = a0d1ce0482ec5f9ff26072d93527872c
+
+#aln-kk45-1.ogg
+filetime=Wed Apr 13 12:55:51 2016
+filesize= 789789 bytes
+MD5 (aln-kk45-1.ogg) = a1097921ac5c2852df874a868cb162c2
+
+#aln-kk45-2.ogg
+filetime=Wed Apr 13 12:55:57 2016
+filesize= 709284 bytes
+MD5 (aln-kk45-2.ogg) = 248c3da3df6b9b382ee9e9290a788d30
+
+#aln-kk45-3.ogg
+filetime=Wed Apr 13 12:56:05 2016
+filesize= 956816 bytes
+MD5 (aln-kk45-3.ogg) = f02a1990ca2bae2f32f03214d4df3e69
+
+#aln-kk46-1.ogg
+filetime=Wed Apr 13 12:56:13 2016
+filesize= 914142 bytes
+MD5 (aln-kk46-1.ogg) = 70ce6c897ae0368d24c2287c78c144ac
+
+#aln-kk46-2.ogg
+filetime=Wed Apr 13 12:56:20 2016
+filesize= 843585 bytes
+MD5 (aln-kk46-2.ogg) = 5ae76c23b137282fa0c970914f17388c
+
+#aln-kk46-3.ogg
+filetime=Wed Apr 13 12:56:28 2016
+filesize= 934508 bytes
+MD5 (aln-kk46-3.ogg) = 93fe29c3676d839a117bad99830b90cb
+
+#aln-kk47-1.ogg
+filetime=Wed Apr 13 12:56:36 2016
+filesize= 1019950 bytes
+MD5 (aln-kk47-1.ogg) = 34201edbc24fcb769805bac16f73c243
+
+#aln-kk47-2.ogg
+filetime=Wed Apr 13 12:56:43 2016
+filesize= 821832 bytes
+MD5 (aln-kk47-2.ogg) = 386c3d747535e3751420dcaf75dacc95
+
+#aln-kk47-3.ogg
+filetime=Wed Apr 13 12:56:51 2016
+filesize= 913676 bytes
+MD5 (aln-kk47-3.ogg) = cbb5c3754d5ecf423391f2ec0ef28d44
+
+#aln-kk48-1.ogg
+filetime=Wed Apr 13 12:56:57 2016
+filesize= 777182 bytes
+MD5 (aln-kk48-1.ogg) = 58ce18893e1d63ac293de66b683c847f
+
+#aln-kk48-2.ogg
+filetime=Wed Apr 13 12:57:04 2016
+filesize= 757038 bytes
+MD5 (aln-kk48-2.ogg) = aee33418035bb642bd9b8e2d19677816
+
+#aln-kk48-3.ogg
+filetime=Wed Apr 13 12:57:10 2016
+filesize= 710257 bytes
+MD5 (aln-kk48-3.ogg) = d002a44fc75ef11e81ba0b2d0a7d8a09
+
+#aln-kk49-1.ogg
+filetime=Mon May 30 18:00:30 2016
+filesize= 767131 bytes
+MD5 (aln-kk49-1.ogg) = 7fabb677a75da2406e30ac9a732215e0
+
+#aln-kk49-2.ogg
+filetime=Mon May 30 18:00:37 2016
+filesize= 882168 bytes
+MD5 (aln-kk49-2.ogg) = 9509ebc4a6e709791ae3c3f005f624a2
+
+#aln-kk49-3.ogg
+filetime=Mon May 30 18:00:44 2016
+filesize= 858788 bytes
+MD5 (aln-kk49-3.ogg) = 72e2bd5851bb1bea2b7555c742fb0f55
+
+#aln-kk5-1.ogg
+filetime=Wed Apr 13 12:57:19 2016
+filesize= 984945 bytes
+MD5 (aln-kk5-1.ogg) = 1a94fc77369ba26cdc3c808c0ae312c1
+
+#aln-kk5-2.ogg
+filetime=Wed Apr 13 12:57:27 2016
+filesize= 882324 bytes
+MD5 (aln-kk5-2.ogg) = 163395addd8bf4f387bc8065f710d4dc
+
+#aln-kk5-3.ogg
+filetime=Wed Apr 13 12:57:33 2016
+filesize= 751879 bytes
+MD5 (aln-kk5-3.ogg) = 69458cd096f42a46ba352f7a6fffe615
+
+#aln-kk50-1.ogg
+filetime=Mon Jun 20 11:19:16 2016
+filesize= 1004436 bytes
+MD5 (aln-kk50-1.ogg) = 9a31eb16f5da8d9a8f287fc8be2880ad
+
+#aln-kk50-2.ogg
+filetime=Mon Jun 20 11:19:26 2016
+filesize= 1160102 bytes
+MD5 (aln-kk50-2.ogg) = 36fc4d1d3e06d81276a2dc32c220e1a3
+
+#aln-kk50-3.ogg
+filetime=Mon Jun 20 11:19:33 2016
+filesize= 965504 bytes
+MD5 (aln-kk50-3.ogg) = 54a18e9c2f9e0c76638d037e6dd1b64e
+
+#aln-kk51-1.ogg
+filetime=Wed Jul 20 08:30:12 2016
+filesize= 857950 bytes
+MD5 (aln-kk51-1.ogg) = 72b65745eef22a90c14901753e2d0c8e
+
+#aln-kk51-2.ogg
+filetime=Sat Oct 22 11:16:46 2016
+filesize= 1308907 bytes
+MD5 (aln-kk51-2.ogg) = 7ab9e3967b51e252829daab2fdec43f7
+
+#aln-kk51-3.ogg
+filetime=Mon Feb  6 11:04:01 2017
+filesize= 993368 bytes
+MD5 (aln-kk51-3.ogg) = e981370bf6b503e079b0b49d14b577a7
+
+#aln-kk52-1.ogg
+filetime=Mon Feb  6 11:04:08 2017
+filesize= 727256 bytes
+MD5 (aln-kk52-1.ogg) = 470b6f0df44d6bd39598d385f5606bf9
+
+#aln-kk52-2.ogg
+filetime=Fri Mar 31 09:22:58 2017
+filesize= 754833 bytes
+MD5 (aln-kk52-2.ogg) = 464c2e57933a83f5955d10dcd6e1132a
+
+#aln-kk52-3.ogg
+filetime=Mon Sep 11 11:27:12 2017
+filesize= 924532 bytes
+MD5 (aln-kk52-3.ogg) = 2fe64fb42260185dcf121d9f7c42f9d7
+
+#aln-kk6-1.ogg
+filetime=Wed Apr 13 12:57:40 2016
+filesize= 792417 bytes
+MD5 (aln-kk6-1.ogg) = 7598bd12fba3a1861c8fa605d539e309
+
+#aln-kk6-2.ogg
+filetime=Wed Apr 13 12:57:47 2016
+filesize= 790171 bytes
+MD5 (aln-kk6-2.ogg) = c514611a14275df6f0c36014712cd657
+
+#aln-kk6-3.ogg
+filetime=Wed Apr 13 12:57:53 2016
+filesize= 732710 bytes
+MD5 (aln-kk6-3.ogg) = eb6332c321d0f71a0a567bc9c047d603
+
+#aln-kk7-1.ogg
+filetime=Wed Apr 13 12:57:59 2016
+filesize= 748967 bytes
+MD5 (aln-kk7-1.ogg) = 37e4bbdc61398c7e91a52306bb13bf59
+
+#aln-kk7-2.ogg
+filetime=Wed Apr 13 12:58:05 2016
+filesize= 647635 bytes
+MD5 (aln-kk7-2.ogg) = 0fe6d682245d250348827300eacf5f25
+
+#aln-kk7-3.ogg
+filetime=Wed Apr 13 12:58:10 2016
+filesize= 561083 bytes
+MD5 (aln-kk7-3.ogg) = 8650656550f08267893fb74f42bded4d
+
+#aln-kk8-1.ogg
+filetime=Wed Apr 13 12:58:15 2016
+filesize= 647928 bytes
+MD5 (aln-kk8-1.ogg) = e8b9adddf1fe89d19425c11ab9765575
+
+#aln-kk8-2.ogg
+filetime=Wed Apr 13 12:58:20 2016
+filesize= 498265 bytes
+MD5 (aln-kk8-2.ogg) = 61a6118efc5f9a7a53ea8a49983eabae
+
+#aln-kk8-3.ogg
+filetime=Wed Apr 13 12:58:25 2016
+filesize= 669336 bytes
+MD5 (aln-kk8-3.ogg) = fe6f00b60eb78895c10ba25d9dd9131e
+
+#aln-kk9-1.ogg
+filetime=Wed Apr 13 12:58:31 2016
+filesize= 603886 bytes
+MD5 (aln-kk9-1.ogg) = aa0f04f76524e0bd773c6e30b4450a09
+
+#aln-kk9-2.ogg
+filetime=Wed Apr 13 12:58:36 2016
+filesize= 589059 bytes
+MD5 (aln-kk9-2.ogg) = 4d3595f9579226d66473e31a57198081
+
+#aln-kk9-3.ogg
+filetime=Wed Apr 13 12:58:43 2016
+filesize= 844865 bytes
+MD5 (aln-kk9-3.ogg) = a7a9e025a28359da26709e390bf04214
+
+#ee-1.ogg
+filetime=Wed Apr 13 12:58:46 2016
+filesize= 369898 bytes
+MD5 (ee-1.ogg) = 109e3e00dbf2a2afa469691e4094fe67
+
+#ee-10.ogg
+filetime=Wed Apr 13 12:58:55 2016
+filesize= 1085605 bytes
+MD5 (ee-10.ogg) = 93c734c104f5737f748e5f8e0e81f275
+
+#ee-2.ogg
+filetime=Wed Apr 13 12:59:01 2016
+filesize= 633460 bytes
+MD5 (ee-2.ogg) = e950ae40263cb5f3b6afcd0ef9bf5008
+
+#ee-3.ogg
+filetime=Wed Apr 13 12:59:06 2016
+filesize= 585531 bytes
+MD5 (ee-3.ogg) = 362383674fbd8ed8e3b42edf44d41b6d
+
+#ee-4.ogg
+filetime=Wed Apr 13 12:59:11 2016
+filesize= 648491 bytes
+MD5 (ee-4.ogg) = 141ae2e4505a689d46d5a5a130f164bd
+
+#ee-5.ogg
+filetime=Wed Apr 13 12:59:16 2016
+filesize= 549661 bytes
+MD5 (ee-5.ogg) = 0d84aac710cb31d722c66ae4ad2917da
+
+#ee-6.ogg
+filetime=Wed Apr 13 12:59:26 2016
+filesize= 1162323 bytes
+MD5 (ee-6.ogg) = 0753a2a7e42dca06ec65bcdeb291beb6
+
+#ee-7.ogg
+filetime=Wed Apr 13 12:59:34 2016
+filesize= 903525 bytes
+MD5 (ee-7.ogg) = e7a26b8be68a4557ee8b26e7e088e13b
+
+#ee-8.ogg
+filetime=Wed Apr 13 12:59:42 2016
+filesize= 1034464 bytes
+MD5 (ee-8.ogg) = 1a4b35051be74bb5148fc92680e73cd3
+
+#ee-9.ogg
+filetime=Wed Apr 13 12:59:48 2016
+filesize= 692529 bytes
+MD5 (ee-9.ogg) = 6e1bf45cbd8cfc99108677e8f33820c9
+
+#eeb-1.ogg
+filetime=Wed Apr 13 12:59:51 2016
+filesize= 304976 bytes
+MD5 (eeb-1.ogg) = a871b013b878fffc4981b945ef3f4e6a
+
+#k79.ogg
+filetime=Wed Apr 13 13:00:12 2016
+filesize= 724376 bytes
+MD5 (k79.ogg) = 72ee9751bbe8d1903d35bc32275300e8
+
+#k80.ogg
+filetime=Wed Apr 13 13:00:19 2016
+filesize= 837356 bytes
+MD5 (k80.ogg) = 65b289e9ec78332cfad57046aa37a73e
+
+#k82.ogg
+filetime=Wed Apr 13 13:00:25 2016
+filesize= 761419 bytes
+MD5 (k82.ogg) = abaee06c9709d28dd137a614306d490c
+
+#k83.ogg
+filetime=Wed Apr 13 13:00:33 2016
+filesize= 853558 bytes
+MD5 (k83.ogg) = 995dc01c5d695187b0166cdf2d6f2165
+
+#k84.ogg
+filetime=Wed Apr 13 13:00:40 2016
+filesize= 859423 bytes
+MD5 (k84.ogg) = 79d297de6abf5e294d595b10f317c696
+
+#k86.ogg
+filetime=Wed Apr 13 13:00:45 2016
+filesize= 608889 bytes
+MD5 (k86.ogg) = 97c63e90e84d22cabf668d6c3275190b
+
+
+END_OF_FILE
+
+
+Process finished with exit code 0
