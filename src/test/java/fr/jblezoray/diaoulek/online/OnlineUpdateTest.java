@@ -1,6 +1,7 @@
 package fr.jblezoray.diaoulek.online;
 
 import fr.jblezoray.diaoulek.Config;
+import fr.jblezoray.diaoulek.online.model.Lesson;
 import fr.jblezoray.diaoulek.online.model.OnlineUpdateEntry;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Assertions;
@@ -22,7 +23,7 @@ public class OnlineUpdateTest {
     }
 
     @Test
-    public void test() throws IOException, URISyntaxException {
+    public void testParseIndex() throws IOException, URISyntaxException {
         // having
         String fileContent = readResource("/tot-file-tank.txt");
 
@@ -38,6 +39,19 @@ public class OnlineUpdateTest {
             Assertions.assertNotNull(entry.getFiletimeDate());
             Assertions.assertNotNull(entry.getMd5());
         }
+    }
+
+    @Test
+    public void testParseLesson() throws IOException, URISyntaxException {
+        // having
+        String fileContent = readResource("/k17.txt");
+        OnlineUpdateEntry oueMock = new OnlineUpdateEntry(null,null,null,null);
+
+        // when
+        Lesson lesson = new OnlineUpdate().parseLesson(fileContent, oueMock);
+
+        // then
+
     }
 
 

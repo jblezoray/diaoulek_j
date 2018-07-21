@@ -1,0 +1,144 @@
+!# K17
+!QR  Q=br  R=fr
+!
+!    Version 0  May 17, 2011
+!    Version  1 :  February 13, 2017 
+!    License Creative Commons by nc sa
+!
+!
+!    Author : Al. Nandert
+!    begins : April 25 2011
+!    Spell correction  May 17 2011 
+!    Spell correction  February 13, 2017 
+!    Svox checked : February 13, 2017 
+!
+
+!
+!     BZ   Buhez ar Zent  (Marikavel)
+!     Black Mort.  Black and Mortimer (Brezhoweb)
+!     Wnoz  Webnoz (Brezhoweb)
+!     Th   Buhez Santez Thereza ar mabig Jesus (alnfurch)
+!     TS   Ti Satanazet (alnfurch)
+!     CP   Cours de CP de Le Bozec (Marikavel)
+!     JK   Jakez Karter, livre pour enfants An Here.
+!     K    Katekiz e Brezhoneg (St Brieuc - Tréguier)
+!     KA   Koulmig Arvor : Marie-Philomène Cadoret
+!     MV   Marvailhoù ar Vretoned
+!
+
+
+#diaezus * qualité qualificatif  négatif
+R#gênant *
+<))  aln-k17.ogg  11264   106496 
+Q>   diaezus ; 
+R>   gênant ; 
+
+#alc'houeder *  oiseau 
+R#alouette *
+<))  aln-k17.ogg   119808   381440
+Q>  an alc'houeder ; alc'houedered ; 
+    daou alc'houeder ;
+R>  une alouette ; ...
+
+#moualc'h, mouilc'hi *  oiseau 
+R# merle *
+<))  aln-k17.ogg   382976   676864
+Q>  moualc'h, ar voualc'h ; mouilc'hi ; 
+    div voualc'h ;
+R>  merle, le merle ; ...
+
+#drask, driski *  oiseau 
+R# grive *
+<))  aln-k17.ogg   684544   979456
+Q>  an drask ; drasked, driski ; 
+    div zrask ;
+R>  la grive ; 2 plur. ; ...
+
+#an neb * utilitaire  personne
+R#quiconque *
+<))  aln-k17.ogg   989184   1076736 
+Q>   an neb ; 
+R>   quiconque ; 
+
+#a dre ; a dre e dreid * expression position  
+%#a-dre ; a-dre e dreid * utilitaire lieu  
+R#hors de *
+<))  aln-k17.ogg   1073152   1281536
+Q>  [1] a-dre e dreid ;
+    [2] a-dre he zreid ;
+R>  [1] hors de ses pieds [à lui] ; 
+    [2] hors de ses pieds [à elle] ;
+
+#endeo * utilitaire  temps 
+R#déjà *
+<))  aln-k17.ogg    1299968    1391616 
+Q>   endeo ; 
+R>   déjà ; 
+
+##fellout *KE-36 * verbe société 
+
+##teurvezout *KK12-2 * Q2 verbe société 
+
+#teurvezout gantañ, teurvezout dezhañ * expression société  
+R#daigner, vouloir bien *
+<))  aln-k17.ogg   1409024   1645568
+Q>   bremañ e teurvez dezhañ ;
+     bremañ e teurvez gantañ ;
+R>   maintenant il daigne [il veut bien] (2) ; 
+
+#peur edo, d'an daouzek ; peur edo ? d'an daouzek a viz Gouere edo * date  
+R#quand c'était, douze [le doute] *
+<))  aln-k17.ogg   1655296   1873408
+Q>   Peur edo ? 
+     D'an daouzek a viz Gouere edo. ; 
+R>   Quand c'était ?
+     C'était le douze juillet. ; 
+
+
+##seiz *KE-20 * matière commerce 
+
+#seizek * qualificatif  positif
+R#soyeux *
+<))  aln-k17.ogg   1884160   1974272
+Q>   seizek ; 
+R>   soyeux ; 
+
+#reun * Q2 matière animal ferme  
+R#crin, soie [de porc] *
+<))  aln-k17.ogg   1982976   2157568
+Q>   reun (2) ; ur reunenn (2) ; 
+R>   du crin, des soies de porc ;
+     un fil de crin, une soie de porc ;
+
+#pig *  oiseau 
+R#pie *
+<))  aln-k17.ogg   2166272   2367488 
+Q>  ar big ; piged ; div big ; 
+R>  la pie ; ...
+
+#pilkoad, kazeg-koad, kezeg-koad, kezekenned-koad * Q2 oiseau 
+R#pivert *
+<))  aln-k17.ogg    2380288   2995200
+Q>  [1] ar pilkoad ; pilkoaded ; daou bilkoad ;
+    [2] ar gazeg-koad ; kezeg-koad, kezekenned-koad ;
+    div gazeg-koad ;
+R>  [1] le pivert ; ...
+    [2] le pivert ; 2 plur. ; ...
+
+#drastus * Q2 qualificatif économie négatif
+R#ruineux, pénible *
+<))  aln-k17.ogg   3000320   3107328
+Q>   drastus (2) ; 
+R>   ruineux, pénible ; 
+
+#aloubiñ * verbe guerre société
+R#envahir *
+<))  aln-k17.ogg   3122176   3274240 
+Q>   aloubiñ ; aloubet (p. passé) ; 
+R>   envahir ; p. passé ; 
+
+#haroz *  personne société positif 
+R#héros *
+<))  aln-k17.ogg   3299840   3526656
+Q>  an haroz ; harozed ; daou haroz ;
+R>  le héros ; ...

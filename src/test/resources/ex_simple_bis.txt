@@ -1,0 +1,62 @@
+!# EX-01
+!
+!  Exemple de leçon simplifiée destinée à
+!  l'apprentissage du vocabulaire.
+!
+!  Attention :  la première ligne est obligatoire
+!  Elle donne l'alias de la leçon. Vous pouvez utiliser
+!  quelques lettres ou chiffres et le tiret.
+!  Jamais deux leçons avec le même alias,
+!  la deuxième serait ignorée.
+!  En tapant EX-1  dans la ligne de commande, vous
+!  pouvez rappeler cette leçon si elle a été
+!  indiquée dans le fichier diaou.conf
+!
+!  Dans une leçon, vous
+!  pouvez mettre vos propres mots ou phrases
+!  ou réutiliser les mots de votre fichier diaou_dico
+!  qu'il vous faudra générer en tapant
+!             !dico
+!  dans la ligne de commande du logiciel DIAOULEK.
+!  (n'oubliez pas le point d'exclamation devant dico)
+!
+!  Ici, les lignes commençant par un point d'exclamation
+!  sont des commentaires. Elles sont ignorées
+!  par le logiciel DIAOULEK ( sauf le "shabang" !# )
+!
+!
+
+#
+Q>  ur gouli
+R>  une blessure
+
+#
+Q>  ur gleizenn ; kleizennoù ; div gleizenn ;
+R>  une cicatrice ; pluriel ; deux cicatrices ;
+
+##loa *KE-16 2606 * ustensile nourriture
+
+#
+Q>  strafuilhañ (2)
+R>  Troubler, Inquiéter
+
+#
+Q>  gennañ
+R>  coincer
+
+#
+Q>  ur berad ; beradoù ; daou verad
+R>  une goutte ; ...
+
+##loen *KE-28 1473 * animal
+
+##mamm *KE-12 2887 * famille
+
+#
+Q>  sempl
+R>  faible ; débile
+
+#
+Q>  mallus
+R>  urgent
+

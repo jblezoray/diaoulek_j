@@ -20,6 +20,10 @@ public class OnlineUpdateEntry {
         this.filetimeDate = filetimeDate;
     }
 
+    public OnlineUpdateEntry(OnlineUpdateEntry oue) {
+        this(oue.filename, oue.filename, oue.md5, oue.filetimeDate);
+    }
+
 
     public String getFilename() {
         return filename;
