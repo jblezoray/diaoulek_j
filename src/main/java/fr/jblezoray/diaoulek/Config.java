@@ -1,7 +1,10 @@
 package fr.jblezoray.diaoulek;
 
-public interface Config {
-  
-  public static final String URL_UPDATE = "http://furchhadiaoulek.free.fr/TANK-BF/";
-  
+import java.io.File;
+import java.nio.charset.Charset;
+
+interface Config {
+  String URL_UPDATE = "http://furchhadiaoulek.free.fr/TANK-BF/";
+  Charset CHARSET = Charset.forName("UTF-8"); // ISO-8859-1
+  File CACHE_DIR = new File("./downloaded_files_cache");
 }

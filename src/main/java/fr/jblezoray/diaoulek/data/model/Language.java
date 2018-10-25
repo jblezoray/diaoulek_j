@@ -1,6 +1,5 @@
-package fr.jblezoray.diaoulek.online.model;
+package fr.jblezoray.diaoulek.data.model;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 public enum Language {

@@ -70,7 +70,7 @@ R>   une grande efficacitÃ© (m/f) ;
 
 #pa bar al loar *  expression astronomie lumiÃ¨re
 %#paraÃ±, loar ; pa bar al loar *  expression astronomie lumiÃ¨re
-R#briller, lune ; lorsque brille la lune *
+R#briller, lune ; lorsque brille la lune *q
 <))  aln-kk12-2.ogg   616448   722944
 Q>   pa bar al loar ; (EmB)
 R>   lorsque brille la lune ;
