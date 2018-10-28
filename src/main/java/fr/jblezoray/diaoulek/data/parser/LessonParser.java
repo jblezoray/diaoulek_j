@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.data;
+package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.*;
 import org.slf4j.Logger;
@@ -7,87 +7,70 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Lesson {
+public class LessonParser implements IParser<LessonEntry> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Lesson.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LessonParser.class);
 
-    private final LessonEntry l;
+    private final Charset charset;
 
-    public Lesson(FileIndexEntry fileIndexEntry) {
-         l = new LessonEntry(fileIndexEntry);
+    public LessonParser(Charset charset) {
+         this.charset = charset;
     }
 
-    public LessonEntry getResult() {
-        return l;
-    }
-
-    public boolean smellsLikeLesson() {
-        String filename = this.l.getFileIndexEntry().getFilename();
+    @Override
+    public boolean seemsParseable(FileIndexEntry fileIndexEntry) {
+        String filename = fileIndexEntry.getFilename();
         return filename.endsWith(".txt") &&
                 !filename.startsWith("IDX1");
     }
 
-    public void parse(String fileContent) throws DataException {
+    @Override
+    public LessonEntry parse(byte[] fileContent, FileIndexEntry fileIndexEntry) throws DataException {
+        LessonEntry le = new LessonEntry(fileIndexEntry);
 
-        try (BufferedReader br =  new BufferedReader(new StringReader(fileContent))) {
+        DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset);
+        le.setAlias(reader.getFileAlias());
 
-            // DOC: La première ligne de la leçon doit commencer par les
-            // signes « !# » suivis d'un espace et de l'alias de la leçon.
-            String line = br.readLine();
-            if (!line.startsWith("!#")) throw new DataException(line);
-            l.setAlias(line.substring(2).trim());
-
-            while ((line =br.readLine()) != null) {
-
-                // DOC: Les lignes commençant par le signe « ! » sont des
-                // commentaires et sont ignorées.
-                if (line.startsWith("!")) continue;
-
-                // Empty line to ignore.
-                if (line.trim().length()==0) continue;
-
-                // something between two lines of '###...' is a Lesson text.
-                if (line.startsWith("###")) {
-                    // read all the lines until another line of '#'.
-                    List<String> lines = readLinesUntil(br,
-                            l -> !l.replaceAll(" ", "").matches("^#{3,}$"));
-                    parseLessonText(lines);
-                }
-                // "##something..." is a word reference from another lesson.
-                else if (line.startsWith("##")) {
-                    parseWordReference(line);
-                }
-                // DOC: On introduira ensuite les couples de questions et
-                // réponses par les signes «#», «Q>» et «R>»
-                else if (line.startsWith("#")) {
-                    // read all the subsequent lines, until a blank one.
-                    List<String> lines = readLinesUntil(br,
-                            l -> l.trim().length() > 0);
-                    parseQRCouple(line, lines);
-                }
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-    private List<String> readLinesUntil(BufferedReader br, Predicate<String> continuationCondition) throws IOException {
-        List<String> lines = new ArrayList<>();
         String line;
-        while ((line = br.readLine())!=null && continuationCondition.test(line))
-            lines.add(line);
-        return lines;
+        while ((line=reader.readLine()) != null) {
+
+            // something between two lines of '###...' is a Lesson text.
+            if (line.startsWith("###")) {
+                // read all the lines until another line of '#'.
+                List<String> lines = reader.readLinesUntil(
+                        l -> !l.replaceAll(" ", "").matches("^#{3,}$"));
+                Text text = parseLessonText(lines);
+                le.getLessonElements().add(text);
+            }
+            // "##something..." is a word reference from another lesson.
+            else if (line.startsWith("##")) {
+                WordReference wr = parseWordReference(line);
+                le.getLessonElements().add(wr);
+            }
+            // DOC: On introduira ensuite les couples de questions et
+            // réponses par les signes «#», «Q>» et «R>»
+            else if (line.startsWith("#")) {
+                // read all the subsequent lines, until a blank one.
+                List<String> lines = reader.readLinesUntil(
+                        l -> l.trim().length() > 0);
+                QRCouple qrCouple = parseQRCouple(line, lines);
+                le.getLessonElements().add(qrCouple);
+            }
+        }
+
+        return le;
     }
 
-    private void parseLessonText(List<String> lines) {
+
+    private static Text parseLessonText(List<String> lines) {
         String lessonText = String.join("\n", lines);
-        this.l.getLessonElements().add(new Text(lessonText));
+        return new Text(lessonText);
     }
 
     // Pour réutiliser l'entrée « anken » dans une de vos leçon, il suffit
@@ -99,7 +82,7 @@ public class Lesson {
     // indispensable, on y trouve cependant la liste des étiquettes attachées
     // à cette entrée, ici « sentiment » et c'est parfois bien utile pour
     // choisir le mot ou améliorer la base de données.
-    private void parseWordReference(String line) throws DataException {
+    private static WordReference parseWordReference(String line) throws DataException {
         String[] split = line.substring(2).split("\\s+");
         if (split.length<2) throw new DataException(line);
 
@@ -111,11 +94,11 @@ public class Lesson {
             String[] tags = Arrays.copyOfRange(split, 4, split.length);
             wr.setTags(tags);
         }
-        l.getLessonElements().add(wr);
+        return wr;
     }
 
 
-    private void parseQRCouple(String firstLine, List<String> lines) throws DataException{
+    private static QRCouple parseQRCouple(String firstLine, List<String> lines) throws DataException{
         QRCouple qrCouple = new QRCouple();
         qrCouple.setSeparationLine(parseSeparationLine(firstLine, "#"));
 
@@ -141,20 +124,18 @@ public class Lesson {
             } else if (line.startsWith("R>")) {
                 // TODO
 
-            } else if (line.startsWith("  ")) {
-                // skip it.
-                // it is part of a Q> or a R>, and was already parsed.
             } else {
-                throw new DataException("unrecognized line : " + line);
+                // Skip it.  It is either :
+                // - part of a Q> or a R>, and was already parsed.
+                // - a blank line
             }
         }
-
-        l.getLessonElements().add(qrCouple);
+        return qrCouple;
     }
 
     // #faim, loup ; faim de loup *  expression tag3
     //  ---REFS---   ----NOTE----    ------TAGS-----
-    private QRCoupleSeparationLine parseSeparationLine(String line, String prefix) {
+    private static QRCoupleSeparationLine parseSeparationLine(String line, String prefix) {
         String[] split = split(removePrefix(line, prefix), "\\*");
         QRCoupleSeparationLine sepLine = new QRCoupleSeparationLine();
         if (split.length >=1) {
@@ -170,7 +151,7 @@ public class Lesson {
     }
 
 
-    private QRCoupleSound parseSound(String line) throws DataException {
+    private static QRCoupleSound parseSound(String line) throws DataException {
         QRCoupleSound sound = new QRCoupleSound();
         String[] split = line.split("\\s+");
         if (split.length!=2 && split.length!=4)
@@ -178,6 +159,12 @@ public class Lesson {
         sound.setSoundFileName(split[1]);
         if (split.length==4) {
             try {
+                // I've seen case twice a case with "something" at the end :
+                // <))  aln-ke-41.ogg   4365824   5159936:
+                // <))  aln-ke-50.ogg   332288   713728:set
+                // hence, this little hack :
+                if (split[3].contains(":")) split[3] = split[3].split(":")[0];
+
                 sound.setSoundBeginIndex(Integer.valueOf(split[2]));
                 sound.setSoundEndIndex(Integer.valueOf(split[3]));
             } catch (NumberFormatException nfe) {
@@ -199,7 +186,7 @@ public class Lesson {
 
     private static String[] split(String original, String regexSeparator) {
         String t = trimToNull(original);
-        if (t==null) return null;
+        if (t==null) return new String[0];
         String[] s = t.split(regexSeparator);
         ArrayList<String> l = new ArrayList<>(s.length);
         for (int i=0; i<s.length; i++) {

@@ -1,11 +1,13 @@
 package fr.jblezoray.diaoulek.data;
 
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
+import fr.jblezoray.diaoulek.data.parser.DataException;
+import fr.jblezoray.diaoulek.data.parser.FileIndexParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 import java.util.List;
 
 public class FileIndexTest {
@@ -17,7 +19,8 @@ public class FileIndexTest {
         String fileContent = ResourceReader.readResource("/tot-file-tank.txt");
 
         // when
-        List<FileIndexEntry> entries = new FileIndex().parseIndex(fileContent);
+        List<FileIndexEntry> entries = new FileIndexParser(Charset.forName("ISO-8859-1"))
+                .parse(fileContent.getBytes(), null);
 
         // then
         Assertions.assertEquals(698, entries.size()); // number of '#' in the file.

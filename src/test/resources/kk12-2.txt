@@ -1,7 +1,7 @@
 !# KK12-2
 !QR  Q=br  R=fr
 !
-!    Version 1
+!    Version 1  
 !    License Creative Commons by nc sa
 !
 !
@@ -10,23 +10,23 @@
 !    Version 1  : January 26, 2015
 !    Spell correction : January 26, 2015
 !
+! 
 !
-!
-!
+! 
 !     AH   geriadur An Herez
 !     Black Mort.  Black and Mortimer (Brezhoweb)
 !     BZ   Buhez ar Zent  (Marikavel)
 !     CP   Cours de CP de Le Bozec (Marikavel)
-!     DT   DivizoÃ¹ Troude (Web: Google books).
+!     DT   Divizoù Troude (Web: Google books).
 !     EmB  geriadur Emgleo Breiz (Garnier)
 !     FFv  Francis Favereau, dictionnaire
-!     FK   FranÃ§ois Kervella, Grammaire.
+!     FK   François Kervella, Grammaire.
 !     JK   Jakez Karter, livre pour enfants An Here.
-!     K    Katekiz e Brezhoneg (St Brieuc - TrÃ©guier)
-!     KA   Koulmig Arvor : Marie-PhilomÃ¨ne Cadoret
-!     MV   MarvailhoÃ¹ ar Vretoned
-!     Qe   SarmonioÃ¹ an Ao. QuÃ©rÃ©.
-!     RH   geriadurioÃ¹ Roparz Hemon
+!     K    Katekiz e Brezhoneg (St Brieuc - Tréguier)
+!     KA   Koulmig Arvor : Marie-Philomène Cadoret
+!     MV   Marvailhoù ar Vretoned
+!     Qe   Sarmonioù an Ao. Quéré.
+!     RH   geriadurioù Roparz Hemon
 !     Th   Buhez Santez Thereza ar mabig Jesus (alnfurch)
 !     TS   Ti Satanazet (alnfurch)
 !     Wnoz  Webnoz (Brezhoweb)
@@ -35,12 +35,12 @@
 
 ################################################################
 
-Commentaire :
-Les mots bretons en "er" exprimant une qualitÃ©, une propriÃ©tÃ©
+Commentaire : 
+Les mots bretons en "er" exprimant une qualité, une propriété 
 sont masculins. Exemple : < habaskter > (patience).
 
-Les mots bretons en "ed" exprimant une qualitÃ©, une propriÃ©tÃ©
-sont fÃ©minins. Exemple : < habaskted > (patience).
+Les mots bretons en "ed" exprimant une qualité, une propriété 
+sont féminins. Exemple : < habaskted > (patience).
 
 
 
@@ -49,126 +49,127 @@ sont fÃ©minins. Exemple : < habaskted > (patience).
 
 
 
-#lez *  Q2 paysage terre
-R#bord, lisiÃ¨re *
+#lez *  Q2 paysage terre 
+R#bord, lisière *
 <))  aln-kk12-2.ogg  5632   358912
-Q>   al lez (2) ; lezoÃ¹ ; daou lez ; (KA-91)
-     lez ar c'hoadoÃ¹ ;
+Q>   al lez (2) ; lezoù ; daou lez ; (KA-91)
+     lez ar c'hoadoù ;
      Lezardrev ;
-R>   le bord, la lisiÃ¨re ; ...
-     la lisiÃ¨re des bois ;
-     LÃ©zardrieux ;
+R>   le bord, la lisière ; ...
+     la lisière des bois ;
+     Lézardrieux ;
 
 
-#efedusted, spouronus *   qualitÃ© positif
-R#efficacitÃ©, redoutable ; une efficacitÃ© redoutable *
+#efedusted, spouronus *   qualité positif
+R#efficacité, redoutable ; une efficacité redoutable *
 <))  aln-kk12-2.ogg  366080   610816
-Q>   un efedusted vras (fÃ©m.) ;
+Q>   un efedusted vras (fém.) ; 
      un efedusted spouronus ;
-R>   une grande efficacitÃ© (m/f) ;
-     une efficacitÃ© redoutable ;
+R>   une grande efficacité (m/f) ;
+     une efficacité redoutable ;
 
-#pa bar al loar *  expression astronomie lumiÃ¨re
-%#paraÃ±, loar ; pa bar al loar *  expression astronomie lumiÃ¨re
-R#briller, lune ; lorsque brille la lune *q
-<))  aln-kk12-2.ogg   616448   722944
+#pa bar al loar *  expression astronomie lumière
+%#parañ, loar ; pa bar al loar *  expression astronomie lumière
+R#briller, lune ; lorsque brille la lune *
+<))  aln-kk12-2.ogg   616448   722944 
 Q>   pa bar al loar ; (EmB)
-R>   lorsque brille la lune ;
+R>   lorsque brille la lune ;  
 
-#teurvezout * Q2 verbe sociÃ©tÃ©
+#teurvezout * Q2 verbe société
 R#daigner, vouloir bien *
-<))  aln-kk12-2.ogg  727552   1009664
-Q>   teurvezout (2) ; teurvezet (p. passÃ©) ;
+<))  aln-kk12-2.ogg  727552   1009664 
+Q>   teurvezout (2) ; teurvezet (p. passé) ;
      Teurvezit, O mamm vat... ; (KA-93)
-R>   daigner, vouloir bien ; p. passÃ© ;
-     Veuillez, Oh bonne mÃ¨re... ;
+R>   daigner, vouloir bien ; p. passé ;
+     Veuillez, Oh bonne mère... ;
 
-#Sul ar BleunioÃ¹ *  Ã©glise date
-%#Sul, bleunioÃ¹ ; Sul ar BleunioÃ¹ *  Ã©glise date
+#Sul ar Bleunioù *  église date
+%#Sul, bleunioù ; Sul ar Bleunioù *  église date
 R#dimanche, rameaux, fleurs ; Le Dimanche des Rameaux *
-<))  aln-kk12-2.ogg  1018368   1120256
-Q>   Sul ar BleunioÃ¹ ; (KA-95)
-R>   le Dimanche des Rameaux (fleurs) ;
+<))  aln-kk12-2.ogg  1018368   1120256 
+Q>   Sul ar Bleunioù ; (KA-95)
+R>   le Dimanche des Rameaux (fleurs) ;  
 
-#hiboudiÃ± * Q2 verbe sociÃ©tÃ© parole nÃ©gatif
-R#murmurer, mÃ©dire *
+#hiboudiñ * Q2 verbe société parole négatif
+R#murmurer, médire *
 <))  aln-kk12-2.ogg   1130496  1282048
-Q>   hiboudiÃ± (2) ; hiboudet (p. passÃ©) ; (KA-96)
-R>   murmurer, mÃ©dire ; p. passÃ© ;
+Q>   hiboudiñ (2) ; hiboudet (p. passé) ; (KA-96)
+R>   murmurer, médire ; p. passé ;
 
-#richanaÃ± * verbe oiseau son
+#richanañ * verbe oiseau son
 R#gazouiller *
 <))  aln-kk12-2.ogg   1294848   1446912
-Q>   richanaÃ± ; richanet (p. passÃ©) ; (KA-96)
-R>   gazouiller ; p. passÃ© ;
+Q>   richanañ ; richanet (p. passé) ; (KA-96)
+R>   gazouiller ; p. passé ;
 
-#en em zisober zieubiÃ± zisammaÃ± * R3 verbe expression vie
-%#dizober, dieubiÃ±, disammaÃ± ; en em zizober, en em zieubiÃ±, en em zisammaÃ± * R3 verbe expression vie
-R#dÃ©barrasser [se dÃ©barrasser de], dÃ©faire [se dÃ©faire de], dÃ©charger *
-<))  aln-kk12-2.ogg   1446400   2151936
+#en em zisober zieubiñ zisammañ * R3 verbe expression vie
+%#dizober, dieubiñ, disammañ ; en em zizober, en em zieubiñ, en em zisammañ * R3 verbe expression vie
+R#débarrasser [se débarrasser de], défaire [se défaire de], décharger *
+<))  aln-kk12-2.ogg   1446400   2151936 
 Q>   en em zizober [eus, diouzh] ;
-     en em zieubiÃ± [eus, diouzh] ;
-     en em zisammaÃ± [eus, diouzh] ;
-R>   se dÃ©barrasser [de] (3) ;
+     en em zieubiñ [eus, diouzh] ;
+     en em zisammañ [eus, diouzh] ;
+R>   se débarrasser [de] (3) ;
 
-#dieubiÃ± & disober *  expression vie
-%#dieubiÃ±, dizober *  expression vie
-R#dÃ©barrasser, libÃ©rer, dÃ©faire [se dÃ©faire de] *
-<))  aln-kk12-2.ogg   2157568   2470912
+#dieubiñ & disober *  expression vie
+%#dieubiñ, dizober *  expression vie
+R#débarrasser, libérer, défaire [se défaire de] *
+<))  aln-kk12-2.ogg   2157568   2470912  
 Q>   dieubet eo bet ar gambr ; (EmB)
-     en em zizober eus ar paperoÃ¹ kozh ;
-R>   la chambre a Ã©tÃ© dÃ©barrassÃ©e ;
-     se dÃ©barrasser des vieux papiers ;
+     en em zizober eus ar paperoù kozh ; 
+R>   la chambre a été débarrassée ;
+     se débarrasser des vieux papiers ;  
 
-#bazh-kaÃ±v *  outil Ã©glise vie
-%#bazh-kaÃ±v, bizhier-kaÃ±v *  outil Ã©glise vie
-R#trÃ©teaux funÃ¨bres *
+#bazh-kañv *  outil église vie
+%#bazh-kañv, bizhier-kañv *  outil église vie
+R#tréteaux funèbres *
 <))  aln-kk12-2.ogg   2481664   2752512
-Q>   ar vazh-kaÃ±v ; bizhier-kaÃ±v ;
-     div vazh-kaÃ±v ; (KA-97)
-R>   les trÃ©teaux funÃ¨bres ; ...
+Q>   ar vazh-kañv ; bizhier-kañv ;
+     div vazh-kañv ; (KA-97)
+R>   les tréteaux funèbres ; ...
 
-#drailhaj *  Q2
-R#dÃ©bris, lambeau *
+#drailhaj *  Q2   
+R#débris, lambeau *
 <))  aln-kk12-2.ogg   2771968   2996224
-Q>   un drailhaj (2) ; drailhajoÃ¹ ; daou zrailhaj ;
-R>   un dÃ©bris, un lambeau ; ...
+Q>   un drailhaj (2) ; drailhajoù ; daou zrailhaj ;
+R>   un débris, un lambeau ; ...
 
-#ensavadur *  Q2   sociÃ©tÃ©
+#ensavadur *  Q2   société
 R#institut, institution *
 <))  aln-kk12-2.ogg    3002880   3248128
-Q>   an ensavadur (2) ; ensavadurioÃ¹ ; daou ensavadur ;
+Q>   an ensavadur (2) ; ensavadurioù ; daou ensavadur ;
 R>   l'institut, l'institution ; ...
 
-#kerzhout dinec'h *  expression  mouvement esprit
-%#kerzhout, dinec'h ; me a gerzh dinec'h *  expression  mouvement esprit
+#kerzhout dinec'h *  expression  mouvement esprit 
+%#kerzhout, dinec'h ; me a gerzh dinec'h *  expression  mouvement esprit 
 R#marcher, crainte [sans crainte] ; je marche sans crainte *
 <))  aln-kk12-2.ogg    3267584   3394560
 Q>   Me a gerzh dinec'h d'ar marv ; (KA-99)
-R>   Je marche sans crainte Ã  la mort ;
+R>   Je marche sans crainte à la mort ;
 
-#mastaraÃ±,  mastariÃ± * Q2 R2 verbe vie
+#mastarañ,  mastariñ * Q2 R2 verbe vie
 R#salir, souiller *
 <))  aln-kk12-2.ogg   3405824   3644928
-Q>   mastaraÃ±, mastariÃ± (2) ; mastaret (p. passÃ©) ; (KA-99)
-R>   salir, souiller (2) ; p. passÃ© ;
+Q>   mastarañ, mastariñ (2) ; mastaret (p. passé) ; (KA-99)
+R>   salir, souiller (2) ; p. passé ;
 
-#engroez *  sociÃ©tÃ©  nombre personne
+#engroez *  société  nombre personne
 R#foule *
 <))  aln-kk12-2.ogg   3646464   3866624
-Q>   an engroez ; engroezioÃ¹ ; daou engroez ;
+Q>   an engroez ; engroezioù ; daou engroez ;
 R>   la foule ; ...
 
-#a-vern, a-vernioÃ¹ *  R2 expression  sociÃ©tÃ©  nombre personne
+#a-vern, a-vernioù *  R2 expression  société  nombre personne  
 R#foule [en foule] *
 <))  aln-kk12-2.ogg   3879424   4027904
-Q>   a-vern, a-vernioÃ¹ ;
+Q>   a-vern, a-vernioù ;
 R>   en foule (2) ;
 
-#tamouez *  outil ustensile
+#tamouez *  outil ustensile 
 R#tamis *
 <))  aln-kk12-2.ogg   4042752   4251648
-Q>   an tamouez ; tamouezoÃ¹ ; daou damouez ;
+Q>   an tamouez ; tamouezoù ; daou damouez ;
 R>   le tamis ; ...
 
-##sil *KE-17 4207 * ustensile
+##sil *KE-17 4207 * ustensile  
+

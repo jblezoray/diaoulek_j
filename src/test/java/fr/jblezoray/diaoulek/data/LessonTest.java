@@ -1,11 +1,14 @@
 package fr.jblezoray.diaoulek.data;
 
 import fr.jblezoray.diaoulek.data.model.*;
+import fr.jblezoray.diaoulek.data.parser.DataException;
+import fr.jblezoray.diaoulek.data.parser.LessonParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 
 public class LessonTest {
 
@@ -17,16 +20,15 @@ public class LessonTest {
         FileIndexEntry oueMock = new FileIndexEntry();
 
         // when
-        Lesson lesson = new Lesson(oueMock);
-        lesson.parse(fileContent);
-        LessonEntry e = lesson.getResult();
+        LessonParser lesson = new LessonParser(Charset.forName("UTF-8"));
+        LessonEntry e = lesson.parse(fileContent.getBytes(), oueMock);
 
         // then
         Assertions.assertEquals("KK12-2", e.getAlias());
         Assertions.assertEquals(19, e.getLessonElements().size());
 
         Text elt0 = (Text)e.getLessonElements().get(0);
-        Assertions.assertTrue(elt0.getText().startsWith("\nCommentaire :\n"));
+        Assertions.assertTrue(elt0.getText().startsWith("\nCommentaire : \n"));
         Assertions.assertTrue(elt0.getText().endsWith("(patience).\n\n\n"));
 
         QRCouple elt1 = (QRCouple)e.getLessonElements().get(1);
@@ -39,7 +41,7 @@ public class LessonTest {
         QRCouple elt2 = (QRCouple)e.getLessonElements().get(2);
         Assertions.assertArrayEquals(new String[]{"efficacité", "redoutable"}, elt2.getSeparationLineReverse().getWordReferences());
         Assertions.assertEquals("une efficacité redoutable", elt2.getSeparationLineReverse().getNote());
-        Assertions.assertEquals(new String[0], elt2.getSeparationLineReverse().getTags());
+        Assertions.assertEquals(0, elt2.getSeparationLineReverse().getTags().length);
 
         WordReference elt18 = (WordReference)e.getLessonElements().get(18);
         Assertions.assertEquals("sil", elt18.getWord());

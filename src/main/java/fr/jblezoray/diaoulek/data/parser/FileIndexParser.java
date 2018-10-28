@@ -1,12 +1,14 @@
-package fr.jblezoray.diaoulek.data;
+package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.crypto.Data;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,16 +17,30 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class FileIndex {
+public class FileIndexParser implements IParser<List<FileIndexEntry>> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FileIndex.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FileIndexParser.class);
 
     private static final String DATE_FORMAT = "EEE MMM dd HH:mm:ss yyyy";
 
-    public List<FileIndexEntry> parseIndex(String fileContent) throws DataException {
+    private final Charset charset;
+
+    public FileIndexParser(Charset charset) {
+        this.charset = charset;
+    }
+
+    @Override
+    public boolean seemsParseable(FileIndexEntry fileIndexEntry) {
+        return true;
+    }
+
+    @Override
+    public List<FileIndexEntry> parse(byte[] fileContent, FileIndexEntry unused) throws DataException {
+
+        String fileContentString = new String(fileContent, charset);
 
         List<FileIndexEntry> entries = new ArrayList<>();
-        try (BufferedReader br =  new BufferedReader(new StringReader(fileContent))) {
+        try (BufferedReader br =  new BufferedReader(new StringReader(fileContentString))) {
 
             String line;
             while ((line = br.readLine()) != null) {
@@ -93,5 +109,4 @@ public class FileIndex {
 
         return date;
     }
-
 }

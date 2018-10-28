@@ -1,9 +1,9 @@
 package fr.jblezoray.diaoulek.data.model;
 
 public class QRCoupleSeparationLine {
-    private String[] wordReferences;
+    private String[] wordReferences = new String[0];
     private String note;
-    private String[] tags;
+    private String[] tags = new String[0];
 
     public String[] getWordReferences() {
         return wordReferences;
