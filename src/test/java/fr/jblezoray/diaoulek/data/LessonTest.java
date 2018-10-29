@@ -17,11 +17,11 @@ public class LessonTest {
     public void testParseLesson() throws IOException, URISyntaxException, DataException {
         // having
         String fileContent = ResourceReader.readResource("/kk12-2.txt");
-        FileIndexEntry oueMock = new FileIndexEntry();
+        FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
         LessonParser lesson = new LessonParser(Charset.forName("UTF-8"));
-        LessonEntry e = lesson.parse(fileContent.getBytes(), oueMock);
+        LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then
         Assertions.assertEquals("KK12-2", e.getAlias());

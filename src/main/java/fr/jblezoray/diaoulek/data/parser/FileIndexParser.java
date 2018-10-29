@@ -44,24 +44,24 @@ public class FileIndexParser implements IParser<List<FileIndexEntry>> {
             String line;
 
             // find a line that starts by '#'
-            while ((line=reader.skipToLine(l -> l.startsWith("#"))) != null) {
+            while ((line=reader.readNextLine(l -> l.startsWith("#"))) != null) {
 
                 // read a filename;
                 String filename = line.replaceFirst("#", "");
 
                 // read filetime on next line.
-                line = reader.readLine();
+                line = reader.readNextLine();
                 if (!line.startsWith("filetime=")) throw new DataException(line);
                 String dateStr = line.replaceFirst("filetime=", "");
                 Date date = parseDate(dateStr);
 
                 // read file size
-                line = reader.readLine();
+                line = reader.readNextLine();
                 if (!line.startsWith("filesize=")) throw new DataException(line);
                 Integer sizeStr = parseInteger(line);
 
                 // read MD5 value.
-                line = reader.readLine();
+                line = reader.readNextLine();
                 if (!line.startsWith("MD5")) throw new DataException(line);
                 String[] split = line.split("=");
                 if (split.length != 2) throw new DataException(line);

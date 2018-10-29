@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class LessonParser implements IParser<LessonEntry> {
 
@@ -38,13 +39,16 @@ public class LessonParser implements IParser<LessonEntry> {
             le.setAlias(reader.readFileAlias());
 
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = reader.readNextLine(
+                    DiaoulekFileReader.EMPTY_LINE.negate(),
+                    DiaoulekFileReader.COMMENT_LINE.negate() )) != null) {
 
                 // something between two lines of '###...' is a Lesson text.
                 if (line.startsWith("###")) {
-                    // read all the lines until another line of '#'.
-                    List<String> lines = reader.readLinesUntil(
-                            l -> !l.replaceAll(" ", "").matches("^#{3,}$"));
+                    // read all the lines until another line of '###...'.
+                    List<String> lines = reader.readLinesUntil(l ->
+                            !l.replaceAll(" ", "")
+                                .matches("^#{3,}$"));
                     Text text = parseLessonText(lines);
                     le.getLessonElements().add(text);
                 }
@@ -56,10 +60,7 @@ public class LessonParser implements IParser<LessonEntry> {
                 // DOC: On introduira ensuite les couples de questions et
                 // réponses par les signes «#», «Q>» et «R>»
                 else if (line.startsWith("#")) {
-                    // read all the subsequent lines, until a blank one.
-                    List<String> lines = reader.readLinesUntil(
-                            l -> l.trim().length() > 0);
-                    QRCouple qrCouple = parseQRCouple(line, lines);
+                    QRCouple qrCouple = parseQRCouple(line, reader);
                     le.getLessonElements().add(qrCouple);
                 }
             }
@@ -101,11 +102,17 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
 
-    private static QRCouple parseQRCouple(String firstLine, List<String> lines) throws DataException{
+    private static QRCouple parseQRCouple(String firstLine, DiaoulekFileReader reader) throws DataException{
         QRCouple qrCouple = new QRCouple();
         qrCouple.setSeparationLine(parseSeparationLine(firstLine, "#"));
 
-        for (String line : lines) {
+        String line;
+        while ((line = reader.readNextLine())!=null && !DiaoulekFileReader.EMPTY_LINE.test(line)) {
+            List<String> lines = reader.readLinesUntilNextline(l -> !l.startsWith("  "));
+            line = lines.stream().reduce(line, (l1, l2) -> l1 + l2);
+
+            lines.add(0, line);
+
             if (line.startsWith("%#")) {
                 // ancienne ligne de séparation
                 // il peut y en avoir plusieurs, mais seule la dernière compte.

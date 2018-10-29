@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -20,10 +21,14 @@ import java.util.function.Predicate;
 public class DiaoulekFileReader implements Closeable  {
 
     private final BufferedReader br;
+    private String foreSeenLine = null;
+    public final static Predicate<String> EMPTY_LINE = l -> l.trim().length()==0;
+    public final static Predicate<String> COMMENT_LINE = l -> l.startsWith("!");
+    public final static Predicate<String> HEADER_LINE = l -> l.startsWith("!#");
 
     public DiaoulekFileReader(byte[] fileContent, Charset charset) throws DataException {
         String fileContentString = new String(fileContent, charset);
-        this.br =  new BufferedReader(new StringReader(fileContentString));
+        this.br = new BufferedReader(new StringReader(fileContentString));
     }
 
     @Override
@@ -36,8 +41,8 @@ public class DiaoulekFileReader implements Closeable  {
         // signes « !# » suivis d'un espace et de l'alias de la leçon.
         String fileAlias;
         try {
-            String line = br.readLine();
-            if (!line.startsWith("!#"))
+            String line = getNextLine();
+            if (!HEADER_LINE.test(line))
                 throw new DataException(line);
             fileAlias = line.substring(2).trim();
         } catch (IOException e) {
@@ -46,13 +51,15 @@ public class DiaoulekFileReader implements Closeable  {
         return fileAlias;
     }
 
-    public String readLine() throws DataException {
-        return skipToLine(l ->
-                // DOC: Les lignes commençant par le signe « ! » sont des
-                // commentaires et sont ignorées.
-                !l.startsWith("!")
-                // Empty line to ignore.
-                && !(l.trim().length()==0));
+    private String getNextLine() throws IOException {
+        String line ;
+        if (this.foreSeenLine==null) {
+            line = br.readLine();
+        } else {
+            line = this.foreSeenLine;
+            this.foreSeenLine = null;
+        }
+        return line;
     }
 
 
@@ -61,7 +68,7 @@ public class DiaoulekFileReader implements Closeable  {
         List<String> lines = new ArrayList<>();
         try {
             String line;
-            while ((line = br.readLine()) != null && continuationCondition.test(line))
+            while ((line = getNextLine()) != null && continuationCondition.test(line))
                 lines.add(line);
         } catch (IOException e) {
             throw new DataException("Cannot read lines", e);
@@ -69,11 +76,36 @@ public class DiaoulekFileReader implements Closeable  {
         return lines;
     }
 
-    public String skipToLine(Predicate<String> lineCondition)
+    public List<String> readLinesUntilNextline(Predicate<String> nextLineCondition)
+            throws DataException {
+        List<String> lines = new ArrayList<>();
+        try {
+            String readline;
+            while ((readline = getNextLine()) != null) {
+                if (nextLineCondition.test(readline)) {
+                    this.foreSeenLine = readline;
+                    break;
+                } else {
+                    lines.add(readline);
+                }
+            }
+        } catch (IOException e) {
+            throw new DataException("Cannot read lines", e);
+        }
+        return lines;
+    }
+
+    public String readNextLine(Predicate<String>... lineConditions)
             throws DataException {
         String line;
         try {
-            while ((line = br.readLine()) != null && !lineCondition.test(line));
+            while ((line=getNextLine())!= null) {
+                boolean lineMatches = true;
+                for (Predicate<String> lineCondition : lineConditions) {
+                    lineMatches = lineMatches && lineCondition.test(line);
+                }
+                if (lineMatches) break;
+            }
         } catch (IOException e) {
             throw new DataException("Cannot read lines", e);
         }
