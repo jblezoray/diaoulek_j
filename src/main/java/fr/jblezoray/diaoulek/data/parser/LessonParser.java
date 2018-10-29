@@ -34,34 +34,37 @@ public class LessonParser implements IParser<LessonEntry> {
     public LessonEntry parse(byte[] fileContent, FileIndexEntry fileIndexEntry) throws DataException {
         LessonEntry le = new LessonEntry(fileIndexEntry);
 
-        DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset);
-        le.setAlias(reader.getFileAlias());
+        try (DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset)) {
+            le.setAlias(reader.readFileAlias());
 
-        String line;
-        while ((line=reader.readLine()) != null) {
+            String line;
+            while ((line = reader.readLine()) != null) {
 
-            // something between two lines of '###...' is a Lesson text.
-            if (line.startsWith("###")) {
-                // read all the lines until another line of '#'.
-                List<String> lines = reader.readLinesUntil(
-                        l -> !l.replaceAll(" ", "").matches("^#{3,}$"));
-                Text text = parseLessonText(lines);
-                le.getLessonElements().add(text);
+                // something between two lines of '###...' is a Lesson text.
+                if (line.startsWith("###")) {
+                    // read all the lines until another line of '#'.
+                    List<String> lines = reader.readLinesUntil(
+                            l -> !l.replaceAll(" ", "").matches("^#{3,}$"));
+                    Text text = parseLessonText(lines);
+                    le.getLessonElements().add(text);
+                }
+                // "##something..." is a word reference from another lesson.
+                else if (line.startsWith("##")) {
+                    WordReference wr = parseWordReference(line);
+                    le.getLessonElements().add(wr);
+                }
+                // DOC: On introduira ensuite les couples de questions et
+                // réponses par les signes «#», «Q>» et «R>»
+                else if (line.startsWith("#")) {
+                    // read all the subsequent lines, until a blank one.
+                    List<String> lines = reader.readLinesUntil(
+                            l -> l.trim().length() > 0);
+                    QRCouple qrCouple = parseQRCouple(line, lines);
+                    le.getLessonElements().add(qrCouple);
+                }
             }
-            // "##something..." is a word reference from another lesson.
-            else if (line.startsWith("##")) {
-                WordReference wr = parseWordReference(line);
-                le.getLessonElements().add(wr);
-            }
-            // DOC: On introduira ensuite les couples de questions et
-            // réponses par les signes «#», «Q>» et «R>»
-            else if (line.startsWith("#")) {
-                // read all the subsequent lines, until a blank one.
-                List<String> lines = reader.readLinesUntil(
-                        l -> l.trim().length() > 0);
-                QRCouple qrCouple = parseQRCouple(line, lines);
-                le.getLessonElements().add(qrCouple);
-            }
+        } catch  (IOException e) {
+            throw new DataException("Cannot read file.", e);
         }
 
         return le;
