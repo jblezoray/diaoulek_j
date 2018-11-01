@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.data;
+package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.*;
 import fr.jblezoray.diaoulek.data.parser.DataException;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 
-public class LessonTest {
+public class LessonParserTest {
 
 
     @Test
@@ -37,11 +37,20 @@ public class LessonTest {
         Assertions.assertEquals("aln-kk12-2.ogg", elt1.getSound().getSoundFileName());
         Assertions.assertEquals(5632, (int)elt1.getSound().getSoundBeginIndex());
         Assertions.assertEquals(358912, (int)elt1.getSound().getSoundEndIndex());
+        Assertions.assertEquals("al lez (2) ; lezoù ; daou lez ; (KA-91)\nlez ar c'hoadoù ;\nLezardrev ;", elt1.getQuestion().toString());
+        Assertions.assertEquals("al lez (2)", elt1.getQuestion().getParts()[0].toString());
+        Assertions.assertEquals("le bord, la lisière ; ...\nla lisière des bois ;\nLézardrieux ;", elt1.getResponse().toString());
+        Assertions.assertEquals("le bord, la lisière", elt1.getResponse().getParts()[0].toString());
+        Assertions.assertArrayEquals(new String[]{"le bord","la lisière"}, elt1.getResponse().getParts()[0].getPhrases());
 
         QRCouple elt2 = (QRCouple)e.getLessonElements().get(2);
         Assertions.assertArrayEquals(new String[]{"efficacité", "redoutable"}, elt2.getSeparationLineReverse().getWordReferences());
         Assertions.assertEquals("une efficacité redoutable", elt2.getSeparationLineReverse().getNote());
         Assertions.assertEquals(0, elt2.getSeparationLineReverse().getTags().length);
+        Assertions.assertEquals("un efedusted vras (fém.) ;\nun efedusted spouronus ;", elt2.getQuestion().toString());
+        Assertions.assertEquals("un efedusted vras (fém.)", elt2.getQuestion().getParts()[0].toString());
+        Assertions.assertEquals("une grande efficacité (m/f) ;\nune efficacité redoutable ;", elt2.getResponse().toString());
+        Assertions.assertArrayEquals(new String[]{"une grande efficacité (m/f)"}, elt2.getResponse().getParts()[0].getPhrases());
 
         WordReference elt18 = (WordReference)e.getLessonElements().get(18);
         Assertions.assertEquals("sil", elt18.getWord());

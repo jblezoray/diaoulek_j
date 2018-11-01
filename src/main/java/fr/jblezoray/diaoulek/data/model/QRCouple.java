@@ -10,6 +10,8 @@ public class QRCouple extends LessonElement {
     private QRCoupleSeparationLine separationLineLegacy;
     private QRCoupleSeparationLine separationLineReverse;
     private QRCoupleSound sound;
+    private Question question;
+    private Response response;
 
 
     public QRCoupleSeparationLine getSeparationLine() {
@@ -42,5 +44,21 @@ public class QRCouple extends LessonElement {
 
     public void setSound(QRCoupleSound sound) {
         this.sound = sound;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public Response getResponse() {
+        return response;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    public void setResponse(Response response) {
+        this.response = response;
     }
 }

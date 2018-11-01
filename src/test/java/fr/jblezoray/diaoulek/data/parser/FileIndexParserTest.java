@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.data;
+package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import fr.jblezoray.diaoulek.data.parser.DataException;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
 
-public class FileIndexTest {
+public class FileIndexParserTest {
 
 
     @Test

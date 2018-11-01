@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LessonParser implements IParser<LessonEntry> {
@@ -109,7 +111,7 @@ public class LessonParser implements IParser<LessonEntry> {
         String line;
         while ((line = reader.readNextLine())!=null && !DiaoulekFileReader.EMPTY_LINE.test(line)) {
             List<String> lines = reader.readLinesUntilNextline(l -> !l.startsWith("  "));
-            line = lines.stream().reduce(line, (l1, l2) -> l1 + l2);
+            line = lines.stream().reduce(line, (l1, l2) -> l1 + "\n" + l2);
 
             lines.add(0, line);
 
@@ -129,17 +131,18 @@ public class LessonParser implements IParser<LessonEntry> {
                 qrCouple.setSound(parseSound(line));
 
             } else if (line.startsWith("Q>")) {
-                // TODO
+                qrCouple.setQuestion(parseQuestion(line));
 
             } else if (line.startsWith("R>")) {
-                // TODO
+                qrCouple.setResponse(parseResponse(line));
 
             } else {
-                // Skip it.  It is either :
-                // - part of a Q> or a R>, and was already parsed.
-                // - a blank line
+                throw new DataException("Cannot parse line " + line);
             }
         }
+//        if (qrCouple.getQuestion()==null ||qrCouple.getResponse()==null ||qrCouple.getSeparationLine()==null) {
+//            throw new DataException("QR misses mandatory elements : '" + firstLine + "'");
+//        }
         return qrCouple;
     }
 
@@ -186,6 +189,49 @@ public class LessonParser implements IParser<LessonEntry> {
         }
         return sound;
     }
+
+    private static Question parseQuestion(String line) {
+        String raw = removeDuplicatesWhitespaces(removePrefix(line, "Q>"));
+        Part[] parts = Arrays.stream(raw.split(";"))
+                .map(String::trim)
+                .map(part -> new Part(part, parsePhrase(part)))
+                .collect(Collectors.toList())
+                .toArray(new Part[0]);
+
+        Question q = new Question();
+        q.setRawString(raw);
+        q.setParts(parts);
+        return q;
+    }
+
+    private static Response parseResponse(String line) {
+        String raw = removeDuplicatesWhitespaces(removePrefix(line, "R>"));
+        Part[] parts = Arrays.stream(raw.split(";"))
+                .map(String::trim)
+                .map(part -> new Part(part, parsePhrase(part)))
+                .collect(Collectors.toList())
+                .toArray(new Part[0]);
+
+        Response r = new Response();
+        r.setRawString(raw);
+        r.setParts(parts);
+        return r;
+    }
+
+    private static String[] parsePhrase(String part) {
+        return Arrays.stream(part.split(","))
+                .map(String::trim)
+                .collect(Collectors.toList())
+                .toArray(new String[0]);
+    }
+
+    private static String removeDuplicatesWhitespaces(String line) {
+        return line
+                .trim()
+                .replaceAll("\\h*\\r?\\v+\\h*", Matcher.quoteReplacement("\n"))
+                .replaceAll("\\h+", Matcher.quoteReplacement(" "));
+    }
+
 
     private static String removePrefix(String original, String prefix) {
         return original==null ? null :

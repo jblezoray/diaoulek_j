@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.data;
+package fr.jblezoray.diaoulek.data.parser;
 
 import java.io.IOException;
 import java.io.InputStream;
