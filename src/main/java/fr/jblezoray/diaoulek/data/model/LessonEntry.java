@@ -1,5 +1,7 @@
 package fr.jblezoray.diaoulek.data.model;
 
+import fr.jblezoray.diaoulek.data.model.lessonelement.LessonElement;
+
 import java.util.ArrayList;
 import java.util.List;
 

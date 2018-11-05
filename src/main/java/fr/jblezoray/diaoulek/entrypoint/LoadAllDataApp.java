@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek;
+package fr.jblezoray.diaoulek.entrypoint;
 
 import fr.jblezoray.diaoulek.data.model.AudioFile;
 import fr.jblezoray.diaoulek.data.model.LessonEntry;
@@ -17,13 +17,11 @@ import java.util.Optional;
  * Hello world!
  *
  */
-public class App {
+public class LoadAllDataApp {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoadAllDataApp.class);
 
     public static void main( String[] args ) throws FileRetrieverException, DataException {
-        LOGGER.info("Hello World!");
-
         FileDownloader fd = new FileDownloader(Config.URL_UPDATE);
         FileCache fc = new FileCache(Config.CACHE_DIR, fd);
 

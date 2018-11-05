@@ -1,15 +1,17 @@
-package fr.jblezoray.diaoulek.data.model;
+package fr.jblezoray.diaoulek.data.model.lessonelement;
 
 
-import java.util.ArrayList;
-import java.util.List;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.QRCoupleSeparationLine;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Response;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 
 public class QRCouple extends LessonElement {
 
     private QRCoupleSeparationLine separationLine;
     private QRCoupleSeparationLine separationLineLegacy;
     private QRCoupleSeparationLine separationLineReverse;
-    private QRCoupleSound sound;
+    private SoundReference sound;
     private Question question;
     private Response response;
 
@@ -38,11 +40,11 @@ public class QRCouple extends LessonElement {
         return this.separationLineLegacy;
     }
 
-    public QRCoupleSound getSound() {
+    public SoundReference getSound() {
         return sound;
     }
 
-    public void setSound(QRCoupleSound sound) {
+    public void setSound(SoundReference sound) {
         this.sound = sound;
     }
 

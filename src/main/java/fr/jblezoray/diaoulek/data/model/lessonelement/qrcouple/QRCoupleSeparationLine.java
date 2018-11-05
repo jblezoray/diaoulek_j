@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.data.model;
+package fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple;
 
 public class QRCoupleSeparationLine {
     private String[] wordReferences = new String[0];

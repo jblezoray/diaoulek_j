@@ -1,0 +1,29 @@
+!# CASLIMITES
+
+
+! issu de k1.txt
+##gouestlañ *KK11-1 2827 * Q3 verbe
+
+! k100.txt
+#hadañ [amzer bremañ] * "v" verbe grammaire
+R#semer [au présent] *
+<))  aln-k100.ogg   336896   490496
+<))  aln-k100.ogg   489984   683008
+Q>   hadan ; hades ; had ;
+     hadomp ; hadit ; hadont ;
+     hader ;
+R>   verbe semer au présent de l'indicatif ;
+
+! k101.txt
+#karvanad * "aw" vie négatif
+R#gifle *
+<))  aln-k101.ogg   254976   541184
+Q>  [1] karvanad, ur garvanad ;
+        karvanadoù ; div garvanad ;
+R> [1] gifle, une gifle ; ...
+
+! k102.txt
+#goiñ, goet * "v, agv" cuisine
+R#fermenter, lever [pour la pâte], digérer *
+Q>  [1] goiñ ; goet (p. passé) ;
+R> [1] fermenter, lever (pâte), digérer ; p. passé ;

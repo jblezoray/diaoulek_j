@@ -1,6 +1,8 @@
-package fr.jblezoray.diaoulek.data.model;
+package fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple;
 
-public class Question {
+import fr.jblezoray.diaoulek.data.model.Part;
+
+public class Response {
 
     private String rawString;
     private Part[] parts;
@@ -21,5 +23,4 @@ public class Question {
     public String toString() {
         return rawString;
     }
-
 }

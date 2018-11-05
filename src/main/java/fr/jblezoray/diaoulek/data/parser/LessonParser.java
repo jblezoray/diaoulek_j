@@ -1,20 +1,24 @@
 package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.*;
+import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
+import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
+import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.QRCoupleSeparationLine;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class LessonParser implements IParser<LessonEntry> {
 
@@ -76,7 +80,7 @@ public class LessonParser implements IParser<LessonEntry> {
 
     private static Text parseLessonText(List<String> lines) {
         String lessonText = String.join("\n", lines);
-        return new Text(lessonText);
+        return new Text(lessonText, Collections.EMPTY_MAP);
     }
 
     // Pour réutiliser l'entrée « anken » dans une de vos leçon, il suffit
@@ -164,8 +168,8 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
 
-    private static QRCoupleSound parseSound(String line) throws DataException {
-        QRCoupleSound sound = new QRCoupleSound();
+    private static SoundReference parseSound(String line) throws DataException {
+        SoundReference sound = new SoundReference();
         String[] split = line.split("\\s+");
         if (split.length!=2 && split.length!=4)
             throw new DataException(line);

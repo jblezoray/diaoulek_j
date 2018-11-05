@@ -1,6 +1,6 @@
-package fr.jblezoray.diaoulek.data.model;
+package fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple;
 
-public class QRCoupleSound {
+public class SoundReference {
     private String soundFileName;
     private Integer soundBeginIndex;
     private Integer soundEndIndex;
