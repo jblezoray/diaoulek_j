@@ -6,9 +6,12 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
@@ -35,29 +38,26 @@ public class FileCache implements IFileRetriever {
 
     @Override
     public byte[] getFileContent(String filename, Optional<String> dir) throws FileRetrieverException {
-        String hashedName = filename + ".cache";
-        return getFile(hashedName, filename, () -> downloader.getFileContent(filename, dir));
+        return getFile(filename, () -> downloader.getFileContent(filename, dir));
     }
 
     @Override
-    public byte[] getFileContent(FileIndexEntry lesson, Optional<String> dir) throws FileRetrieverException {
-        String hashedName = lesson.getFilename() + ".cache." + lesson.getMd5();
-        return getFile(hashedName, lesson.getFilename(), () -> downloader.getFileContent(lesson, dir));
+    public byte[] getFileContent(FileIndexEntry file, Optional<String> dir) throws FileRetrieverException {
+        return getFile(file.getFilename(), () -> downloader.getFileContent(file, dir));
     }
 
     /**
      * gets the file content either from the cache, or if a cached version
      * isn't available, from the original source.
      *
-     * @param cacheEntryName
      * @param filename
      * @param originalSource
      * @return
      * @throws FileRetrieverException
      */
-    private byte[] getFile(String cacheEntryName, String filename, Callable<byte[]> originalSource)
+    private byte[] getFile(String filename, Callable<byte[]> originalSource)
     throws FileRetrieverException {
-        File cachedFile = new File(cacheDir, cacheEntryName);
+        File cachedFile = new File(cacheDir, filename + ".cache");
         byte[] fileContent;
         try {
             // return file content if it exists.

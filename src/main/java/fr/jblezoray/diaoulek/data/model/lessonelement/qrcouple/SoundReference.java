@@ -28,4 +28,13 @@ public class SoundReference {
     public void setSoundEndIndex(Integer soundEndIndex) {
         this.soundEndIndex = soundEndIndex;
     }
+
+    @Override
+    public String toString() {
+        return "SoundReference{" +
+                "soundFileName='" + soundFileName + '\'' +
+                ", soundBeginIndex=" + soundBeginIndex +
+                ", soundEndIndex=" + soundEndIndex +
+                '}';
+    }
 }

@@ -1,5 +1,8 @@
 package fr.jblezoray.diaoulek.data.parser;
 
+import com.google.common.collect.ListMultimap;
+import com.google.common.collect.MultimapBuilder;
+import com.sun.tools.javac.util.Pair;
 import fr.jblezoray.diaoulek.data.model.*;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
@@ -13,10 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
@@ -78,9 +78,58 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
 
-    private static Text parseLessonText(List<String> lines) {
-        String lessonText = String.join("\n", lines);
-        return new Text(lessonText, Collections.EMPTY_MAP);
+    private static Text parseLessonText(List<String> lines) throws DataException {
+        List<Pair<String, SoundReference>> lessonText = new ArrayList<>();
+        Map<String, SoundReference> sounds = new HashMap<>();
+        StringBuilder commentText = new StringBuilder();
+
+
+
+        boolean soundMode = false;
+        boolean commentMode = false;
+        for (String line : lines) {
+            if (line.startsWith("<)start)")) {
+                soundMode = true;
+
+            } else if (line.startsWith("<)end)")) {
+                soundMode = false;
+
+            } else if (line.startsWith("Commentaire")) {
+                commentMode = true;
+
+            } else if (soundMode) {
+                int spaceIndex = line.trim().indexOf(" ");
+                if (spaceIndex!=-1) {
+                    String key = line.trim().substring(0, spaceIndex);
+                    SoundReference sound = parseSound(line);
+                    sounds.put(key, sound);
+                }
+
+            } else {
+                String l = line.trim();
+                if (l.length() > 0) {
+                    if (commentMode) {
+                        commentText.append(l).append(System.lineSeparator());
+                    } else {
+                        SoundReference sr = null;
+                        for (String soundKey: sounds.keySet()) {
+                            if (l.startsWith(soundKey)) {
+                                sr = sounds.get(soundKey);
+                                l = l.substring(soundKey.length()).trim();
+                            }
+                        }
+                        lessonText.add(new Pair<>(l, sr));
+                    }
+                }
+            }
+        }
+
+        // remove last \n
+        int idx = commentText.lastIndexOf(System.lineSeparator());
+        String commentTextStr = (idx==-1) ? commentText.toString() :
+                commentText.deleteCharAt(idx).toString();
+
+        return new Text(lessonText, commentTextStr);
     }
 
     // Pour réutiliser l'entrée « anken » dans une de vos leçon, il suffit
@@ -170,7 +219,7 @@ public class LessonParser implements IParser<LessonEntry> {
 
     private static SoundReference parseSound(String line) throws DataException {
         SoundReference sound = new SoundReference();
-        String[] split = line.split("\\s+");
+        String[] split = line.trim().split("\\s+");
         if (split.length!=2 && split.length!=4)
             throw new DataException(line);
         sound.setSoundFileName(split[1]);

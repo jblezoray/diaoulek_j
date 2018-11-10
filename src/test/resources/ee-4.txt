@@ -1,0 +1,240 @@
+!# EE-4
+
+!   animal  poisson oiseau insecte 
+!   arbre
+!   bâtiment
+!   bruit
+!   corps
+!   date
+!   difficile
+!   eau
+!   église
+!   expression
+!   ferme
+!   insecte
+!   machine
+!   maison
+!   maladie
+!   matériel, ustensile, objet
+!   matière
+!   mer
+!   métier
+!   objet
+!   outil
+!   paysage
+!   plante
+!   poisson
+!   qualificatif
+!   qualité  (ou défaut)
+!   santé
+!   société
+!   utilitaire
+!   ustensile
+!   verbe
+!
+!     BZ   Buhez ar Zent  (Marikavel)
+!     Black Mort.  Black and Mortimer (Brezhoweb)
+!     Th   Buhez Santez Thereza ar mabig Jesus (alnfurch)
+!     TS   Ti Satanazet (alnfurch)
+!
+!
+!
+!
+!
+!
+##################################################################
+<)start)
+    B>0a  ee-4.ogg  5120    1278464 
+    B>1  ee-4.ogg   6656   131584
+    B>2  ee-4.ogg   130048   250368
+    B>3  ee-4.ogg   260096   366592
+    B>4  ee-4.ogg   365056   485888
+    B>5  ee-4.ogg   480256   739328
+    B>6  ee-4.ogg   737280   865792
+    B>7  ee-4.ogg   859648   1015808
+    B>8  ee-4.ogg   1011200  1272832
+    
+<)end)
+
+B>0a
+
+B>1   Ur c'helenner pe ur skolaer eo ?
+F>1   C'est un professeur ou un instituteur ?
+     [Un professeur ou un instituteur est ?] 
+
+
+B>2   Ur c'helenner eo, evel-just.
+F>2   C'est un professeur, bien sûr.
+
+
+B>3   Evit petra : Evel-just ?  
+F>3   Pourquoi : Bien sûr ?
+
+
+B>4   Dre ma n'ez eus skolaerien ken. 
+F>4   Parce que il n'y a plus d'instituteurs.
+
+
+B>5   Zoken e skol ar re vihan, ez eus bremañ 
+      kelennerien ha kelennerezed.
+F>5   Même à [dans] l'école des petits, il y a maintenant
+    des professeurs [hommes et femmes].
+
+
+B>6   Ha paeet muioc'h ez int ?
+F>6   Et ils sont payés plus ? (et payés plus sont)
+
+
+B>7   D'am soñj, n'int ket paeet gwelloc'h.
+F>7   Je pense qu'ils ne sont pas mieux payés.
+      [\`A ma pensée, sont pas payés mieux.]
+
+
+B>8   Hag evit pezh a sell ouzh va c'helenner
+      war ar Brezhoneg, n'en deus gopr ebet.
+F>8   Et en ce qui concerne mon professeur de breton,
+      il n'a aucun salaire.
+
+
+
+Commentaires :
+
+1)  < Ur c'helenner pe ur skolaer eo ? > ( C'est un professeur 
+    ou un instituteur ? )
+    .  Le verbe < être >, à la troisième personne du singulier
+    du présent de l'indicatif [il, elle est, il y a] est très particulier
+    car il a trois formes différents qui ne s'emploie pas de la même
+    façon. C'est heureusement le seul verbe comme cela !
+    .    On trouve < zo, eo, eus >
+       < zo > est utilisé lorsque le sujet précède le verbe :
+          < Me a zo bras > (je suis grand), 
+	  < Ni a zo bras > (nous sommes grands),
+      < Tud a zo amañ > (il y a des gens ici) [gens est un complément en français].
+      < Pell a zo > (il y a longtemps)
+      .
+      < eus > est utilisé pour traduire < il y a > lorsque le sujet de
+      précède pas le verbe et toujours à la forme négative : < il n'y a pas >
+      < amañ ez eus tud > (ici il y a des gens)
+      < n'eus ket a dud > (il n'y a pas de gens)
+      < n'eus ket pell > (il n'y a pas longtemps)
+      .
+      < eo > s'emploie dans les autres cas. C'est à dire lorsque l'on ne
+      traduit pas < il y a > mais < il est > et que le sujet ne précède
+      pas le verbe.
+          < Yann a zo bras. Bras eo Yann. > (Jean est grand).
+	  < Bremañ ez eo bras. > (maintenant il est grand).
+
+2)  < Dre ma n'ez eus skolaerien ken. > ( Parce que il n'y a plus 
+     d'instituteurs.)
+     < Dre ma > a deux significations : < à mesure que >
+     et < parce que >.
+     .
+     Nous avons dans cette phrase la traduction de < il y a > à la
+     forme négative.
+     .
+     Les noms désignant des personnes comme ici < skolaer > font souvent
+     leur pluriel en < ien > ou < ed >. Exemple :
+            < skolaerien > (des instituteurs)
+            < skolaerezed > (des institutrices)
+
+3)  < e skol ar re vihan > (dans l'école des petits)
+    < e > signifie < dans >. 
+    < ar re vihan > signifie ceux qui sont petits. 
+    . L'adjectif < bihan > veut dire < petit > mais il y a une mutation
+    par adoucissement après < re >.
+
+4)   < Ha paeet muioc'h ez int ? > (et payés plus sont ?)
+     < int > (sont) . Comme le sujet n'est pas exprimé dans la phrase, on 
+     est bien obligé de conjuguer le verbe pour que l'on puisse savoir de 
+     qui on parle.
+     < muioc'h > veut dire : < [encore] plus >, c'est le comparatif de
+       supériorité de < mui > (plus) et a en fait la même signification.
+
+5)  < Paet gwelloc'h > (mieux payé)
+    . Comme dans le cas de < mui > et < muioc'h >, qui tous les deux 
+       signifient : < plus >, < gwell > et < gwelloc'h > se traduisent
+       tous les deux par < mieux >
+
+##################################################################
+
+##skol *KE-34 2171 * esprit école  
+
+##skolaer *KE-49 3232 * métier  
+
+##skolaerez *KE-49 3354 * métier  
+
+#me a zo bras * 
+<))  ee-4.ogg   1295360   1606144
+Q>  Me a zo bras ;
+    Te a zo bras ;
+    Ni a zo bras ;
+R>  Je suis grand ;
+    Tu es grand ;
+    Nous sommes grands ;
+
+#tud a zo amañ * 
+<))  ee-4.ogg   1618944   1791488
+Q>  Tud a zo amañ ;
+    Amañ ez eus tud ;
+R>  Des gens il y a ici ;
+    Ici il y a des gens ;
+
+#pell a zo *  expression
+<))  ee-4.ogg   1803264   1950720
+Q>  Pell a zo ;
+    N'eus ket pell ;
+R>  Il y a longtemps ;
+    Il n'y a pas longtemps ;
+
+#bras eo Yann *  
+<))  ee-4.ogg   1962496   2155008
+Q>  Bras eo Yann ;
+    Yann a zo bras ;
+    Bremañ ez eo bras ;
+R>  Grand est Jean ;
+    Jean est grand ; 
+    Maintenant il est grand ;
+
+#evel-just *  utilitaire expression
+<))  ee-4.ogg   2169856   2259968
+Q>  evel-just ;
+R>  bien sûr ;
+
+##dre ma *KE-72 3540 * Q2 expression  
+
+##zoken *KE-70 1874 * utilitaire  
+
+#ar re *  utilitaire 
+<))  ee-4.ogg   2269696   2551808
+Q>  bihan ; ar re vihan ;
+    kozh  ; ar re gozh ;
+R>  petits ; les petits ;
+    vieux ; les vieux ;
+
+##paeañ *KE-49 1464 * commerce verbe 
+
+#mui muioc'h * R2 utilitaire 
+<))  ee-4.ogg   2564608   2681344
+Q>  mui ; muioc'h ;
+R>   plus (2);
+
+#gwell gwolloc'h * R2 Q2 utilitaire 
+<))  ee-4.ogg   2690560   2819072
+Q>  gwell, gwelloc'h ; (2)
+R>   mieux, meilleur ; (2)
+
+#d'am soñj *  expression 
+<))  ee-4.ogg   2828800   2921472 
+Q>  d'am soñj ; 
+R>   je pense, à mon idée ;
+
+#evit pezh a sell ouzh *  expression 
+<))  ee-4.ogg   2928640   3063296 
+Q>  evit pezh a sell ouzh... ; 
+R>   pour ce qui regarde, en ce qui concerne ;
+
+##gopr *KE-43 3161 * Q2 société vie  
+
+##ebet *KE-72 1300 * utilitaire  
+
+

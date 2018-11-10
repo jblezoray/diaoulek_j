@@ -7,19 +7,23 @@ import fr.jblezoray.diaoulek.data.scrapper.FileCache;
 import fr.jblezoray.diaoulek.data.scrapper.FileDownloader;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
 import fr.jblezoray.diaoulek.userinterface.CommandLineUserInterface;
+import fr.jblezoray.diaoulek.userinterface.SoundPlayer;
 
 public class App {
 
     public static void main(String[] args) throws FileRetrieverException {
 
         FileDownloader fd = new FileDownloader(Config.URL_UPDATE);
-        FileCache fc = new FileCache(Config.CACHE_DIR, fd);
+        FileCache cache = new FileCache(Config.CACHE_DIR, fd);
 
         LessonParser lessonParser = new LessonParser(Config.CHARSET);
         FileIndexParser fileIndexParser = new FileIndexParser(Config.CHARSET);
-        DiaoulekService s = new DiaoulekService(fc, Config.FILE_INDEX_NAME, fileIndexParser, lessonParser);
+        DiaoulekService service = new DiaoulekService(
+                cache, Config.FILE_INDEX_NAME, fileIndexParser, lessonParser);
 
-        CommandLineUserInterface cli = new CommandLineUserInterface(s, System.out, System.in);
+        SoundPlayer soundPlayer = new SoundPlayer(cache);
+        CommandLineUserInterface cli = new CommandLineUserInterface(
+                service, System.out, System.in, soundPlayer);
         cli.start();
     }
 }

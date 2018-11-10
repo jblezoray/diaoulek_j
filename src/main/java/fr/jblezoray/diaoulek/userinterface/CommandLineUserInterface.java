@@ -1,5 +1,6 @@
 package fr.jblezoray.diaoulek.userinterface;
 
+import com.sun.tools.javac.util.Pair;
 import fr.jblezoray.diaoulek.core.DiaoulekService;
 import fr.jblezoray.diaoulek.core.LessonCategoryBuilder;
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
@@ -11,6 +12,7 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.parser.DataException;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
 import org.slf4j.Logger;
@@ -27,11 +29,16 @@ public class CommandLineUserInterface {
     private final DiaoulekService diaoulekService;
     private final PrintStream ps;
     private final InputStream is;
+    private final SoundPlayer soundPlayer;
 
-    public CommandLineUserInterface(DiaoulekService diaoulekService, PrintStream ps, InputStream is) {
+    public CommandLineUserInterface(DiaoulekService diaoulekService,
+                                    PrintStream ps,
+                                    InputStream is,
+                                    SoundPlayer soundPlayer) {
         this.diaoulekService = diaoulekService;
         this.is = is;
         this.ps = ps;
+        this.soundPlayer = soundPlayer;
     }
 
 
@@ -142,10 +149,21 @@ public class CommandLineUserInterface {
         return br.readLine().trim();
     }
 
-    private void printText(Text le) {
-        this.ps.println(le.getText());
+    private void pressAnyKey() throws IOException {
+        while (this.is.available()!=0) this.is.read();
+        this.is.read();
     }
 
+    private void printText(Text le) throws IOException, FileRetrieverException {
+        for (Pair<String, SoundReference> line : le.getText()) {
+            if (line.fst.length() > 0)
+                this.ps.println(line.fst);
+            if (line.snd!=null)
+                soundPlayer.playSound(line.snd);
+//            this.pressAnyKey();
+        }
+        this.ps.println(le.getText());
+    }
 }
 
 

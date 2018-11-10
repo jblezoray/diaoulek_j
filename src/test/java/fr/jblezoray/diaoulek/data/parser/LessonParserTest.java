@@ -4,12 +4,14 @@ import fr.jblezoray.diaoulek.data.model.*;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
+import java.util.stream.Collectors;
 
 public class LessonParserTest {
 
@@ -21,7 +23,7 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonParser lesson = new LessonParser(Charset.forName("UTF-8"));
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then
@@ -29,8 +31,8 @@ public class LessonParserTest {
         Assertions.assertEquals(19, e.getLessonElements().size());
 
         Text elt0 = (Text) e.getLessonElements().get(0);
-        Assertions.assertTrue(elt0.getText().startsWith("\nCommentaire : \n"));
-        Assertions.assertTrue(elt0.getText().endsWith("(patience).\n\n\n"));
+        Assertions.assertTrue(elt0.getComment().startsWith("Les mots bretons en \"er\""));
+        Assertions.assertTrue(elt0.getComment().endsWith("Exemple : < habaskted > (patience)."));
 
         QRCouple elt1 = (QRCouple) e.getLessonElements().get(1);
         Assertions.assertArrayEquals(new String[]{"lez"}, elt1.getSeparationLine().getWordReferences());
@@ -71,5 +73,33 @@ public class LessonParserTest {
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then no exception.
+    }
+
+    @Test
+    public void testParseLessonText() throws IOException, DataException {
+        // having
+        String fileContent = ResourceReader.readResource("/ee-4.txt");
+        FileIndexEntry fieMock = new FileIndexEntry();
+
+        // when
+        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
+
+        // then
+        Assertions.assertEquals(1, e.getLessonElements()
+                .stream().filter(le -> le instanceof Text).count());
+        Text t = (Text) e.getLessonElements()
+                .stream().filter(le -> le instanceof Text).findFirst().get();
+        // lessonText
+        Assertions.assertEquals("ee-4.ogg", t.getText().get(0).snd.getSoundFileName());
+        Assertions.assertEquals(5120, (int)t.getText().get(0).snd.getSoundBeginIndex());
+        Assertions.assertEquals(1278464, (int)t.getText().get(0).snd.getSoundEndIndex());
+        Assertions.assertEquals("", t.getText().get(0).fst);
+        Assertions.assertEquals("Ur c'helenner pe ur skolaer eo ?", t.getText().get(1).fst);
+        Assertions.assertEquals("il n'a aucun salaire.", t.getText().get(22).fst);
+        Assertions.assertEquals(null, t.getText().get(22).snd);
+        // comment
+        Assertions.assertTrue(t.getComment().startsWith("1)  < Ur c'hele"));
+        Assertions.assertTrue(t.getComment().endsWith(" deux par < mieux >"));
     }
 }
