@@ -1,21 +1,20 @@
 package fr.jblezoray.diaoulek.data.model.lessonelement;
 
-import com.sun.tools.javac.util.Pair;
-import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 
 import java.util.List;
 
 public class Text extends LessonElement {
 
-    private final List<Pair<String, SoundReference>> text;
+    private final List<LessonTextLine> text;
     private final String comment;
 
-    public Text(List<Pair<String, SoundReference>> text, String comment) {
+    public Text(List<LessonTextLine> text, String comment) {
         this.text = text;
         this.comment = comment;
     }
 
-    public List<Pair<String, SoundReference>> getText() {
+    public List<LessonTextLine> getText() {
         return text;
     }
 

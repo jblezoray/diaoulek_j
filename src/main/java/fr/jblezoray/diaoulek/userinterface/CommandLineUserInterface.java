@@ -1,5 +1,6 @@
 package fr.jblezoray.diaoulek.userinterface;
 
+import com.google.common.base.Strings;
 import com.sun.tools.javac.util.Pair;
 import fr.jblezoray.diaoulek.core.DiaoulekService;
 import fr.jblezoray.diaoulek.core.LessonCategoryBuilder;
@@ -11,6 +12,7 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.LessonElement;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.parser.DataException;
@@ -25,6 +27,8 @@ import java.util.stream.Collectors;
 
 public class CommandLineUserInterface {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommandLineUserInterface.class);
+
+    private static final int LINE_WIDTH = 120;
 
     private final DiaoulekService diaoulekService;
     private final PrintStream ps;
@@ -50,12 +54,15 @@ public class CommandLineUserInterface {
                 LessonEntry lesson = this.diaoulekService.getLesson(fie);
                 for (LessonElement le : lesson.getLessonElements()) {
                     if (le instanceof Text) {
+                        printTitle("Lesson");
                         printText((Text) le);
 
                     } else if (le instanceof WordReference) {
+                        printTitle("Question");
                         // TODO
 
                     } else if (le instanceof QRCouple) {
+                        printTitle("Question");
                         printQuestion((QRCouple)le);
                         this.read("translate : ");
                     }
@@ -125,7 +132,7 @@ public class CommandLineUserInterface {
                 .orElseThrow(DataException::new);
         int spacer = 5;
         int widthPerFile = maxFilenameLength + spacer;
-        int howManyPerLine = (80 - spacer) / widthPerFile;
+        int howManyPerLine = (LINE_WIDTH - spacer) / widthPerFile;
         for (int i=0; i<fies.size(); i+=howManyPerLine) {
             for (int j=i; j<fies.size() && j<i+howManyPerLine; j++) {
                 String filename = fies.get(j).getFilename();
@@ -141,7 +148,6 @@ public class CommandLineUserInterface {
     }
 
 
-
     private String read(String inquerry) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(this.is));
         this.ps.print(inquerry);
@@ -149,20 +155,45 @@ public class CommandLineUserInterface {
         return br.readLine().trim();
     }
 
+
     private void pressAnyKey() throws IOException {
         while (this.is.available()!=0) this.is.read();
         this.is.read();
     }
 
+
     private void printText(Text le) throws IOException, FileRetrieverException {
-        for (Pair<String, SoundReference> line : le.getText()) {
-            if (line.fst.length() > 0)
-                this.ps.println(line.fst);
-            if (line.snd!=null)
-                soundPlayer.playSound(line.snd);
+        int width = (LINE_WIDTH -9) / 2;
+
+        for (LessonTextLine line : le.getText()) {
+            if (line.getLine().length() > 0) {
+                String formatedLine = String.format(
+                        "  %-"+width+"s  |  %-"+width+"s  ",
+                        Strings.nullToEmpty(line.getLine()),
+                        Strings.nullToEmpty(line.getTranslation()));
+                this.ps.println(formatedLine);
+            }
+
+            if (line.getSound()!=null) {
+                soundPlayer.playSound(line.getSound());
+            }
+
 //            this.pressAnyKey();
         }
-        this.ps.println(le.getText());
+//        this.ps.println(le.getText());
+    }
+
+
+    private void printTitle(String title) {
+
+        int len = title.length();
+        int fillerLen = ((LINE_WIDTH-len) / 2) - 4;
+
+        StringBuilder fillerBuilder = new StringBuilder();
+        for (int i=0; i<fillerLen; i++) fillerBuilder.append("=");
+        String filler = fillerBuilder.toString();
+
+        this.ps.println(String.format("%s  %s  %s", filler , title, filler));
     }
 }
 

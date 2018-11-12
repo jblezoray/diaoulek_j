@@ -7,6 +7,7 @@ import fr.jblezoray.diaoulek.data.model.*;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
+import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.QRCoupleSeparationLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
@@ -18,6 +19,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class LessonParser implements IParser<LessonEntry> {
@@ -55,7 +57,7 @@ public class LessonParser implements IParser<LessonEntry> {
                     List<String> lines = reader.readLinesUntil(l ->
                             !l.replaceAll(" ", "")
                                 .matches("^#{3,}$"));
-                    Text text = parseLessonText(lines);
+                    Text text = new LessonTextParser(lines).parseLessonText();
                     le.getLessonElements().add(text);
                 }
                 // "##something..." is a word reference from another lesson.
@@ -78,59 +80,6 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
 
-    private static Text parseLessonText(List<String> lines) throws DataException {
-        List<Pair<String, SoundReference>> lessonText = new ArrayList<>();
-        Map<String, SoundReference> sounds = new HashMap<>();
-        StringBuilder commentText = new StringBuilder();
-
-
-
-        boolean soundMode = false;
-        boolean commentMode = false;
-        for (String line : lines) {
-            if (line.startsWith("<)start)")) {
-                soundMode = true;
-
-            } else if (line.startsWith("<)end)")) {
-                soundMode = false;
-
-            } else if (line.startsWith("Commentaire")) {
-                commentMode = true;
-
-            } else if (soundMode) {
-                int spaceIndex = line.trim().indexOf(" ");
-                if (spaceIndex!=-1) {
-                    String key = line.trim().substring(0, spaceIndex);
-                    SoundReference sound = parseSound(line);
-                    sounds.put(key, sound);
-                }
-
-            } else {
-                String l = line.trim();
-                if (l.length() > 0) {
-                    if (commentMode) {
-                        commentText.append(l).append(System.lineSeparator());
-                    } else {
-                        SoundReference sr = null;
-                        for (String soundKey: sounds.keySet()) {
-                            if (l.startsWith(soundKey)) {
-                                sr = sounds.get(soundKey);
-                                l = l.substring(soundKey.length()).trim();
-                            }
-                        }
-                        lessonText.add(new Pair<>(l, sr));
-                    }
-                }
-            }
-        }
-
-        // remove last \n
-        int idx = commentText.lastIndexOf(System.lineSeparator());
-        String commentTextStr = (idx==-1) ? commentText.toString() :
-                commentText.deleteCharAt(idx).toString();
-
-        return new Text(lessonText, commentTextStr);
-    }
 
     // Pour réutiliser l'entrée « anken » dans une de vos leçon, il suffit
     // de faire un copier-coller de la ligne :
@@ -181,7 +130,7 @@ public class LessonParser implements IParser<LessonEntry> {
 
             } else if (line.startsWith("<))")) {
                 // référence audio
-                qrCouple.setSound(parseSound(line));
+                qrCouple.setSound(new LessonSoundReferenceParser(line).parseSound());
 
             } else if (line.startsWith("Q>")) {
                 qrCouple.setQuestion(parseQuestion(line));
@@ -216,32 +165,6 @@ public class LessonParser implements IParser<LessonEntry> {
         return sepLine;
     }
 
-
-    private static SoundReference parseSound(String line) throws DataException {
-        SoundReference sound = new SoundReference();
-        String[] split = line.trim().split("\\s+");
-        if (split.length!=2 && split.length!=4)
-            throw new DataException(line);
-        sound.setSoundFileName(split[1]);
-        if (split.length==4) {
-            try {
-                // I've seen case twice a case with "something" at the end :
-                // <))  aln-ke-41.ogg   4365824   5159936:
-                // <))  aln-ke-50.ogg   332288   713728:set
-                // hence, this little hack :
-                if (split[3].contains(":")) split[3] = split[3].split(":")[0];
-
-                sound.setSoundBeginIndex(Integer.valueOf(split[2]));
-                sound.setSoundEndIndex(Integer.valueOf(split[3]));
-            } catch (NumberFormatException nfe) {
-                throw new DataException("Cannot parse value", nfe);
-            }
-        } else {
-            sound.setSoundBeginIndex(0);
-            sound.setSoundEndIndex(0);
-        }
-        return sound;
-    }
 
     private static Question parseQuestion(String line) {
         String raw = removeDuplicatesWhitespaces(removePrefix(line, "Q>"));
