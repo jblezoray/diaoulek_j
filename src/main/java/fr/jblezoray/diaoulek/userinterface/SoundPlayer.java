@@ -6,6 +6,8 @@ import fr.jblezoray.diaoulek.data.scrapper.FileCache;
 import fr.jblezoray.diaoulek.data.scrapper.FileDownloader;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
 import fr.jblezoray.diaoulek.entrypoint.Config;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.sound.sampled.*;
 import javax.sound.sampled.DataLine.Info;
@@ -20,10 +22,12 @@ import static javax.sound.sampled.AudioFormat.Encoding.PCM_SIGNED;
  * see https://odoepner.wordpress.com/2013/07/19/play-mp3-or-ogg-using-javax-sound-sampled-mp3spi-vorbisspi/
  */
 public class SoundPlayer {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SoundPlayer.class);
 
     private final FileCache cache;
+    private Thread playerThread = null;
 
-
+    // for testing purpose.
     public static void main(String[] args) throws FileRetrieverException {
         FileDownloader fd = new FileDownloader("");
         FileCache cache = new FileCache(Config.CACHE_DIR, fd);
@@ -55,9 +59,24 @@ public class SoundPlayer {
             throws FileRetrieverException {
         byte[] bytes = this.cache.getFileContent(
                 snd.getSoundFileName(), Optional.of("SOUND"));
-        playSound(bytes, snd.getSoundBeginIndex(), snd.getSoundEndIndex());
+        if (!isDone()) this.stop();
+        this.playerThread = new Thread(() -> {
+            playSound(bytes, snd.getSoundBeginIndex(), snd.getSoundEndIndex());
+        });
+        this.playerThread.start();
     }
 
+    public boolean isDone() {
+        return this.playerThread!=null
+                && !this.playerThread.isAlive()
+                && !this.playerThread.isInterrupted();
+    }
+
+    public void stop() {
+        if (this.playerThread!=null) {
+            this.playerThread.interrupt();
+        }
+    }
 
     private void playSound(byte[] bytes, int beginIndex, int endIndex) {
         try (
@@ -81,8 +100,12 @@ public class SoundPlayer {
                     line.open(outFormat);
                     line.start();
                     fadeInMasterGain(line, 75);// avoids white noises at the begin.
-                    stream(audioIs, line, beginIndex, endIndex);
-                    line.drain();
+                    try {
+                        stream(audioIs, line, beginIndex, endIndex);
+                        line.drain();
+                    } catch (InterruptedException e) {
+                        line.flush();
+                    }
                     line.stop();
                 }
             }
@@ -119,8 +142,7 @@ public class SoundPlayer {
         while (!started.get()) {
             try {
                 Thread.sleep(10);
-            } catch (InterruptedException e) {
-            }
+            } catch (InterruptedException e) {}
         }
     }
 
@@ -129,12 +151,12 @@ public class SoundPlayer {
                         SourceDataLine line,
                         int beginIndex,
                         int endIndex)
-            throws IOException {
+            throws IOException, InterruptedException {
         int frameSize = line.getFormat().getFrameSize();
         // move to beginIndex.
         in.skip(beginIndex * frameSize);
         int bytesToReadLeft = (endIndex - beginIndex) * frameSize;
-        byte[] buffer = new byte[4096];
+        byte[] buffer = new byte[1024];
         while (bytesToReadLeft>0) {
             int bytesToRead = Math.min(bytesToReadLeft, buffer.length);
             int bytesRead = in.read(buffer, 0, bytesToRead);
@@ -142,6 +164,12 @@ public class SoundPlayer {
             if (bytesRead>0) {
                 bytesRead -= bytesRead % frameSize;
                 line.write(buffer, 0, bytesRead);
+            }
+            while (line.available()<1024*2) {
+                Thread.sleep(50);
+            }
+            if (this.playerThread.isInterrupted()) {
+                throw new InterruptedException();
             }
         }
     }

@@ -1,7 +1,6 @@
 package fr.jblezoray.diaoulek.userinterface;
 
 import com.google.common.base.Strings;
-import com.sun.tools.javac.util.Pair;
 import fr.jblezoray.diaoulek.core.DiaoulekService;
 import fr.jblezoray.diaoulek.core.LessonCategoryBuilder;
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
@@ -14,7 +13,6 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
 import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
-import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.parser.DataException;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
 import org.slf4j.Logger;
@@ -157,6 +155,7 @@ public class CommandLineUserInterface {
 
 
     private void pressAnyKey() throws IOException {
+        // empty the inputstream.
         while (this.is.available()!=0) this.is.read();
         this.is.read();
     }
@@ -176,11 +175,20 @@ public class CommandLineUserInterface {
 
             if (line.getSound()!=null) {
                 soundPlayer.playSound(line.getSound());
+                // empty the inputstream.
+                while (this.is.available()!=0) this.is.read();
+                // wait for either a key pressed or the end of the playing of
+                // the sound.
+                while (this.is.available()==0 && !this.soundPlayer.isDone()) {
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        // noop.
+                    }
+                }
+                this.soundPlayer.stop();
             }
-
-//            this.pressAnyKey();
         }
-//        this.ps.println(le.getText());
     }
 
 
