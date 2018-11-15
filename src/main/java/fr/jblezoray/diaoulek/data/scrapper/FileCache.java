@@ -5,16 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.IOException;
-import java.math.BigInteger;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 import java.util.concurrent.Callable;
-import java.util.function.Function;
 
 public class FileCache implements IFileRetriever {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileCache.class);

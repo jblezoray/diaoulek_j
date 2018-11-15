@@ -1,9 +1,9 @@
 package fr.jblezoray.diaoulek.entrypoint;
 
 import fr.jblezoray.diaoulek.data.model.AudioFile;
+import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import fr.jblezoray.diaoulek.data.model.LessonEntry;
 import fr.jblezoray.diaoulek.data.parser.*;
-import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import fr.jblezoray.diaoulek.data.scrapper.FileCache;
 import fr.jblezoray.diaoulek.data.scrapper.FileDownloader;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;

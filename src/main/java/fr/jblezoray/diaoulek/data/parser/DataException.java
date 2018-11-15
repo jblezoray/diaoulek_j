@@ -1,7 +1,5 @@
 package fr.jblezoray.diaoulek.data.parser;
 
-import java.io.IOException;
-
 public class DataException extends Exception {
 
     public DataException(String data) {

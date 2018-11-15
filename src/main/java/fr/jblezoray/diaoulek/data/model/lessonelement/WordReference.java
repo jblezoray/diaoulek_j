@@ -1,7 +1,5 @@
 package fr.jblezoray.diaoulek.data.model.lessonelement;
 
-import fr.jblezoray.diaoulek.data.model.lessonelement.LessonElement;
-
 public class WordReference extends LessonElement {
     private String word;
     private String lessonAlias;

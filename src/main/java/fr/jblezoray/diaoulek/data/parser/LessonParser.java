@@ -1,15 +1,12 @@
 package fr.jblezoray.diaoulek.data.parser;
 
-import com.google.common.collect.ListMultimap;
-import com.google.common.collect.MultimapBuilder;
-import com.sun.tools.javac.util.Pair;
-import fr.jblezoray.diaoulek.data.model.*;
+import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
+import fr.jblezoray.diaoulek.data.model.LessonEntry;
+import fr.jblezoray.diaoulek.data.model.Part;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
-import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.QRCoupleSeparationLine;
-import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Response;
 import org.slf4j.Logger;
@@ -17,9 +14,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class LessonParser implements IParser<LessonEntry> {
