@@ -1,8 +1,6 @@
 package fr.jblezoray.diaoulek.data.parser;
 
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
-import fr.jblezoray.diaoulek.data.parser.DataException;
-import fr.jblezoray.diaoulek.data.parser.FileIndexParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
