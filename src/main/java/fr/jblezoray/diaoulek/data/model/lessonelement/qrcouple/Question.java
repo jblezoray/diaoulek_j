@@ -15,6 +15,10 @@ public class Question {
         this.parts = parts;
     }
 
+    /**
+     * parts of a question are separated by a ';' in lesson files.
+     * @return
+     */
     public Part[] getParts() {
         return this.parts;
     }

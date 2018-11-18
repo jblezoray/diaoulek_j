@@ -10,6 +10,10 @@ public class Part {
         this.phrases = phrases;
     }
 
+    /**
+     * phrases are separated by a "," in lesson files.
+     * @return
+     */
     public String[] getPhrases() {
         return phrases;
     }

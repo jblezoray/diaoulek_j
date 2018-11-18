@@ -20,9 +20,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
+/**
+ * Parses a Lesson file.
+ */
 public class LessonParser implements IParser<LessonEntry> {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(LessonParser.class);
 
     private final Charset charset;
 
