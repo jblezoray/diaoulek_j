@@ -1,7 +1,6 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * An implementation of the Levenshtein edit distance.
@@ -12,6 +11,8 @@ import java.util.List;
  *     <li>a phrase (List of String), the base element being a word (String)</li>
  *     <li>...</li>
  * </ul>
+ *
+ * May also compute edit paths.
  *
  * See :
  * <ul>
@@ -37,15 +38,9 @@ public class Levenshtein<WHOLE,PART> {
         this.comparePart = comparePart;
     }
 
-
-    public List<EditOperation<PART>> computeEditPath(WHOLE from, WHOLE to) {
-        // TODO
-        return null;
-    }
-
-
     /**
      * Computes a levenshtein edit distance between two elements.
+     *
      * @param s a first element.
      * @param t a second element
      * @return a levenshtein edit score.
@@ -79,46 +74,96 @@ public class Levenshtein<WHOLE,PART> {
 
 
     /**
-     * Wagner–Fischer algorithm
+     * Computes an edit path for going from 's' to 't'.
+     *
+     * implements a Wagner–Fischer algorithm, modified for computing the edit
+     * path instead of the edit distance.
+     *
+     * See:
+     * <ul>
+     *     <li>https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm</li>
+     * </ul>
      *
      * @param s
      * @param t
      * @return
      */
+    public List<EditOperation<PART>> computePath(WHOLE s, WHOLE t) {
+        List<PART> sTokenized = this.tokenizer.tokenize(s);
+        List<PART> tTokenized = this.tokenizer.tokenize(t);
+        return computePath(sTokenized, tTokenized);
+    }
+
+
     private List<EditOperation<PART>> computePath(List<PART> s, List<PART> t) {
 
         int m = s.size();
         int n = t.size();
 
-        // For all i and j, d[i,j] will hold the Levenshtein distance between
-        // the first i characters of s and the first j characters of t.
-        // Note that d has (m+1) x (n+1) values.
-        int[][] d = new int[m+1][n+1];
-        // the distance of any first string to an empty second string
-        for (int i=0; i<=m; i++) d[i][0] = i;
-        // (transforming the string of the first i characters of s into
-        // the empty string requires i deletions)
-        // the distance of any second string to an empty first string
-        for (int j=0; j<=n; j++) d[0][j] = j;
+        List<EditOperation<PART>>[][] ope = new List[m+1][n+1];
 
+        // the edit path of an empty stuff to an empty stuff is the empty path.
+        ope[0][0] = Collections.EMPTY_LIST;
+
+        // the edit path of any first stuff to an empty second stuff is a
+        // succession of delete operations.
+        for (int i=1; i<=m; i++)
+            ope[i][0] = copyAndAppend(ope[i-1][0], new EditOperation.Delete<>(i-1));
+
+        // the edit path of the empty stuff to any stuff is a succession of
+        // insert operations.
+        for (int j=1; j<=n; j++)
+            ope[0][j] = copyAndAppend(ope[0][j-1], new EditOperation.Insert<>(0, t.get(j-1)));
 
         for (int j=1; j<=n; j++) {
             for (int i=1; i<=m; i++) {
                 if (this.comparePart.isEqualTo(s.get(i-1), t.get(j-1))) {
-                    d[i][j] = d[i-1][j-1]; // no operation required
+                    // no operation required.
+                    ope[i][j] = ope[i-1][j-1];
+
                 } else {
-                    d[i][j] = minOf(
-                            d[i-1][j] + 1,  // a deletion
-                            d[i][j-1] + 1,  // an insertion
-                            d[i-1][j-1] + 1 // a substitution
-                    );
+
+                    // compute three edit distances
+                    int sizeIfDeletion = ope[i-1][j].size() + 1;
+                    int sizeIfInsertion = ope[i][j-1].size() + 1;
+                    int sizeIfSubstitution = ope[i-1][j-1].size() + 1;
+                    int minScore = minOf(
+                            sizeIfDeletion, sizeIfInsertion, sizeIfSubstitution);
+
+                    // keep the smallest score, with a new operation.
+                    if (minScore == sizeIfDeletion) {
+                        ope[i][j] = copyAndAppend(
+                                ope[i-1][j],
+                                new EditOperation.Delete<>(i-1));
+
+                    } else if (minScore == sizeIfInsertion) {
+                        ope[i][j] = copyAndAppend(
+                                ope[i][j-1],
+                                new EditOperation.Insert<>(i, t.get(j-1)));
+
+                    } else {
+                        ope[i][j] = copyAndAppend(
+                                ope[i-1][j-1],
+                                new EditOperation.Replace<>(i-1, t.get(j-1)));
+                    }
                 }
             }
         }
 
-        return d[m][n]; // TODO
+        return ope[m][n];
     }
 
+
+    private List<EditOperation<PART>> copyAndAppend(
+            List<EditOperation<PART>> toCopy,
+            EditOperation<PART> toAppend) {
+        ArrayList<EditOperation<PART>> result = new ArrayList<>(toCopy.size()+1);
+        Iterator<EditOperation<PART>> toCopyIterator = toCopy.iterator();
+        result.add(toAppend);
+        while (toCopyIterator.hasNext())
+            result.add(toCopyIterator.next());
+        return Collections.unmodifiableList(result);
+    }
 
 
     private static int minOf(int... a) {
