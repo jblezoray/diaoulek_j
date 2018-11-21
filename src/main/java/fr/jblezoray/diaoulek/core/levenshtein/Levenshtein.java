@@ -1,5 +1,7 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
+import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
+
 import java.util.*;
 
 /**
@@ -36,6 +38,14 @@ public class Levenshtein<WHOLE,PART> {
             ComparePart<PART> comparePart) {
         this.tokenizer = tokenizer;
         this.comparePart = comparePart;
+    }
+
+    public Tokenizer<WHOLE, PART> getTokenizer() {
+        return tokenizer;
+    }
+
+    public ComparePart<PART> getComparePart() {
+        return comparePart;
     }
 
     /**

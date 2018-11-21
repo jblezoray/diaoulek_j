@@ -1,12 +1,14 @@
 package fr.jblezoray.diaoulek.userinterface;
 
 import com.google.common.base.Strings;
+import fr.jblezoray.diaoulek.core.AnswerAnalyser;
 import fr.jblezoray.diaoulek.core.DiaoulekService;
 import fr.jblezoray.diaoulek.core.LessonCategoryBuilder;
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import fr.jblezoray.diaoulek.data.model.LessonCategory;
 import fr.jblezoray.diaoulek.data.model.LessonEntry;
 import fr.jblezoray.diaoulek.data.model.Part;
+import fr.jblezoray.diaoulek.data.model.analysis.AnswerAnalysis;
 import fr.jblezoray.diaoulek.data.model.lessonelement.LessonElement;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
@@ -47,7 +49,9 @@ public class CommandLineUserInterface {
     public void start() {
         try {
             while(true) {
+                printTitle("Lesson categories");
                 LessonCategory lc = chooseLessonCategory();
+                printTitle("Lessons");
                 FileIndexEntry fie = chooseLesson(lc);
                 LessonEntry lesson = this.diaoulekService.getLesson(fie);
                 for (LessonElement le : lesson.getLessonElements()) {
@@ -62,7 +66,15 @@ public class CommandLineUserInterface {
                     } else if (le instanceof QRCouple) {
                         printTitle("Question");
                         printQuestion((QRCouple)le);
-                        this.read("translate : ");
+                        String answer = this.read("translate : ");
+
+                        AnswerAnalyser analyser = new AnswerAnalyser((QRCouple)le);
+                        AnswerAnalysis aa = analyser.analyze(answer);
+                        this.ps.println("expected  q : " + aa.getExpectedResponse());
+                        this.ps.println("tokenized q : " + aa.getExpectedResponseTokenized());
+                        this.ps.println("formated  r : " + aa.getInputWords());
+                        this.ps.println("tokenized r : " + aa.getInputWordsTokenized());
+                        this.ps.println("accuracy   : " + aa.getAnswerAccuracy());
                     }
                 }
             }
@@ -78,13 +90,12 @@ public class CommandLineUserInterface {
     }
 
     private void printQuestion(QRCouple qr) {
-        this.ps.println("Word / expression :");
         Question q = qr.getQuestion();
         for (Part p : q.getParts()) {
             String[] phrases = p.getPhrases();
             for (String phrase : phrases) {
+                this.ps.print("                    ");
                 this.ps.print(phrase);
-                this.ps.print(" ; ");
             }
             this.ps.println();
         }
@@ -93,7 +104,6 @@ public class CommandLineUserInterface {
 
     private LessonCategory chooseLessonCategory()
             throws DataException, FileRetrieverException, IOException {
-        this.ps.println("Lesson categories");
         List<FileIndexEntry> files = diaoulekService.streamAllLessons()
                 .collect(Collectors.toList());
         LessonCategoryBuilder lcb = new LessonCategoryBuilder(files);
@@ -119,7 +129,6 @@ public class CommandLineUserInterface {
 
     private FileIndexEntry chooseLesson(LessonCategory lc)
             throws DataException, FileRetrieverException, IOException {
-        this.ps.println("Lessons : ");
         List<FileIndexEntry> fies = this.diaoulekService
                 .streamLessonsWithin(lc)
                 .collect(Collectors.toList());
@@ -187,6 +196,8 @@ public class CommandLineUserInterface {
                     }
                 }
                 this.soundPlayer.stop();
+                // re-empty the input stream.
+                while (this.is.available()!=0) this.is.read();
             }
         }
     }

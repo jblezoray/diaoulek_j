@@ -1,4 +1,4 @@
-package fr.jblezoray.diaoulek.core.levenshtein;
+package fr.jblezoray.diaoulek.data.model.analysis;
 
 public interface EditOperation<A> {
 

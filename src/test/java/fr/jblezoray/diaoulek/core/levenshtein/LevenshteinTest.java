@@ -1,15 +1,40 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
+import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class LevenshteinTest {
 
-    private Levenshtein levenshteinWord = LevenshteinFactory.buildWordLevensthein();
-    private Levenshtein levenshteinPhrase = LevenshteinFactory.buildPhraseLevensthein();
+    /**
+     * Computes a levenshtein edit score, by considering how many letter
+     * deletion, insertion, and substitution should be made to go from a word to
+     * another.
+     *
+     * This is therefore a classic string levenshtein computation.
+     */
+    private Levenshtein<String, Character> levenshteinWord = new Levenshtein<>(
+            (str) -> {
+                char[] chars = str.toLowerCase().toCharArray();
+                List<Character> l = new ArrayList<>(chars.length);
+                for (int i = 0; i < chars.length; i++)
+                    l.add(new Character(chars[i]));
+                return l;
+            },
+            (left, right) -> left.compareTo(right) == 0);
+
+    /**
+     * Computes a levenshtein edit score, by considering how many word
+     * deletion, insertion, and substitution should be made to go from a phrase
+     * to another.
+     */
+    private Levenshtein<List<String>, String> levenshteinPhrase = new Levenshtein<>(
+            (list) -> list,
+            (left, right) -> left.equalsIgnoreCase(right));
 
     @Test
     public void nominalCase() {
@@ -45,7 +70,7 @@ public class LevenshteinTest {
         List<String> to = Arrays.asList(  "Tu", "aimes", "bien", "les", "pâtes");
 
         // when
-        List<EditOperation> editList = levenshteinPhrase.computePath(from, to);
+        List<EditOperation<String>> editList = levenshteinPhrase.computePath(from, to);
 
         // then
         Assertions.assertEquals(6, editList.size());
@@ -64,7 +89,7 @@ public class LevenshteinTest {
         String to   = "sitting";
 
         // when
-        List<EditOperation> editList = levenshteinWord.computePath(from, to);
+        List<EditOperation<Character>> editList = levenshteinWord.computePath(from, to);
 
         // then
         Assertions.assertEquals(3, editList.size());
