@@ -3,9 +3,7 @@ package fr.jblezoray.diaoulek.userinterface;
 
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.SoundReference;
 import fr.jblezoray.diaoulek.data.scrapper.FileCache;
-import fr.jblezoray.diaoulek.data.scrapper.FileDownloader;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
-import fr.jblezoray.diaoulek.entrypoint.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,30 +24,6 @@ public class SoundPlayer {
 
     private final FileCache cache;
     private Thread playerThread = null;
-
-    // for testing purpose.
-    public static void main(String[] args) throws FileRetrieverException {
-        FileDownloader fd = new FileDownloader("");
-        FileCache cache = new FileCache(Config.CACHE_DIR, fd);
-        SoundPlayer soundPlayer = new SoundPlayer(cache);
-        int[][] indexes = new int[][]{
-//                {9216,   445952},
-//                {454656, 846848},
-                {13312,  80896},
-                {82432,  147968},
-                {150528, 261632},
-                {263680, 316416},
-                {325120, 447488},
-        };
-        for (int[] index : indexes) {
-            SoundReference sr = new SoundReference();
-            sr.setSoundFileName("ee-1.ogg");
-            sr.setSoundBeginIndex(index[0]);
-            sr.setSoundEndIndex(index[1]);
-            System.out.println(sr.toString());
-            soundPlayer.playSound(sr);
-        }
-    }
 
     public SoundPlayer(FileCache cache) {
         this.cache = cache;
@@ -114,13 +88,14 @@ public class SoundPlayer {
         }
     }
 
-
+    /**
+     * gainControl.shift(..) doesn't work properly with the default
+     * implementation.  Therefore, here is a straightforward implementation.
+     */
     private void fadeInMasterGain(SourceDataLine line, long fadeInTime) {
         FloatControl gainControl = (FloatControl) line.getControl(FloatControl.Type.MASTER_GAIN);
         final float minVol = gainControl.getMinimum();
         gainControl.setValue(minVol);
-        // gainControl.shift(..) doesn't work properly with the default
-        // implementation.  Therefore, here is a straightforward implementation:
         AtomicBoolean started = new AtomicBoolean(false);
         Thread thread = new Thread(() -> {
             started.set(true);
@@ -173,6 +148,5 @@ public class SoundPlayer {
             }
         }
     }
-
 
 }

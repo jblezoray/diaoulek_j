@@ -4,6 +4,8 @@ plugins {
     // for cobertura.
     id 'net.saliman.cobertura' version '2.3.1'
     id 'com.github.kt3k.coveralls' version '2.8.2'
+    // shadow plugin for uber jars
+    id 'com.github.johnrengelman.shadow' version '4.0.3'
 }
 
 apply plugin: 'java'
@@ -21,15 +23,27 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
     compile 'org.apache.httpcomponents:fluent-hc:4.5.6'
-    compile 'org.slf4j:slf4j-simple:1.8.0-beta2'
+    compile 'org.slf4j:slf4j-simple:1.8.0-beta2'         // TODO replace me ...
     compile 'com.google.guava:guava:27.0-jre'
-    // to play oggvorbis.
-    compile 'com.googlecode.soundlibs:vorbisspi:1.0.3-1'
+    compile 'com.googlecode.soundlibs:vorbisspi:1.0.3-1' // to play oggvorbis.
+    compile 'org.jline:jline:3.9.0'                      // for console interactions
 }
 
 cobertura.coverageFormats = ['html', 'xml']
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ["-Xdoclint:none"]
+}
 
 test {
     useJUnitPlatform()
+}
+
+shadowJar {
+    baseName = 'shadow'
+    classifier = null
+    version = null
+    manifest {
+        attributes 'Main-Class': 'fr.jblezoray.diaoulek.entrypoint.App'
+    }
 }

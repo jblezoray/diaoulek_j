@@ -17,32 +17,45 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.lesson.LessonTextLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
 import fr.jblezoray.diaoulek.data.parser.DataException;
 import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
+import org.jline.reader.LineReader;
+import org.jline.reader.LineReaderBuilder;
+import org.jline.reader.impl.completer.StringsCompleter;
+import org.jline.terminal.Terminal;
+import org.jline.terminal.TerminalBuilder;
+import org.jline.utils.NonBlockingReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CommandLineUserInterface {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommandLineUserInterface.class);
-
     private static final int LINE_WIDTH = 120;
 
     private final DiaoulekService diaoulekService;
-    private final PrintStream ps;
-    private final InputStream is;
     private final SoundPlayer soundPlayer;
+    private final Terminal terminal;
+    private final PrintWriter pw;
+
 
     public CommandLineUserInterface(DiaoulekService diaoulekService,
                                     PrintStream ps,
                                     InputStream is,
-                                    SoundPlayer soundPlayer) {
+                                    SoundPlayer soundPlayer) throws IOException {
         this.diaoulekService = diaoulekService;
-        this.is = is;
-        this.ps = ps;
         this.soundPlayer = soundPlayer;
+        this.terminal = TerminalBuilder.builder()
+                .system(true)
+                .streams(is, ps)
+                .build();
+        this.pw = this.terminal.writer();
     }
 
 
@@ -66,15 +79,11 @@ public class CommandLineUserInterface {
                     } else if (le instanceof QRCouple) {
                         printTitle("Question");
                         printQuestion((QRCouple)le);
-                        String answer = this.read("translate : ");
+                        String answer = this.read("translate");
 
                         AnswerAnalyser analyser = new AnswerAnalyser((QRCouple)le);
-                        AnswerAnalysis aa = analyser.analyze(answer);
-                        this.ps.println("expected  q : " + aa.getExpectedResponse());
-                        this.ps.println("tokenized q : " + aa.getExpectedResponseTokenized());
-                        this.ps.println("formated  r : " + aa.getInputWords());
-                        this.ps.println("tokenized r : " + aa.getInputWordsTokenized());
-                        this.ps.println("accuracy   : " + aa.getAnswerAccuracy());
+                        AnswerAnalysis analysis = analyser.analyze(answer);
+                        printAnalysis(analysis);
                     }
                 }
             }
@@ -94,11 +103,21 @@ public class CommandLineUserInterface {
         for (Part p : q.getParts()) {
             String[] phrases = p.getPhrases();
             for (String phrase : phrases) {
-                this.ps.print("                    ");
-                this.ps.print(phrase);
+                this.pw.print("                    ");
+                this.pw.print(phrase);
             }
-            this.ps.println();
+            this.pw.println();
         }
+    }
+
+
+
+    private void printAnalysis(AnswerAnalysis aa) {
+        this.pw.println("expected response : " + aa.getExpectedResponse());
+        this.pw.println("      (tokenized) : " + aa.getExpectedResponseTokenized());
+        this.pw.println("      (tokenized) : " + aa.getInputWordsTokenized());
+        this.pw.println("  phrase accuracy : " + aa.getAnswerAccuracy());
+        this.pw.println("   words accuracy : " + aa.getInputWordsAccuracy());
     }
 
 
@@ -107,6 +126,7 @@ public class CommandLineUserInterface {
         List<FileIndexEntry> files = diaoulekService.streamAllLessons()
                 .collect(Collectors.toList());
         LessonCategoryBuilder lcb = new LessonCategoryBuilder(files);
+        List<String> keys = new ArrayList<>();
         for (LessonCategory lc  : lcb.getLessonsCategories()) {
             String line = String.format("  - %3s : %-20s %3d lesson%1s   %s",
                     lc.getKey(),
@@ -114,15 +134,16 @@ public class CommandLineUserInterface {
                     lc.getCount(),
                     lc.getCount()==1 ? "" : "s",
                     lc.getDescription());
-            this.ps.println(line);
+            keys.add(lc.getKey());
+            this.pw.println(line);
         }
-        String chosenLessonKey = this.read("Choose a lesson category");
+        String chosenLessonKey = this.read("Choose a lesson category", keys.toArray(new String[0]));
         Optional<LessonCategory> olc = lcb.findFromKey(chosenLessonKey);
         if (! olc.isPresent()) {
-            this.ps.println("Unknown lesson category.");
+            this.pw.println("Unknown lesson category.");
             return chooseLessonCategory();// recursive call.
         }
-        return olc.get(); // final choicef
+        return olc.get(); // final choice
     }
 
 
@@ -139,65 +160,66 @@ public class CommandLineUserInterface {
                 .orElseThrow(DataException::new);
         int spacer = 5;
         int widthPerFile = maxFilenameLength + spacer;
-        int howManyPerLine = (LINE_WIDTH - spacer) / widthPerFile;
+        int terminalWidth = getTerminalWidth();
+        int howManyPerLine = (terminalWidth - spacer) / widthPerFile;
         for (int i=0; i<fies.size(); i+=howManyPerLine) {
             for (int j=i; j<fies.size() && j<i+howManyPerLine; j++) {
                 String filename = fies.get(j).getFilename();
-                this.ps.print(String.format("%"+(widthPerFile)+"s", filename));
+                this.pw.print(String.format("%"+(widthPerFile)+"s", filename));
             }
-            this.ps.println();
+            this.pw.println();
         }
-        String chosen = this.read("Choose a Lesson");
+        String[] suggestions = fies.stream()
+                .map(FileIndexEntry::getFilename)
+                .toArray(String[]::new);
+        String chosen = this.read("Choose a Lesson", suggestions);
         for (FileIndexEntry fie : fies)
             if (fie.getFilename().equalsIgnoreCase(chosen))
                 return fie; // final choice.
         return chooseLesson(lc); // recursive call.
     }
 
-
-    private String read(String inquerry) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(this.is));
-        this.ps.print(inquerry);
-        this.ps.print("> ");
-        return br.readLine().trim();
+    private int getTerminalWidth() {
+        int terminalWidth = this.terminal.getWidth();
+        return terminalWidth==0 ? LINE_WIDTH : terminalWidth;
     }
 
 
-    private void pressAnyKey() throws IOException {
-        // empty the inputstream.
-        while (this.is.available()!=0) this.is.read();
-        this.is.read();
+    private String read(String inquerry, String... completions) {
+        LineReader lineReader = LineReaderBuilder.builder()
+                .terminal(terminal)
+                .completer(new StringsCompleter(completions))
+                .build();
+        return lineReader
+                .readLine(AnsiEscapeColors.BLUE + inquerry + " > " + AnsiEscapeColors.RESET)
+                .trim();
     }
 
 
     private void printText(Text le) throws IOException, FileRetrieverException {
-        int width = (LINE_WIDTH -9) / 2;
+        int width = (getTerminalWidth() -9) / 2;
 
         for (LessonTextLine line : le.getText()) {
             if (line.getLine().length() > 0) {
-                String formatedLine = String.format(
-                        "  %-"+width+"s  |  %-"+width+"s  ",
+                this.pw.printf("  %-"+width+"s  |  %-"+width+"s  ",
                         Strings.nullToEmpty(line.getLine()),
                         Strings.nullToEmpty(line.getTranslation()));
-                this.ps.println(formatedLine);
+                this.pw.println();
+                this.pw.flush();
             }
 
             if (line.getSound()!=null) {
                 soundPlayer.playSound(line.getSound());
+                NonBlockingReader reader = this.terminal.reader();
+                this.terminal.echo(false);
                 // empty the inputstream.
-                while (this.is.available()!=0) this.is.read();
+                while (reader.available()!=0) reader.read();
                 // wait for either a key pressed or the end of the playing of
                 // the sound.
-                while (this.is.available()==0 && !this.soundPlayer.isDone()) {
-                    try {
-                        Thread.sleep(100);
-                    } catch (InterruptedException e) {
-                        // noop.
-                    }
-                }
+                while (reader.read(100)==-2 && !this.soundPlayer.isDone());
                 this.soundPlayer.stop();
                 // re-empty the input stream.
-                while (this.is.available()!=0) this.is.read();
+                while (reader.available()!=0) reader.read();
             }
         }
     }
@@ -206,13 +228,17 @@ public class CommandLineUserInterface {
     private void printTitle(String title) {
 
         int len = title.length();
-        int fillerLen = ((LINE_WIDTH-len) / 2) - 4;
+        int fillerLen = ((getTerminalWidth()-len) / 2) - 4;
 
         StringBuilder fillerBuilder = new StringBuilder();
         for (int i=0; i<fillerLen; i++) fillerBuilder.append("=");
         String filler = fillerBuilder.toString();
 
-        this.ps.println(String.format("%s  %s  %s", filler , title, filler));
+        this.pw.print(AnsiEscapeColors.BLUE);
+        this.pw.printf("%s  %s  %s", filler , title, filler);
+        this.pw.print(AnsiEscapeColors.RESET);
+        this.pw.println();
+        this.pw.flush();
     }
 }
 

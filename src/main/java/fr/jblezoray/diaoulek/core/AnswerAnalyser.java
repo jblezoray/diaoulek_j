@@ -1,5 +1,6 @@
 package fr.jblezoray.diaoulek.core;
 
+import fr.jblezoray.diaoulek.core.levenshtein.EditPathResolver;
 import fr.jblezoray.diaoulek.core.levenshtein.Levenshtein;
 import fr.jblezoray.diaoulek.data.model.Part;
 import fr.jblezoray.diaoulek.data.model.analysis.AnswerAnalysis;
@@ -65,10 +66,25 @@ public class AnswerAnalyser {
 
         AnswerAnalysis aa = new AnswerAnalysis();
         aa.setExpectedResponse(bestPhrase);
-        aa.setExpectedResponseTokenized(PHRASE_LEVENSHTEIN.getTokenizer().tokenize(bestPhrase));
-        aa.setInputWords(PHRASE_LEVENSHTEIN.getTokenizer().tokenize(answer));
-        aa.setInputWordsTokenized(PHRASE_LEVENSHTEIN.getTokenizer().tokenize(answer));
+        List<String> bestPhraseTokenized = PHRASE_LEVENSHTEIN.getTokenizer().tokenize(bestPhrase);
+        aa.setExpectedResponseTokenized(bestPhraseTokenized);
+
+        List<String> inputWords = PHRASE_LEVENSHTEIN.getTokenizer().tokenize(answer);
+        aa.setInputWordsTokenized(inputWords);
+
         aa.setAnswerAccuracy(1 - (bestEditPath.size() / aa.getExpectedResponseTokenized().size()));
+
+        List<String> bestPhraseResolved = EditPathResolver.resolve(bestPhraseTokenized, bestEditPath);
+        List<Double> scores = new ArrayList<>();
+        for (int i=0; i<bestPhraseResolved.size(); i++) {
+            String expectedWord = bestPhraseResolved.get(i);
+            String inputWord = inputWords.get(i);
+            double score =
+                    1 - (WORD_LEVENSHTEIN.compute(expectedWord, inputWord)) / expectedWord.length();
+            scores.add(i, score);
+        }
+        aa.setInputWordsAccuracy(scores);
+
         return aa;
     }
 

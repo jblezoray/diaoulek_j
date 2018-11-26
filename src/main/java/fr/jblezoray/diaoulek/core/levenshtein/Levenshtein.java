@@ -118,7 +118,7 @@ public class Levenshtein<WHOLE,PART> {
         // the edit path of any first stuff to an empty second stuff is a
         // succession of delete operations.
         for (int i=1; i<=m; i++)
-            ope[i][0] = copyAndAppend(ope[i-1][0], new EditOperation.Delete<>(i-1));
+            ope[i][0] = copyAndAppend(ope[i-1][0], new EditOperation.Delete(i-1, s.get(i-1)));
 
         // the edit path of the empty stuff to any stuff is a succession of
         // insert operations.
@@ -144,7 +144,7 @@ public class Levenshtein<WHOLE,PART> {
                     if (minScore == sizeIfDeletion) {
                         ope[i][j] = copyAndAppend(
                                 ope[i-1][j],
-                                new EditOperation.Delete<>(i-1));
+                                new EditOperation.Delete<>(i-1, s.get(i-1)));
 
                     } else if (minScore == sizeIfInsertion) {
                         ope[i][j] = copyAndAppend(

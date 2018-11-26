@@ -194,8 +194,10 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
     private static String[] parsePhrase(String part) {
+        // "[a, e] rit" means "a rit, e rit".
         return Arrays.stream(part.split(","))
                 .map(String::trim)
+                .map(LessonParser::removeDuplicatesWhitespaces)
                 .collect(Collectors.toList())
                 .toArray(new String[0]);
     }
@@ -203,8 +205,8 @@ public class LessonParser implements IParser<LessonEntry> {
     private static String removeDuplicatesWhitespaces(String line) {
         return line
                 .trim()
-                .replaceAll("\\h*\\r?\\v+\\h*", Matcher.quoteReplacement("\n"))
-                .replaceAll("\\h+", Matcher.quoteReplacement(" "));
+//                .replaceAll("\\h*\\r?\\v+\\h*", Matcher.quoteReplacement(" "))
+                .replaceAll("\\s+", Matcher.quoteReplacement(" "));
     }
 
 

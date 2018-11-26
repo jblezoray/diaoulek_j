@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LevenshteinTest {
+class LevenshteinTest {
 
     /**
      * Computes a levenshtein edit score, by considering how many letter
@@ -22,7 +22,7 @@ public class LevenshteinTest {
                 char[] chars = str.toLowerCase().toCharArray();
                 List<Character> l = new ArrayList<>(chars.length);
                 for (int i = 0; i < chars.length; i++)
-                    l.add(new Character(chars[i]));
+                    l.add(chars[i]);
                 return l;
             },
             (left, right) -> left.compareTo(right) == 0);
@@ -74,12 +74,12 @@ public class LevenshteinTest {
 
         // then
         Assertions.assertEquals(6, editList.size());
-        Assertions.assertEquals(new EditOperation.Delete(5), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Delete(4), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Replace(3, "pâtes"), editList.get(2));
-        Assertions.assertEquals(new EditOperation.Insert(2, "bien"), editList.get(3));
-        Assertions.assertEquals(new EditOperation.Replace(1, "aimes"), editList.get(4));
-        Assertions.assertEquals(new EditOperation.Replace(0, "Tu"), editList.get(5));
+        Assertions.assertEquals(new EditOperation.Delete<>(5, "ketchup"), editList.get(0));
+        Assertions.assertEquals(new EditOperation.Delete<>(4, "au"), editList.get(1));
+        Assertions.assertEquals(new EditOperation.Replace<>(3, "pâtes"), editList.get(2));
+        Assertions.assertEquals(new EditOperation.Insert<>(2, "bien"), editList.get(3));
+        Assertions.assertEquals(new EditOperation.Replace<>(1, "aimes"), editList.get(4));
+        Assertions.assertEquals(new EditOperation.Replace<>(0, "Tu"), editList.get(5));
     }
 
     @Test
@@ -93,9 +93,9 @@ public class LevenshteinTest {
 
         // then
         Assertions.assertEquals(3, editList.size());
-        Assertions.assertEquals(new EditOperation.Insert(6, 'g'), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Replace(4, 'i'), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Replace(0, 's'), editList.get(2));
+        Assertions.assertEquals(new EditOperation.Insert<>(6, 'g'), editList.get(0));
+        Assertions.assertEquals(new EditOperation.Replace<>(4, 'i'), editList.get(1));
+        Assertions.assertEquals(new EditOperation.Replace<>(0, 's'), editList.get(2));
     }
 
 

@@ -6,9 +6,9 @@ public class AnswerAnalysis {
 
     private String expectedResponse;
     private double answerAccuracy;
-    private List<String> inputWords;
     private List<String> expectedResponseTokenized;
     private List<String> inputWordsTokenized;
+    private List<Double> inputWordsAccuracy;
 
     public String getExpectedResponse() {
         return expectedResponse;
@@ -26,14 +26,6 @@ public class AnswerAnalysis {
         this.answerAccuracy = answerAccuracy;
     }
 
-    public List<String> getInputWords() {
-        return inputWords;
-    }
-
-    public void setInputWords(List<String> inputWords) {
-        this.inputWords = inputWords;
-    }
-
     public void setExpectedResponseTokenized(List<String> expectedResponseTokenized) {
         this.expectedResponseTokenized = expectedResponseTokenized;
     }
@@ -48,5 +40,13 @@ public class AnswerAnalysis {
 
     public List<String> getInputWordsTokenized() {
         return inputWordsTokenized;
+    }
+
+    public List<Double> getInputWordsAccuracy() {
+        return inputWordsAccuracy;
+    }
+
+    public void setInputWordsAccuracy(List<Double> inputWordsAccuracy) {
+        this.inputWordsAccuracy = inputWordsAccuracy;
     }
 }

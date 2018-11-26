@@ -1,0 +1,217 @@
+!# EX-02
+!QR  Q=br  R=fr
+!
+!
+!    Version 0  
+!    License Creative Commons by nc sa
+!
+!
+!    Author : Al. Nandert
+!    beginning : November 19, 2013
+!    Spell correction : November 19, 2013 
+!
+!
+!   *   * nb=90  QR=24  RQ=24 
+!   * Géographie * nb=3  QR=2  RQ=2 
+!   * Histoire * nb=4  QR=2  RQ=2 
+!   * action * nb=129  QR=25  RQ=25 
+!   * admin * nb=33  QR=23  RQ=23 
+!   * air * nb=4  QR=3  RQ=3 
+!   * animal * nb=131  QR=82  RQ=78 
+!   * apparence * nb=2  QR=2  RQ=2 
+!   * arbre * nb=29  QR=20  RQ=20 
+!   * arme * nb=8  QR=4  RQ=4 
+!   * art * nb=5  QR=4  RQ=2 
+!   * artisan * nb=9  QR=6  RQ=6 
+!   * astronomie * nb=3  QR=2  RQ=2 
+!   * bâtiment * nb=80  QR=48  RQ=44 
+!   * bruit * nb=41  QR=26  RQ=26 
+!   * changement * nb=1  QR=1  RQ=1 
+!   * commerce * nb=72  QR=22  RQ=21 
+!   * comportement * nb=8  QR=5  RQ=5 
+!   * corps * nb=127  QR=69  RQ=66 
+!   * couleur * nb=23  QR=11  RQ=10 
+!   * cuisine * nb=43  QR=23  RQ=21 
+!   * date * nb=32  QR=14  RQ=12 
+!   * difficile * nb=54  QR=26  RQ=25 
+!   * dimension * nb=9  QR=4  RQ=4 
+!   * direction * nb=5  QR=3  RQ=3 
+!   * distance * nb=11  QR=7  RQ=7 
+!   * droit * nb=9  QR=7  RQ=7 
+!   * eau * nb=80  QR=41  RQ=38 
+!   * école * nb=81  QR=55  RQ=53 
+!   * économie * nb=12  QR=10  RQ=8 
+!   * église * nb=138  QR=47  RQ=41 
+!   * esprit * nb=79  QR=37  RQ=35 
+!   * état * nb=25  QR=12  RQ=12 
+!   * expression * nb=634  QR=395  RQ=385 
+!   * famille * nb=61  QR=23  RQ=21 
+!   * ferme * nb=187  QR=132  RQ=125 
+!   * feu * nb=5  QR=3  RQ=2 
+!   * fleur * nb=3  QR=3  RQ=3 
+!   * force * nb=2  QR=2  RQ=2 
+!   * forme * nb=29  QR=10  RQ=8 
+!   * fruit * nb=6  QR=4  RQ=4 
+!   * géographie * nb=26  QR=11  RQ=10 
+!   * grammaire * nb=36  QR=8  RQ=6 
+!   * guerre * nb=21  QR=9  RQ=8 
+!   * habit * nb=18  QR=13  RQ=12 
+!   * histoire * nb=1  QR=0  RQ=0 
+!   * indication * nb=4  QR=2  RQ=1 
+!   * industrie * nb=10  QR=9  RQ=6 
+!   * insecte * nb=28  QR=14  RQ=14 
+!   * instrument * nb=64  QR=41  RQ=36 
+!   * jeu * nb=22  QR=15  RQ=15 
+!   * justice * nb=13  QR=9  RQ=8 
+!   * lieu * nb=86  QR=25  RQ=23 
+!   * liquide * nb=10  QR=0  RQ=0 
+!   * littérature * nb=10  QR=4  RQ=4 
+!   * local * nb=1  QR=1  RQ=1 
+!   * lumière * nb=26  QR=11  RQ=11 
+!   * machine * nb=32  QR=23  RQ=22 
+!   * maison * nb=127  QR=82  RQ=81 
+!   * mal * nb=11  QR=9  RQ=8 
+!   * maladie * nb=41  QR=30  RQ=29 
+!   * manière * nb=19  QR=10  RQ=9 
+!   * matériel * nb=40  QR=27  RQ=27 
+!   * math * nb=25  QR=18  RQ=18 
+!   * matière * nb=49  QR=24  RQ=23 
+!   * médecine * nb=3  QR=2  RQ=2 
+!   * médical * nb=41  QR=19  RQ=18 
+!   * mer * nb=91  QR=50  RQ=46 
+!   * mesure * nb=6  QR=2  RQ=2 
+!   * météo * nb=44  QR=17  RQ=17 
+!   * métier * nb=99  QR=35  RQ=33 
+!   * minéral * nb=10  QR=2  RQ=2 
+!   * moisson * nb=3  QR=3  RQ=3 
+!   * mouvement * nb=88  QR=46  RQ=39 
+!   * musique * nb=12  QR=7  RQ=4 
+!   * nature * nb=89  QR=53  RQ=53 
+!   * négatif * nb=99  QR=64  RQ=53 
+!   * néolog * nb=54  QR=37  RQ=36 
+!   * nombre * nb=54  QR=3  RQ=3 
+!   * nourriture * nb=64  QR=23  RQ=20 
+!   * objet * nb=26  QR=21  RQ=19 
+!   * odeur * nb=9  QR=2  RQ=2 
+!   * oiseau * nb=55  QR=39  RQ=38 
+!   * ornement * nb=8  QR=7  RQ=7 
+!   * outil * nb=36  QR=25  RQ=25 
+!   * parole * nb=62  QR=30  RQ=21 
+!   * pays * nb=22  QR=0  RQ=0 
+!   * paysage * nb=67  QR=50  RQ=50 
+!   * personne * nb=147  QR=71  RQ=57 
+!   * pitiésvp * nb=14  QR=12  RQ=12 
+!   * plante * nb=86  QR=60  RQ=56 
+!   * poids * nb=2  QR=0  RQ=0 
+!   * poisson * nb=9  QR=3  RQ=3 
+!   * positif * nb=42  QR=27  RQ=24 
+!   * proverbe * nb=19  QR=13  RQ=13 
+!   * qualificatif * nb=340  QR=180  RQ=167 
+!   * qualité * nb=113  QR=54  RQ=53 
+!   * quantité * nb=77  QR=26  RQ=23 
+!   * repas * nb=20  QR=8  RQ=8 
+!   * santé * nb=44  QR=22  RQ=21 
+!   * sens * nb=12  QR=6  RQ=6 
+!   * sentiment * nb=146  QR=74  RQ=69 
+!   * société * nb=499  QR=274  RQ=257 
+!   * son * nb=15  QR=5  RQ=5 
+!   * sport * nb=2  QR=0  RQ=0 
+!   * taille * nb=5  QR=2  RQ=2 
+!   * technique * nb=19  QR=10  RQ=10 
+!   * température * nb=37  QR=21  RQ=18 
+!   * temps * nb=148  QR=37  RQ=35 
+!   * terre * nb=99  QR=61  RQ=60 
+!   * transport * nb=8  QR=6  RQ=6 
+!   * travail * nb=20  QR=12  RQ=11 
+!   * ustensile * nb=22  QR=9  RQ=9 
+!   * utilitaire * nb=329  QR=113  RQ=111 
+!   * véhicule * nb=6  QR=3  RQ=3 
+!   * verbe * nb=887  QR=466  RQ=433 
+!   * vêtement * nb=45  QR=17  RQ=17 
+!   * vie * nb=176  QR=88  RQ=81 
+!   * ville * nb=8  QR=5  RQ=5 
+!   * vision * nb=4  QR=4  RQ=4 
+!   * vue * nb=10  QR=7  RQ=7 
+!
+!
+
+!     AH   geriadur An Herez
+!     Black Mort.  Black and Mortimer (Brezhoweb)
+!     BZ   Buhez ar Zent  (Marikavel)
+!     BB   Bali Breizh et autres vidéo internet de FR3
+!     CP   Cours de CP de Le Bozec (Marikavel)
+!     DT   Divizoù Troude (Web: Google books).
+!     EmB  geriadur Emgleo Breiz (Garnier)
+!     FFv  Francis Favereau, dictionnaire
+!     FK   François Kervella, Grammaire.
+!     HP1   Harry Potter 1, troet gant Mark Kerrain
+!     JK   Jakez Karter, livre pour enfants An Here.
+!     K    Katekiz e Brezhoneg (St Brieuc - Tréguier)
+!     KA   Koulmig Arvor : Marie-Philomène Cadoret
+!     LM   Le Moal : le pain moisi
+!     MV   Marvailhoù ar Vretoned
+!     MM   Martial Ménard dic. Français-Breton
+!     4ME  Buhez ar pevar Mab Emon (Bib. universitaire Rennes)
+!     Qe   Sarmonioù an Ao. Quéré.
+!     RH   geriadurioù Roparz Hemon
+!     Th   Buhez Santez Thereza ar mabig Jesus (alnfurch)
+!     TS   Ti Satanazet (alnfurch)
+!     Wnoz  Webnoz (Brezhoweb)
+!
+
+
+
+#ti *  maison
+R#maison *
+<))  aln-ex2.ogg   9216   118784
+Q>   ti ; an ti ;  
+R>   maison ; la maison ;
+
+#kador *  maison
+R#chaise *
+<))  aln-ex2.ogg  122368   260608
+Q>   kador ; ar gador ;
+    (mutation par adoucissement des
+    mots féminins après l'article)
+    (une mutation = une liaison)
+R>   chaise ; la chaise ;
+    [attention à la mutation ! ]
+
+#mamm *  famille
+R#mère *
+<))  aln-ex2.ogg   259584   404480
+Q>   mamm ; ar vamm ;
+    (mutation par adoucissement des
+    mots féminins après l'article)
+R>   mère ; la mère ;
+    [attention à la mutation ! ]
+
+#tad *  famille
+R#père *
+<))  aln-ex2.ogg  407040   559104
+Q>   tad ; an tad ;
+R>   père ; le père ;
+
+#bugel *  famille
+R#enfant *
+<))  aln-ex2.ogg   556032   714240
+Q>   bugel ; ar bugel ;
+R>   enfant ; l'enfant ;
+
+#bugale *  famille
+R#enfants [au pluriel] *
+<))  aln-ex2.ogg  720384   880128
+Q>   bugale ; ar vugale ;
+    (mutation par adoucissement des noms de
+    personnes au pluriel après l'article)
+    (il faut plusieurs hommes
+       pour faire une femme ? )
+R>   enfants [au pluriel] ; les enfants ;
+    [attention à la mutation ! ]
+
+#ya, nann *  utilitaire
+R#oui, non *
+<))  aln-ex2.ogg   879104   1010688
+Q>   ya ; nann ;
+R>   oui ; non ;
+

@@ -6,6 +6,7 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.Text;
 import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -39,9 +40,9 @@ public class LessonParserTest {
         Assertions.assertEquals("aln-kk12-2.ogg", elt1.getSound().getSoundFileName());
         Assertions.assertEquals(5632, (int) elt1.getSound().getSoundBeginIndex());
         Assertions.assertEquals(358912, (int) elt1.getSound().getSoundEndIndex());
-        Assertions.assertEquals("al lez (2) ; lezoù ; daou lez ; (KA-91)\nlez ar c'hoadoù ;\nLezardrev ;", elt1.getQuestion().toString());
+        Assertions.assertEquals("al lez (2) ; lezoù ; daou lez ; (KA-91) lez ar c'hoadoù ; Lezardrev ;", elt1.getQuestion().toString());
         Assertions.assertEquals("al lez (2)", elt1.getQuestion().getParts()[0].toString());
-        Assertions.assertEquals("le bord, la lisière ; ...\nla lisière des bois ;\nLézardrieux ;", elt1.getResponse().toString());
+        Assertions.assertEquals("le bord, la lisière ; ... la lisière des bois ; Lézardrieux ;", elt1.getResponse().toString());
         Assertions.assertEquals("le bord, la lisière", elt1.getResponse().getParts()[0].toString());
         Assertions.assertArrayEquals(new String[]{"le bord", "la lisière"}, elt1.getResponse().getParts()[0].getPhrases());
 
@@ -49,9 +50,9 @@ public class LessonParserTest {
         Assertions.assertArrayEquals(new String[]{"efficacité", "redoutable"}, elt2.getSeparationLineReverse().getWordReferences());
         Assertions.assertEquals("une efficacité redoutable", elt2.getSeparationLineReverse().getNote());
         Assertions.assertEquals(0, elt2.getSeparationLineReverse().getTags().length);
-        Assertions.assertEquals("un efedusted vras (fém.) ;\nun efedusted spouronus ;", elt2.getQuestion().toString());
+        Assertions.assertEquals("un efedusted vras (fém.) ; un efedusted spouronus ;", elt2.getQuestion().toString());
         Assertions.assertEquals("un efedusted vras (fém.)", elt2.getQuestion().getParts()[0].toString());
-        Assertions.assertEquals("une grande efficacité (m/f) ;\nune efficacité redoutable ;", elt2.getResponse().toString());
+        Assertions.assertEquals("une grande efficacité (m/f) ; une efficacité redoutable ;", elt2.getResponse().toString());
         Assertions.assertArrayEquals(new String[]{"une grande efficacité (m/f)"}, elt2.getResponse().getParts()[0].getPhrases());
 
         WordReference elt18 = (WordReference) e.getLessonElements().get(18);
@@ -100,4 +101,23 @@ public class LessonParserTest {
         Assertions.assertTrue(t.getComment().startsWith("1)  < Ur c'hele"));
         Assertions.assertTrue(t.getComment().endsWith(" deux par < mieux >"));
     }
+
+
+
+    @Disabled("TODO ! ")
+    @Test
+    public void testGuessEncoding() throws IOException, DataException {
+        // having
+        String fileContent = ResourceReader.readResource("/ex2.txt"); // UTF-8 !
+        FileIndexEntry fieMock = new FileIndexEntry();
+
+        // when
+        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1")); // ikes ...
+        LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
+
+        // then
+        QRCouple qr = (QRCouple) e.getLessonElements().get(2);
+        Assertions.assertEquals("mère", qr.getResponse().getParts()[0]);
+    }
+
 }

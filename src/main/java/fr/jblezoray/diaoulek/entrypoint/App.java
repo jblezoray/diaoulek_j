@@ -9,9 +9,12 @@ import fr.jblezoray.diaoulek.data.scrapper.FileRetrieverException;
 import fr.jblezoray.diaoulek.userinterface.CommandLineUserInterface;
 import fr.jblezoray.diaoulek.userinterface.SoundPlayer;
 
+import java.io.IOException;
+
 public class App {
 
-    public static void main(String[] args) throws FileRetrieverException {
+    public static void main(String[] args)
+            throws FileRetrieverException, IOException {
 
         FileDownloader fd = new FileDownloader(Config.URL_UPDATE);
         FileCache cache = new FileCache(Config.CACHE_DIR, fd);
