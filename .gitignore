@@ -2,5 +2,6 @@
 .gradle/
 .idea/
 build/
+target/
 out/
 downloaded_files_cache/

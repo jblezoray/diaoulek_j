@@ -1,5 +1,4 @@
 language: java
 
-
 after_success:
-- ./gradlew cobertura coveralls
+  - mvn clean test jacoco:report coveralls:report

@@ -128,14 +128,14 @@ public class CommandLineUserInterface {
         LessonCategoryBuilder lcb = new LessonCategoryBuilder(files);
         List<String> keys = new ArrayList<>();
         for (LessonCategory lc  : lcb.getLessonsCategories()) {
-            String line = String.format("  - %3s : %-20s %3d lesson%1s   %s",
+            keys.add(lc.getKey());
+            this.pw.printf("  - %3s : %-20s %3d lesson%1s   %s",
                     lc.getKey(),
                     lc.getFullName(),
                     lc.getCount(),
                     lc.getCount()==1 ? "" : "s",
                     lc.getDescription());
-            keys.add(lc.getKey());
-            this.pw.println(line);
+            this.pw.println();
         }
         String chosenLessonKey = this.read("Choose a lesson category", keys.toArray(new String[0]));
         Optional<LessonCategory> olc = lcb.findFromKey(chosenLessonKey);
@@ -165,7 +165,7 @@ public class CommandLineUserInterface {
         for (int i=0; i<fies.size(); i+=howManyPerLine) {
             for (int j=i; j<fies.size() && j<i+howManyPerLine; j++) {
                 String filename = fies.get(j).getFilename();
-                this.pw.print(String.format("%"+(widthPerFile)+"s", filename));
+                this.pw.printf("%"+(widthPerFile)+"s", filename);
             }
             this.pw.println();
         }
@@ -211,7 +211,6 @@ public class CommandLineUserInterface {
             if (line.getSound()!=null) {
                 soundPlayer.playSound(line.getSound());
                 NonBlockingReader reader = this.terminal.reader();
-                this.terminal.echo(false);
                 // empty the inputstream.
                 while (reader.available()!=0) reader.read();
                 // wait for either a key pressed or the end of the playing of
