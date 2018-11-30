@@ -140,21 +140,21 @@ public class Levenshtein<WHOLE,PART> {
                     int minScore = minOf(
                             sizeIfDeletion, sizeIfInsertion, sizeIfSubstitution);
 
-                    // keep the smallest score, with a new operation.
-                    if (minScore == sizeIfDeletion) {
+                    // keep the smallest score, with a new operation :
+                    if (minScore == sizeIfSubstitution) {
+                        ope[i][j] = copyAndAppend(
+                                ope[i-1][j-1],
+                                new EditOperation.Replace<>(i-1, t.get(j-1)));
+
+                    } else if (minScore == sizeIfDeletion) {
                         ope[i][j] = copyAndAppend(
                                 ope[i-1][j],
                                 new EditOperation.Delete<>(i-1, s.get(i-1)));
 
-                    } else if (minScore == sizeIfInsertion) {
+                    } else {
                         ope[i][j] = copyAndAppend(
                                 ope[i][j-1],
                                 new EditOperation.Insert<>(i, t.get(j-1)));
-
-                    } else {
-                        ope[i][j] = copyAndAppend(
-                                ope[i-1][j-1],
-                                new EditOperation.Replace<>(i-1, t.get(j-1)));
                     }
                 }
             }

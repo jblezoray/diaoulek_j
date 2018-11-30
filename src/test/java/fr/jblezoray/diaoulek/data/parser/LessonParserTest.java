@@ -41,19 +41,17 @@ public class LessonParserTest {
         Assertions.assertEquals(5632, (int) elt1.getSound().getSoundBeginIndex());
         Assertions.assertEquals(358912, (int) elt1.getSound().getSoundEndIndex());
         Assertions.assertEquals("al lez (2) ; lezoù ; daou lez ; (KA-91) lez ar c'hoadoù ; Lezardrev ;", elt1.getQuestion().toString());
-        Assertions.assertEquals("al lez (2)", elt1.getQuestion().getParts()[0].toString());
+        Assertions.assertEquals("al lez (2)", elt1.getQuestion().getParts()[0].getRawString());
         Assertions.assertEquals("le bord, la lisière ; ... la lisière des bois ; Lézardrieux ;", elt1.getResponse().toString());
-        Assertions.assertEquals("le bord, la lisière", elt1.getResponse().getParts()[0].toString());
-        Assertions.assertArrayEquals(new String[]{"le bord", "la lisière"}, elt1.getResponse().getParts()[0].getPhrases());
+        Assertions.assertEquals("le bord, la lisière", elt1.getResponse().getParts()[0].getRawString());
 
         QRCouple elt2 = (QRCouple) e.getLessonElements().get(2);
         Assertions.assertArrayEquals(new String[]{"efficacité", "redoutable"}, elt2.getSeparationLineReverse().getWordReferences());
         Assertions.assertEquals("une efficacité redoutable", elt2.getSeparationLineReverse().getNote());
         Assertions.assertEquals(0, elt2.getSeparationLineReverse().getTags().length);
         Assertions.assertEquals("un efedusted vras (fém.) ; un efedusted spouronus ;", elt2.getQuestion().toString());
-        Assertions.assertEquals("un efedusted vras (fém.)", elt2.getQuestion().getParts()[0].toString());
+        Assertions.assertEquals("un efedusted vras (fém.)", elt2.getQuestion().getParts()[0].getRawString());
         Assertions.assertEquals("une grande efficacité (m/f) ; une efficacité redoutable ;", elt2.getResponse().toString());
-        Assertions.assertArrayEquals(new String[]{"une grande efficacité (m/f)"}, elt2.getResponse().getParts()[0].getPhrases());
 
         WordReference elt18 = (WordReference) e.getLessonElements().get(18);
         Assertions.assertEquals("sil", elt18.getWord());

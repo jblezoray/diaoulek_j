@@ -9,8 +9,6 @@ import fr.jblezoray.diaoulek.data.model.lessonelement.WordReference;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.QRCoupleSeparationLine;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Question;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Response;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -18,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
-import java.util.stream.Collectors;
 
 /**
  * Parses a Lesson file.
@@ -169,10 +166,8 @@ public class LessonParser implements IParser<LessonEntry> {
         String raw = removeDuplicatesWhitespaces(removePrefix(line, "Q>"));
         Part[] parts = Arrays.stream(raw.split(";"))
                 .map(String::trim)
-                .map(part -> new Part(part, parsePhrase(part)))
-                .collect(Collectors.toList())
-                .toArray(new Part[0]);
-
+                .map(part -> new Part(part))
+                .toArray(Part[]::new);
         Question q = new Question();
         q.setRawString(raw);
         q.setParts(parts);
@@ -183,23 +178,12 @@ public class LessonParser implements IParser<LessonEntry> {
         String raw = removeDuplicatesWhitespaces(removePrefix(line, "R>"));
         Part[] parts = Arrays.stream(raw.split(";"))
                 .map(String::trim)
-                .map(part -> new Part(part, parsePhrase(part)))
-                .collect(Collectors.toList())
-                .toArray(new Part[0]);
-
+                .map(part -> new Part(part))
+                .toArray(Part[]::new);
         Response r = new Response();
         r.setRawString(raw);
         r.setParts(parts);
         return r;
-    }
-
-    private static String[] parsePhrase(String part) {
-        // "[a, e] rit" means "a rit, e rit".
-        return Arrays.stream(part.split(","))
-                .map(String::trim)
-                .map(LessonParser::removeDuplicatesWhitespaces)
-                .collect(Collectors.toList())
-                .toArray(new String[0]);
     }
 
     private static String removeDuplicatesWhitespaces(String line) {
@@ -208,7 +192,6 @@ public class LessonParser implements IParser<LessonEntry> {
 //                .replaceAll("\\h*\\r?\\v+\\h*", Matcher.quoteReplacement(" "))
                 .replaceAll("\\s+", Matcher.quoteReplacement(" "));
     }
-
 
     private static String removePrefix(String original, String prefix) {
         return original==null ? null :

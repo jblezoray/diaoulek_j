@@ -8,13 +8,15 @@ import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AnswerAnalyser {
 
     private final QRCouple qr;
 
-    private final static double WORD_COMPARATOR_THRESHOLD = 0.8;
+    private final static double WORD_COMPARATOR_THRESHOLD = 0.5;
 
     private final static Levenshtein<String, Character> WORD_LEVENSHTEIN = new Levenshtein<String, Character>(
             (str) -> {
@@ -29,19 +31,16 @@ public class AnswerAnalyser {
 
 
     private final static Levenshtein<String, String> PHRASE_LEVENSHTEIN = new Levenshtein<>(
-            phrase -> {
-                ArrayList<String> tokens = new ArrayList<>();
-                for (String word : phrase.split("\\s+")) {
-                    word = word.toLowerCase();
-                    tokens.add(word);
-                }
-                return tokens;
-            },
+            phrase -> Arrays.stream(phrase.split("\\s+"))
+                    .map(String::toLowerCase)
+                    .map(str -> str.replaceAll("\\P{Alnum}", ""))
+                    .map(String::trim)
+                    .filter(s -> !s.isEmpty())
+                    .collect(Collectors.toList()),
             (word1, word2) -> {
-                double medianLength = (word1.length() + word2.length()) / 2;
                 double levenshteinScore = WORD_LEVENSHTEIN.compute(word1, word2);
-                double score = 1 - (levenshteinScore / medianLength);
-                return score > WORD_COMPARATOR_THRESHOLD;
+                double score = 1 - (levenshteinScore / word1.length());
+                return score >= WORD_COMPARATOR_THRESHOLD;
             }
     );
 
@@ -50,41 +49,59 @@ public class AnswerAnalyser {
         this.qr = qr;
     }
 
-    public AnswerAnalysis analyze(String answer) {
 
-        List<EditOperation<String>> bestEditPath = null;
-        String bestPhrase = null;
-        for (Part part : this.qr.getResponse().getParts()) {
-            for (String phrase : part.getPhrases()) {
-                List<EditOperation<String>> editPath = PHRASE_LEVENSHTEIN.computePath(answer, phrase);
-                if (bestEditPath==null || bestEditPath.size()>editPath.size()) {
-                    bestEditPath = editPath;
-                    bestPhrase = phrase;
-                }
+    public AnswerAnalysis analyze(String inputPhrase) {
+        List<String> inputWords = PHRASE_LEVENSHTEIN.getTokenizer().tokenize(inputPhrase);
+
+        // find the best matching phrase within all possibles matching phrases.
+        Part bestPhrase = null;
+        Integer bestPhraseScore = null; // the lower the best.
+        for (Part phrase : this.qr.getResponse().getParts()) {
+            int partScore = PHRASE_LEVENSHTEIN.compute(phrase.getRawString(), inputPhrase);
+            if (bestPhraseScore==null || partScore>bestPhraseScore) {
+                bestPhrase = phrase;
+                bestPhraseScore = partScore;
             }
         }
+        if (bestPhrase==null) throw new RuntimeException("No best part found !?");
 
-        AnswerAnalysis aa = new AnswerAnalysis();
-        aa.setExpectedResponse(bestPhrase);
-        List<String> bestPhraseTokenized = PHRASE_LEVENSHTEIN.getTokenizer().tokenize(bestPhrase);
-        aa.setExpectedResponseTokenized(bestPhraseTokenized);
+        // compute the edit path for the best match.
+        List<EditOperation<String>> editPath =
+                PHRASE_LEVENSHTEIN.computePath(bestPhrase.getRawString(), inputPhrase);
 
-        List<String> inputWords = PHRASE_LEVENSHTEIN.getTokenizer().tokenize(answer);
-        aa.setInputWordsTokenized(inputWords);
-
-        aa.setAnswerAccuracy(1 - (bestEditPath.size() / aa.getExpectedResponseTokenized().size()));
-
-        List<String> bestPhraseResolved = EditPathResolver.resolve(bestPhraseTokenized, bestEditPath);
-        List<Double> scores = new ArrayList<>();
+        // compute a score per word.
+        List<String> bestPhraseTokenized =
+                PHRASE_LEVENSHTEIN.getTokenizer().tokenize(bestPhrase.getRawString());
+        List<String> bestPhraseResolved =
+                EditPathResolver.resolve(bestPhraseTokenized, editPath);
+        List<Float> scoresPerWord = new ArrayList<>();
+        List<List<EditOperation<Character>>> editPathsPerWord = new ArrayList<>();
         for (int i=0; i<bestPhraseResolved.size(); i++) {
             String expectedWord = bestPhraseResolved.get(i);
             String inputWord = inputWords.get(i);
-            double score =
-                    1 - (WORD_LEVENSHTEIN.compute(expectedWord, inputWord)) / expectedWord.length();
-            scores.add(i, score);
-        }
-        aa.setInputWordsAccuracy(scores);
+            if (expectedWord != null) {
+                List<EditOperation<Character>> editPathWord =
+                        WORD_LEVENSHTEIN.computePath(expectedWord, inputWord);
+                editPathsPerWord.add(i, editPathWord);
 
+                int levenshteinDistance = editPathWord.size();
+                float score = 1 - (float)levenshteinDistance / (float)expectedWord.length();
+                scoresPerWord.add(i, score);
+            } else {
+                editPathsPerWord.add(i, null);
+                scoresPerWord.add(i, null);
+            }
+
+        }
+
+        // prepare result.
+        AnswerAnalysis aa = new AnswerAnalysis();
+        aa.setExpectedResponseTokenized(bestPhraseTokenized);
+        aa.setAnswerAccuracy(1 - (float)editPath.size() / (float)bestPhraseTokenized.size());
+        aa.setPhraseEditPath(editPath);
+        aa.setInputWordsTokenized(inputWords);
+        aa.setInputWordsAccuracy(scoresPerWord);
+        aa.setInputWordsEditPath(editPathsPerWord);
         return aa;
     }
 

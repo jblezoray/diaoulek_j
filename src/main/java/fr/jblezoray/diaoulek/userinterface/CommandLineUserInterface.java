@@ -101,12 +101,9 @@ public class CommandLineUserInterface {
     private void printQuestion(QRCouple qr) {
         Question q = qr.getQuestion();
         for (Part p : q.getParts()) {
-            String[] phrases = p.getPhrases();
-            for (String phrase : phrases) {
-                this.pw.print("                    ");
-                this.pw.print(phrase);
-            }
-            this.pw.println();
+            String phrase = p.getRawString();
+            this.pw.print("                    ");
+            this.pw.println(phrase);
         }
     }
 

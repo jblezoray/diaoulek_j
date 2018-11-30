@@ -1,20 +1,24 @@
 package fr.jblezoray.diaoulek.data.model.analysis;
 
+import fr.jblezoray.diaoulek.data.model.Part;
+
 import java.util.List;
 
 public class AnswerAnalysis {
 
-    private String expectedResponse;
+    private Part expectedResponse;
     private double answerAccuracy;
     private List<String> expectedResponseTokenized;
     private List<String> inputWordsTokenized;
-    private List<Double> inputWordsAccuracy;
+    private List<Float> inputWordsAccuracy;
+    private List<EditOperation<String>> phraseEditPath;
+    private List<List<EditOperation<Character>>> inputWordsEditPath;
 
-    public String getExpectedResponse() {
+    public Part getExpectedResponse() {
         return expectedResponse;
     }
 
-    public void setExpectedResponse(String expectedResponse) {
+    public void setExpectedResponse(Part expectedResponse) {
         this.expectedResponse = expectedResponse;
     }
 
@@ -42,11 +46,27 @@ public class AnswerAnalysis {
         return inputWordsTokenized;
     }
 
-    public List<Double> getInputWordsAccuracy() {
+    public List<Float> getInputWordsAccuracy() {
         return inputWordsAccuracy;
     }
 
-    public void setInputWordsAccuracy(List<Double> inputWordsAccuracy) {
+    public void setInputWordsAccuracy(List<Float> inputWordsAccuracy) {
         this.inputWordsAccuracy = inputWordsAccuracy;
+    }
+
+    public List<EditOperation<String>> getPhraseEditPath() {
+        return phraseEditPath;
+    }
+
+    public void setPhraseEditPath(List<EditOperation<String>> phraseEditPath) {
+        this.phraseEditPath = phraseEditPath;
+    }
+
+    public List<List<EditOperation<Character>>> getInputWordsEditPath() {
+        return inputWordsEditPath;
+    }
+
+    public void setInputWordsEditPath(List<List<EditOperation<Character>>> inputWordsEditPath) {
+        this.inputWordsEditPath = inputWordsEditPath;
     }
 }

@@ -22,11 +22,11 @@ public class EditPathResolver {
 
             } else if (editOpetation instanceof EditOperation.Insert) {
                 Insert i = (Insert)editOpetation;
-                output.add(i.getIndex(), (PART) i.getValue());
+                output.add(i.getIndex(), null);
 
             } else if (editOpetation instanceof EditOperation.Replace) {
                 Replace r = (Replace)editOpetation;
-                output.set(r.getIndex(), (PART) r.getValue());
+                output.set(r.getIndex(), null);
 
             } else {
                 throw new RuntimeException("unknown EditEperation");

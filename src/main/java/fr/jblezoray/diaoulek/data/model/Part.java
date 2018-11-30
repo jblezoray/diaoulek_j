@@ -3,19 +3,13 @@ package fr.jblezoray.diaoulek.data.model;
 public class Part {
 
     private String rawString;
-    private String[] phrases;
 
-    public Part(String rawString, String[] phrases) {
+    public Part(String rawString) {
         this.rawString = rawString;
-        this.phrases = phrases;
     }
 
-    /**
-     * phrases are separated by a "," in lesson files.
-     * @return
-     */
-    public String[] getPhrases() {
-        return phrases;
+    public String getRawString() {
+        return rawString;
     }
 
     @Override
