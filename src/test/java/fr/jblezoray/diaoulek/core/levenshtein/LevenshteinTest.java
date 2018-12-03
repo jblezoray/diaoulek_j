@@ -27,14 +27,6 @@ class LevenshteinTest {
             },
             (left, right) -> left.compareTo(right) == 0);
 
-    /**
-     * Computes a levenshtein edit score, by considering how many word
-     * deletion, insertion, and substitution should be made to go from a phrase
-     * to another.
-     */
-    private Levenshtein<List<String>, String> levenshteinPhrase = new Levenshtein<>(
-            (list) -> list,
-            (left, right) -> left.equalsIgnoreCase(right));
 
     @Test
     public void nominalCase() {
@@ -54,34 +46,6 @@ class LevenshteinTest {
         Assertions.assertEquals(5, editDistance);
     }
 
-
-    @Test
-    public void withPhrase() {
-        int editDistance = levenshteinPhrase.compute(
-                Arrays.asList("J",  "aime",          "les", "frites", "au", "ketchup"),
-                Arrays.asList("Tu", "aimes", "bien", "les", "pâtes"));
-        Assertions.assertEquals(6, editDistance);
-    }
-
-    @Test
-    public void withPhraseEditPath() {
-        // having
-        List<String> from = Arrays.asList("J",  "aime",          "les", "frites", "au", "ketchup");
-        List<String> to = Arrays.asList(  "Tu", "aimes", "bien", "les", "pâtes");
-
-        // when
-        List<EditOperation<String>> editList = levenshteinPhrase.computePath(from, to);
-
-        // then
-        Assertions.assertEquals(6, editList.size());
-        Assertions.assertEquals(new EditOperation.Delete<>(5, "ketchup"), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Delete<>(4, "au"), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Replace<>(3, "pâtes"), editList.get(2));
-        Assertions.assertEquals(new EditOperation.Insert<>(2, "bien"), editList.get(3));
-        Assertions.assertEquals(new EditOperation.Replace<>(1, "aimes"), editList.get(4));
-        Assertions.assertEquals(new EditOperation.Replace<>(0, "Tu"), editList.get(5));
-    }
-
     @Test
     public void withEditPath() {
         // having
@@ -92,10 +56,15 @@ class LevenshteinTest {
         List<EditOperation<Character>> editList = levenshteinWord.computePath(from, to);
 
         // then
-        Assertions.assertEquals(3, editList.size());
-        Assertions.assertEquals(new EditOperation.Insert<>(6, 'g'), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Replace<>(4, 'i'), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Replace<>(0, 's'), editList.get(2));
+        Assertions.assertEquals(3, levenshteinWord.getScore(editList));
+        Assertions.assertEquals(7, editList.size());
+        Assertions.assertEquals(new EditOperation.Insert<>(6, null, 'g'), editList.get(0));
+        Assertions.assertEquals(new EditOperation.Equality<>(5, 'n', 'n'), editList.get(1));
+        Assertions.assertEquals(new EditOperation.Replace<>(4, 'e', 'i'), editList.get(2));
+        Assertions.assertEquals(new EditOperation.Equality<>(3, 't', 't'), editList.get(3));
+        Assertions.assertEquals(new EditOperation.Equality<>(2, 't', 't'), editList.get(4));
+        Assertions.assertEquals(new EditOperation.Equality<>(1, 'i', 'i'), editList.get(5));
+        Assertions.assertEquals(new EditOperation.Replace<>(0, 'k', 's'), editList.get(6));
     }
 
 

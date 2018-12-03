@@ -4,6 +4,7 @@ import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation.Delete;
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation.Insert;
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation.Replace;
+import fr.jblezoray.diaoulek.data.model.analysis.EditOperation.Equality;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,10 @@ public class EditPathResolver {
 
             } else if (editOpetation instanceof EditOperation.Replace) {
                 Replace r = (Replace)editOpetation;
+                output.set(r.getIndex(), null);
+
+            } else if (editOpetation instanceof EditOperation.Equality) {
+                Equality r = (Equality)editOpetation;
                 output.set(r.getIndex(), null);
 
             } else {

@@ -73,12 +73,10 @@ public class Levenshtein<WHOLE,PART> {
         // tests if the last element of each list match
         boolean eq = this.comparePart.isEqualTo(s.get(sCursor-1), t.get(tCursor-1));
 
-        // compute three edit distances
+        // compute the edit distances & return the minimum.
         int deleteFromS = computeScore(s, sCursor-1, t, tCursor) + 1;
         int deleteFromT = computeScore(s, sCursor, t, tCursor-1) + 1;
-        int deleteFromBoth = computeScore(s, sCursor-1, t, tCursor-1) + (eq? 0:1);
-
-        // returns the minimum of the edit distances
+        int deleteFromBoth = computeScore(s, sCursor - 1, t, tCursor - 1) + (eq ? 0 : 1);
         return minOf(deleteFromS, deleteFromT, deleteFromBoth);
     }
 
@@ -118,43 +116,43 @@ public class Levenshtein<WHOLE,PART> {
         // the edit path of any first stuff to an empty second stuff is a
         // succession of delete operations.
         for (int i=1; i<=m; i++)
-            ope[i][0] = copyAndAppend(ope[i-1][0], new EditOperation.Delete(i-1, s.get(i-1)));
+            ope[i][0] = copyAndAppend(ope[i-1][0], new EditOperation.Delete(i-1, s.get(i-1), null));
 
         // the edit path of the empty stuff to any stuff is a succession of
         // insert operations.
         for (int j=1; j<=n; j++)
-            ope[0][j] = copyAndAppend(ope[0][j-1], new EditOperation.Insert<>(0, t.get(j-1)));
+            ope[0][j] = copyAndAppend(ope[0][j-1], new EditOperation.Insert<>(0, null, t.get(j-1)));
 
         for (int j=1; j<=n; j++) {
             for (int i=1; i<=m; i++) {
                 if (this.comparePart.isEqualTo(s.get(i-1), t.get(j-1))) {
                     // no operation required.
-                    ope[i][j] = ope[i-1][j-1];
+                    ope[i][j] = copyAndAppend(
+                            ope[i-1][j-1],
+                            new EditOperation.Equality<>(i-1,  s.get(i-1), t.get(j-1)));
 
                 } else {
-
                     // compute three edit distances
-                    int sizeIfDeletion = ope[i-1][j].size() + 1;
-                    int sizeIfInsertion = ope[i][j-1].size() + 1;
-                    int sizeIfSubstitution = ope[i-1][j-1].size() + 1;
-                    int minScore = minOf(
-                            sizeIfDeletion, sizeIfInsertion, sizeIfSubstitution);
+                    int sizeIfDeletion = getScore(ope[i-1][j]) + 1;
+                    int sizeIfInsertion = getScore(ope[i][j-1]) + 1;
+                    int sizeIfSubstitution = getScore(ope[i-1][j-1]) + 1;
+                    int minScore = minOf(sizeIfDeletion, sizeIfInsertion, sizeIfSubstitution);
 
                     // keep the smallest score, with a new operation :
-                    if (minScore == sizeIfSubstitution) {
+                    if (minScore == sizeIfSubstitution)  {
                         ope[i][j] = copyAndAppend(
                                 ope[i-1][j-1],
-                                new EditOperation.Replace<>(i-1, t.get(j-1)));
+                                new EditOperation.Replace<>(i-1, s.get(i-1),  t.get(j-1)));
 
                     } else if (minScore == sizeIfDeletion) {
                         ope[i][j] = copyAndAppend(
                                 ope[i-1][j],
-                                new EditOperation.Delete<>(i-1, s.get(i-1)));
+                                new EditOperation.Delete<>(i-1, s.get(i-1), null));
 
                     } else {
                         ope[i][j] = copyAndAppend(
                                 ope[i][j-1],
-                                new EditOperation.Insert<>(i, t.get(j-1)));
+                                new EditOperation.Insert<>(i, null, t.get(j-1)));
                     }
                 }
             }
@@ -180,5 +178,11 @@ public class Levenshtein<WHOLE,PART> {
         return Arrays.stream(a)
                 .min()
                 .orElseThrow(() -> new RuntimeException("Unexpected array length"));
+    }
+
+    public int getScore(List<EditOperation<PART>> editList) {
+        return (int) editList.stream()
+                .filter(ope -> !(ope instanceof EditOperation.Equality))
+                .count();
     }
 }
