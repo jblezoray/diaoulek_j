@@ -1,13 +1,13 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
+import fr.jblezoray.diaoulek.data.model.analysis.EditPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
 
-import static fr.jblezoray.diaoulek.core.levenshtein.LevenshteinDefaults.*;
+import static fr.jblezoray.diaoulek.core.levenshtein.LevenshteinDefaults.PHRASE_LEVENSHTEIN;
 
 public class LevenshteinDefaultsTest {
 
@@ -32,18 +32,19 @@ public class LevenshteinDefaultsTest {
         String to =   "Tu aimes bien les  pates";
 
         // when
-        List<EditOperation<String>> editList = PHRASE_LEVENSHTEIN.computePath(from, to);
+        EditPath<String> editList = PHRASE_LEVENSHTEIN.computePath(from, to);
 
         // then
-        Assertions.assertEquals(7, editList.size());
-        Assertions.assertEquals(4, PHRASE_LEVENSHTEIN.getScore(editList));
-        Assertions.assertEquals(new EditOperation.Delete<>(5, "ketchup", null), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Delete<>(4, "au", null), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Equality<>(3, "frites", "pates"), editList.get(2));
-        Assertions.assertEquals(new EditOperation.Equality<>(2, "les", "les"), editList.get(3));
-        Assertions.assertEquals(new EditOperation.Insert<>(2, null, "bien"), editList.get(4));
-        Assertions.assertEquals(new EditOperation.Equality<>(1, "aime", "aimes"), editList.get(5));
-        Assertions.assertEquals(new EditOperation.Replace<>(0, "j", "tu"), editList.get(6));
+        Assertions.assertEquals(7, editList.getPath().size());
+        Assertions.assertEquals(4, editList.getLevenshteinScore());
+        List<EditOperation<String>> path = editList.getPath();
+        Assertions.assertEquals(new EditOperation.Delete<>(5, "ketchup", null), path.get(0));
+        Assertions.assertEquals(new EditOperation.Delete<>(4, "au", null), path.get(1));
+        Assertions.assertEquals(new EditOperation.Equality<>(3, "frites", "pates"), path.get(2));
+        Assertions.assertEquals(new EditOperation.Equality<>(2, "les", "les"), path.get(3));
+        Assertions.assertEquals(new EditOperation.Insert<>(2, null, "bien"), path.get(4));
+        Assertions.assertEquals(new EditOperation.Equality<>(1, "aime", "aimes"), path.get(5));
+        Assertions.assertEquals(new EditOperation.Replace<>(0, "j", "tu"), path.get(6));
     }
 
 

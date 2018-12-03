@@ -1,6 +1,7 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
+import fr.jblezoray.diaoulek.data.model.analysis.EditPath;
 
 import java.util.*;
 
@@ -96,14 +97,14 @@ public class Levenshtein<WHOLE,PART> {
      * @param t
      * @return
      */
-    public List<EditOperation<PART>> computePath(WHOLE s, WHOLE t) {
+    public EditPath<PART> computePath(WHOLE s, WHOLE t) {
         List<PART> sTokenized = this.tokenizer.tokenize(s);
         List<PART> tTokenized = this.tokenizer.tokenize(t);
         return computePath(sTokenized, tTokenized);
     }
 
 
-    private List<EditOperation<PART>> computePath(List<PART> s, List<PART> t) {
+    private EditPath<PART> computePath(List<PART> s, List<PART> t) {
 
         int m = s.size();
         int n = t.size();
@@ -158,7 +159,7 @@ public class Levenshtein<WHOLE,PART> {
             }
         }
 
-        return ope[m][n];
+        return new EditPath<>(ope[m][n], getScore(ope[m][n]));
     }
 
 
@@ -180,7 +181,7 @@ public class Levenshtein<WHOLE,PART> {
                 .orElseThrow(() -> new RuntimeException("Unexpected array length"));
     }
 
-    public int getScore(List<EditOperation<PART>> editList) {
+    private int getScore(List<EditOperation<PART>> editList) {
         return (int) editList.stream()
                 .filter(ope -> !(ope instanceof EditOperation.Equality))
                 .count();

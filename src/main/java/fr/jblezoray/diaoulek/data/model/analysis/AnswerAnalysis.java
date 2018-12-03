@@ -11,8 +11,8 @@ public class AnswerAnalysis {
     private List<String> expectedResponseTokenized;
     private List<String> inputWordsTokenized;
     private List<Float> inputWordsAccuracy;
-    private List<EditOperation<String>> phraseEditPath;
-    private List<List<EditOperation<Character>>> inputWordsEditPath;
+    private EditPath<String> phraseEditPath;
+    private List<EditPath<Character>> inputWordsEditPath;
 
     public Part getExpectedResponse() {
         return expectedResponse;
@@ -54,19 +54,19 @@ public class AnswerAnalysis {
         this.inputWordsAccuracy = inputWordsAccuracy;
     }
 
-    public List<EditOperation<String>> getPhraseEditPath() {
+    public EditPath<String> getPhraseEditPath() {
         return phraseEditPath;
     }
 
-    public void setPhraseEditPath(List<EditOperation<String>> phraseEditPath) {
+    public void setPhraseEditPath(EditPath<String> phraseEditPath) {
         this.phraseEditPath = phraseEditPath;
     }
 
-    public List<List<EditOperation<Character>>> getInputWordsEditPath() {
+    public List<EditPath<Character>> getInputWordsEditPath() {
         return inputWordsEditPath;
     }
 
-    public void setInputWordsEditPath(List<List<EditOperation<Character>>> inputWordsEditPath) {
+    public void setInputWordsEditPath(List<EditPath<Character>> inputWordsEditPath) {
         this.inputWordsEditPath = inputWordsEditPath;
     }
 }

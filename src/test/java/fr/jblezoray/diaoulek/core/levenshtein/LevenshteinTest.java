@@ -1,11 +1,11 @@
 package fr.jblezoray.diaoulek.core.levenshtein;
 
 import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
+import fr.jblezoray.diaoulek.data.model.analysis.EditPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 class LevenshteinTest {
@@ -53,18 +53,19 @@ class LevenshteinTest {
         String to   = "sitting";
 
         // when
-        List<EditOperation<Character>> editList = levenshteinWord.computePath(from, to);
+        EditPath<Character> editList = levenshteinWord.computePath(from, to);
 
         // then
-        Assertions.assertEquals(3, levenshteinWord.getScore(editList));
-        Assertions.assertEquals(7, editList.size());
-        Assertions.assertEquals(new EditOperation.Insert<>(6, null, 'g'), editList.get(0));
-        Assertions.assertEquals(new EditOperation.Equality<>(5, 'n', 'n'), editList.get(1));
-        Assertions.assertEquals(new EditOperation.Replace<>(4, 'e', 'i'), editList.get(2));
-        Assertions.assertEquals(new EditOperation.Equality<>(3, 't', 't'), editList.get(3));
-        Assertions.assertEquals(new EditOperation.Equality<>(2, 't', 't'), editList.get(4));
-        Assertions.assertEquals(new EditOperation.Equality<>(1, 'i', 'i'), editList.get(5));
-        Assertions.assertEquals(new EditOperation.Replace<>(0, 'k', 's'), editList.get(6));
+        Assertions.assertEquals(3, editList.getLevenshteinScore());
+        Assertions.assertEquals(7, editList.getPath().size());
+        List<EditOperation<Character>> path = editList.getPath();
+        Assertions.assertEquals(new EditOperation.Insert<>(6, null, 'g'), path.get(0));
+        Assertions.assertEquals(new EditOperation.Equality<>(5, 'n', 'n'), path.get(1));
+        Assertions.assertEquals(new EditOperation.Replace<>(4, 'e', 'i'), path.get(2));
+        Assertions.assertEquals(new EditOperation.Equality<>(3, 't', 't'), path.get(3));
+        Assertions.assertEquals(new EditOperation.Equality<>(2, 't', 't'), path.get(4));
+        Assertions.assertEquals(new EditOperation.Equality<>(1, 'i', 'i'), path.get(5));
+        Assertions.assertEquals(new EditOperation.Replace<>(0, 'k', 's'), path.get(6));
     }
 
 

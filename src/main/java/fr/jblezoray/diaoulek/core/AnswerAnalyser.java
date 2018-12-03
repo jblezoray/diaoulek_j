@@ -1,16 +1,16 @@
 package fr.jblezoray.diaoulek.core;
 
 import fr.jblezoray.diaoulek.core.levenshtein.EditPathResolver;
-import static fr.jblezoray.diaoulek.core.levenshtein.LevenshteinDefaults.*;
 import fr.jblezoray.diaoulek.data.model.Part;
 import fr.jblezoray.diaoulek.data.model.analysis.AnswerAnalysis;
-import fr.jblezoray.diaoulek.data.model.analysis.EditOperation;
+import fr.jblezoray.diaoulek.data.model.analysis.EditPath;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static fr.jblezoray.diaoulek.core.levenshtein.LevenshteinDefaults.PHRASE_LEVENSHTEIN;
+import static fr.jblezoray.diaoulek.core.levenshtein.LevenshteinDefaults.WORD_LEVENSHTEIN;
 
 public class AnswerAnalyser {
 
@@ -37,7 +37,7 @@ public class AnswerAnalyser {
         if (bestPhrase==null) throw new RuntimeException("No best part found !?");
 
         // compute the edit path for the best match.
-        List<EditOperation<String>> editPath =
+        EditPath<String> editPath =
                 PHRASE_LEVENSHTEIN.computePath(bestPhrase.getRawString(), inputPhrase);
 
         // compute a score per word.
@@ -46,17 +46,17 @@ public class AnswerAnalyser {
         List<String> bestPhraseResolved =
                 EditPathResolver.resolve(bestPhraseTokenized, editPath);
         List<Float> scoresPerWord = new ArrayList<>();
-        List<List<EditOperation<Character>>> editPathsPerWord = new ArrayList<>();
+        List<EditPath<Character>> editPathsPerWord = new ArrayList<>();
         for (int i=0; i<bestPhraseResolved.size(); i++) {
             String expectedWord = bestPhraseResolved.get(i);
             String inputWord = inputWords.get(i);
             if (expectedWord != null) {
-                List<EditOperation<Character>> editPathWord =
+                EditPath<Character> editPathWord =
                         WORD_LEVENSHTEIN.computePath(expectedWord, inputWord);
                 editPathsPerWord.add(i, editPathWord);
 
-                int levenshteinDistance = editPathWord.size();
-                float score = 1 - (float)levenshteinDistance / (float)expectedWord.length();
+                float score = 1 - (float)editPathWord.getLevenshteinScore()
+                        / (float)expectedWord.length();
                 scoresPerWord.add(i, score);
             } else {
                 editPathsPerWord.add(i, null);
@@ -68,7 +68,8 @@ public class AnswerAnalyser {
         // prepare result.
         AnswerAnalysis aa = new AnswerAnalysis();
         aa.setExpectedResponseTokenized(bestPhraseTokenized);
-        aa.setAnswerAccuracy(1 - (float)editPath.size() / (float)bestPhraseTokenized.size());
+        aa.setAnswerAccuracy(1 - (float) editPath.getLevenshteinScore()
+                / (float) bestPhraseTokenized.size());
         aa.setPhraseEditPath(editPath);
         aa.setInputWordsTokenized(inputWords);
         aa.setInputWordsAccuracy(scoresPerWord);
