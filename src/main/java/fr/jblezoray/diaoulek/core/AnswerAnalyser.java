@@ -43,14 +43,14 @@ public class AnswerAnalyser {
         // compute a score per word.
         List<String> bestPhraseTokenized =
                 PHRASE_LEVENSHTEIN.getTokenizer().tokenize(bestPhrase.getRawString());
-        List<String> bestPhraseResolved =
-                EditPathResolver.resolve(bestPhraseTokenized, editPath);
+        List<String> inputUnresolved =
+                EditPathResolver.unresolve(inputWords, editPath);
         List<Float> scoresPerWord = new ArrayList<>();
         List<EditPath<Character>> editPathsPerWord = new ArrayList<>();
-        for (int i=0; i<bestPhraseResolved.size(); i++) {
-            String expectedWord = bestPhraseResolved.get(i);
-            String inputWord = inputWords.get(i);
-            if (expectedWord != null) {
+        for (int i=0; i<Utils.maxSize(inputUnresolved, inputWords); i++) {
+            String expectedWord = Utils.getOrNull(inputUnresolved, i);
+            String inputWord = Utils.getOrNull(inputWords, i);
+            if (expectedWord != null && inputWord != null) {
                 EditPath<Character> editPathWord =
                         WORD_LEVENSHTEIN.computePath(expectedWord, inputWord);
                 editPathsPerWord.add(i, editPathWord);

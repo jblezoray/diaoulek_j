@@ -32,7 +32,7 @@ public class LevenshteinDefaults {
             (word1, word2) -> {
                 double levenshteinScore = WORD_LEVENSHTEIN.compute(word1, word2);
                 double score = 1 - (levenshteinScore / word1.length());
-                return score >= WORD_COMPARATOR_THRESHOLD;
+                return score > WORD_COMPARATOR_THRESHOLD;
             }
     );
 }
