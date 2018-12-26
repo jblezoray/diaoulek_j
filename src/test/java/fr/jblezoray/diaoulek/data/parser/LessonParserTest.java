@@ -118,4 +118,24 @@ public class LessonParserTest {
         Assertions.assertEquals("mère", qr.getResponse().getParts()[0]);
     }
 
+
+    @Test
+    public void testIgnoreEmptyLines() throws IOException, DataException {
+        // having
+        String fileContent = ResourceReader.readResource("/ks53.txt");
+        FileIndexEntry fieMock = new FileIndexEntry();
+
+        // when
+        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
+
+        // then
+        Assertions.assertEquals(2, e.getLessonElements()
+                .stream().filter(le -> le instanceof Text).count());
+        Assertions.assertEquals("bander une blessure",
+                ((QRCouple) e.getLessonElements().get(0)).getResponse().getParts()[0].getRawString());
+        Assertions.assertEquals("ur gouli",
+                ((QRCouple) e.getLessonElements().get(1)).getQuestion().getParts()[0].getRawString());
+    }
+
 }

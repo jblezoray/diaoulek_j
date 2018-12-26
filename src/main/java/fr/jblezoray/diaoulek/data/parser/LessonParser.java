@@ -42,17 +42,22 @@ public class LessonParser implements IParser<LessonEntry> {
         try (DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset)) {
             le.setAlias(reader.readFileAlias());
 
+            reader.setIgnore(
+                    l -> l.trim().length()==0,
+                    l -> l.startsWith("!"));
+            reader.setMergeLineWithPreviousIf(
+                    l -> l.startsWith("  "));
+
             String line;
-            while ((line = reader.readNextLine(
-                    DiaoulekFileReader.EMPTY_LINE.negate(),
-                    DiaoulekFileReader.COMMENT_LINE.negate() )) != null) {
+            while ((line = reader.readNextLine()) != null) {
 
                 // something between two lines of '###...' is a Lesson text.
                 if (line.startsWith("###")) {
                     // read all the lines until another line of '###...'.
-                    List<String> lines = reader.readLinesUntil(l ->
+                    List<String> lines = reader.readLinesUntilNextline(l ->
                             !l.replaceAll(" ", "")
                                 .matches("^#{3,}$"));
+                    reader.readNextLine(); // pass the '###' line.
                     Text text = new LessonTextParser(lines).parseLessonText();
                     le.getLessonElements().add(text);
                 }
@@ -64,7 +69,10 @@ public class LessonParser implements IParser<LessonEntry> {
                 // DOC: On introduira ensuite les couples de questions et
                 // réponses par les signes «#», «Q>» et «R>»
                 else if (line.startsWith("#")) {
-                    QRCouple qrCouple = parseQRCouple(line, reader);
+                    List<String> lines = reader.readLinesUntilNextline(l ->
+                            l.startsWith("#"));
+                    lines.add(0, line);
+                    QRCouple qrCouple = parseQRCouple(lines);
                     le.getLessonElements().add(qrCouple);
                 }
             }
@@ -102,16 +110,12 @@ public class LessonParser implements IParser<LessonEntry> {
     }
 
 
-    private static QRCouple parseQRCouple(String firstLine, DiaoulekFileReader reader) throws DataException{
+    private static QRCouple parseQRCouple(List<String> lines) throws DataException{
         QRCouple qrCouple = new QRCouple();
-        qrCouple.setSeparationLine(parseSeparationLine(firstLine, "#"));
+        qrCouple.setSeparationLine(parseSeparationLine(lines.get(0), "#"));
+        lines.remove(0);
 
-        String line;
-        while ((line = reader.readNextLine())!=null && !DiaoulekFileReader.EMPTY_LINE.test(line)) {
-            List<String> lines = reader.readLinesUntilNextline(l -> !l.startsWith("  "));
-            line = lines.stream().reduce(line, (l1, l2) -> l1 + "\n" + l2);
-
-            lines.add(0, line);
+        for (String line : lines) {
 
             if (line.startsWith("%#")) {
                 // ancienne ligne de séparation
@@ -138,9 +142,9 @@ public class LessonParser implements IParser<LessonEntry> {
                 throw new DataException("Cannot parse line " + line);
             }
         }
-//        if (qrCouple.getQuestion()==null ||qrCouple.getResponse()==null ||qrCouple.getSeparationLine()==null) {
-//            throw new DataException("QR misses mandatory elements : '" + firstLine + "'");
-//        }
+        if (qrCouple.getQuestion()==null ||qrCouple.getResponse()==null ||qrCouple.getSeparationLine()==null) {
+            throw new DataException("QR misses mandatory elements : '" + lines + "'");
+        }
         return qrCouple;
     }
 

@@ -5,6 +5,7 @@ import fr.jblezoray.diaoulek.data.model.Part;
 import fr.jblezoray.diaoulek.data.model.analysis.AnswerAnalysis;
 import fr.jblezoray.diaoulek.data.model.lessonelement.QRCouple;
 import fr.jblezoray.diaoulek.data.model.lessonelement.qrcouple.Response;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,10 @@ public class AnswerAnalysisRendererTest {
         String rendered = new AnswerAnalysisRenderer(aa).render();
 
         // then
-        System.out.println(rendered);
+        Assertions.assertEquals(
+                "   mort     aux vaches bleues \n" +
+                "   mor  pas aux waches        ",
+                rendered);
     }
 
     private static Part[] parts(String... parts) {

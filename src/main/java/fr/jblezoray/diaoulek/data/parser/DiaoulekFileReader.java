@@ -5,8 +5,10 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.Charset;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 import java.util.function.Predicate;
 
 /**
@@ -20,14 +22,17 @@ import java.util.function.Predicate;
 public class DiaoulekFileReader implements Closeable  {
 
     private final BufferedReader br;
-    private String foreSeenLine = null;
-    public final static Predicate<String> EMPTY_LINE = l -> l.trim().length()==0;
-    public final static Predicate<String> COMMENT_LINE = l -> l.startsWith("!");
-    public final static Predicate<String> HEADER_LINE = l -> l.startsWith("!#");
+    private Queue<String> foreSeenLines;
+    private final static Predicate<String> HEADER_LINE = l -> l.startsWith("!#");
+
+    private Predicate<String>[] linesToIgnore = null;
+    private Predicate<String>[] linesToMerge = null;
+
 
     public DiaoulekFileReader(byte[] fileContent, Charset charset) throws DataException {
         String fileContentString = new String(fileContent, charset);
         this.br = new BufferedReader(new StringReader(fileContentString));
+        this.foreSeenLines = new ArrayDeque<>();
     }
 
     @Override
@@ -35,12 +40,21 @@ public class DiaoulekFileReader implements Closeable  {
         this.br.close();
     }
 
+
+    public void setIgnore(Predicate<String>... linesToIgnore) {
+        this.linesToIgnore = linesToIgnore;
+    }
+
+    public void setMergeLineWithPreviousIf(Predicate<String>... linesToMerge) {
+        this.linesToMerge = linesToMerge;
+    }
+
     public String readFileAlias() throws DataException{
         // DOC: La première ligne de la leçon doit commencer par les
         // signes « !# » suivis d'un espace et de l'alias de la leçon.
         String fileAlias;
         try {
-            String line = getNextLine();
+            String line = br.readLine();
             if (!HEADER_LINE.test(line))
                 throw new DataException(line);
             fileAlias = line.substring(2).trim();
@@ -50,65 +64,98 @@ public class DiaoulekFileReader implements Closeable  {
         return fileAlias;
     }
 
-    private String getNextLine() throws IOException {
+    public String readNextLine(Predicate<String> predicate) throws DataException {
+        String line;
+        do {
+            line = readNextLine();
+        } while (line!=null && !predicate.test(line));
+        return line;
+    }
+
+
+    public String readNextLine() throws DataException {
         String line ;
-        if (this.foreSeenLine==null) {
-            line = br.readLine();
-        } else {
-            line = this.foreSeenLine;
-            this.foreSeenLine = null;
+        try {
+            line = this.foreSeenLines.peek()==null ?
+                    br.readLine()
+                    : this.foreSeenLines.poll();
+
+            // does this line must be ignored?
+            if (mustBeIgnored(line))
+                line = readNextLine();
+
+            // does the next line must be merged with this one ?
+            ensureAtLeast1lineInTheForeseenLines();
+            while (mustBeMerged(this.foreSeenLines.peek())) {
+                line = line + this.foreSeenLines.poll();
+                ensureAtLeast1lineInTheForeseenLines();
+            }
+        } catch (IOException e) {
+            throw new DataException("Cannot read lines", e);
         }
         return line;
     }
 
 
-    public List<String> readLinesUntil(Predicate<String> continuationCondition)
-            throws DataException {
-        List<String> lines = new ArrayList<>();
-        try {
-            String line;
-            while ((line = getNextLine()) != null && continuationCondition.test(line))
-                lines.add(line);
-        } catch (IOException e) {
-            throw new DataException("Cannot read lines", e);
+    private boolean mustBeIgnored(String line) {
+        boolean mustBeIgnored = false;
+        if (line != null && this.linesToIgnore!=null) {
+            for (Predicate<String> lineCondition : this.linesToIgnore) {
+                if (lineCondition.test(line)) {
+                    mustBeIgnored = true;
+                    break;
+                }
+            }
         }
-        return lines;
+        return mustBeIgnored;
     }
+
+    private boolean mustBeMerged(String line) {
+        boolean mustBeMerged = false;
+        if (line!= null && this.linesToMerge!=null) {
+            for (Predicate<String> lineCondition : this.linesToMerge) {
+                if (lineCondition.test(line)) {
+                    mustBeMerged = true;
+                    break;
+                }
+            }
+        }
+        return mustBeMerged;
+    }
+
+
+    private void ensureAtLeast1lineInTheForeseenLines() throws IOException {
+        if (this.foreSeenLines.size()==0) {
+            String line;
+            do {
+                line = br.readLine();
+            } while (mustBeIgnored(line));
+            if (line!=null)
+                this.foreSeenLines.add(line);
+        }
+    }
+
 
     public List<String> readLinesUntilNextline(Predicate<String> nextLineCondition)
             throws DataException {
         List<String> lines = new ArrayList<>();
-        try {
-            String readline;
-            while ((readline = getNextLine()) != null) {
-                if (nextLineCondition.test(readline)) {
-                    this.foreSeenLine = readline;
-                    break;
-                } else {
-                    lines.add(readline);
-                }
+        boolean nextLineConditionReached = false;
+        lines.add(readNextLine());
+        do {
+            try {
+                ensureAtLeast1lineInTheForeseenLines();
+            } catch (IOException e) {
+                throw new DataException("Cannot read lines", e);
             }
-        } catch (IOException e) {
-            throw new DataException("Cannot read lines", e);
-        }
-        return lines;
-    }
 
-    public String readNextLine(Predicate<String>... lineConditions)
-            throws DataException {
-        String line;
-        try {
-            while ((line=getNextLine())!= null) {
-                boolean lineMatches = true;
-                for (Predicate<String> lineCondition : lineConditions) {
-                    lineMatches = lineMatches && lineCondition.test(line);
-                }
-                if (lineMatches) break;
+            String nextLine = this.foreSeenLines.peek();
+            if (nextLine==null || nextLineCondition.test(nextLine)) {
+                nextLineConditionReached=true;
+            } else {
+                lines.add(readNextLine());
             }
-        } catch (IOException e) {
-            throw new DataException("Cannot read lines", e);
-        }
-        return line;
+        } while (!nextLineConditionReached);
+        return lines;
     }
 
 
