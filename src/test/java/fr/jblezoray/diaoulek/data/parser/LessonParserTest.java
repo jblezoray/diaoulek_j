@@ -131,7 +131,7 @@ public class LessonParserTest {
 
         // then
         Assertions.assertEquals(2, e.getLessonElements()
-                .stream().filter(le -> le instanceof Text).count());
+                .stream().filter(le -> le instanceof QRCouple).count());
         Assertions.assertEquals("bander une blessure",
                 ((QRCouple) e.getLessonElements().get(0)).getResponse().getParts()[0].getRawString());
         Assertions.assertEquals("ur gouli",

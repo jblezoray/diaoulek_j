@@ -15,6 +15,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 
 /**
@@ -23,6 +24,10 @@ import java.util.regex.Matcher;
 public class LessonParser implements IParser<LessonEntry> {
 
     private final Charset charset;
+
+    private static final Predicate<String> EMPTY_LINE = l -> l.trim().length() == 0;
+    private static final Predicate<String> COMMENT_LINE = l -> l.startsWith("!");
+    private static final Predicate<String> INDENTED_LINE = l -> l.startsWith("  ");
 
     public LessonParser(Charset charset) {
          this.charset = charset;
@@ -42,11 +47,8 @@ public class LessonParser implements IParser<LessonEntry> {
         try (DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset)) {
             le.setAlias(reader.readFileAlias());
 
-            reader.setIgnore(
-                    l -> l.trim().length()==0,
-                    l -> l.startsWith("!"));
-            reader.setMergeLineWithPreviousIf(
-                    l -> l.startsWith("  "));
+            reader.setIgnore(COMMENT_LINE, EMPTY_LINE);
+            reader.setMergeLineWithPreviousIf(INDENTED_LINE);
 
             String line;
             while ((line = reader.readNextLine()) != null) {
@@ -54,10 +56,15 @@ public class LessonParser implements IParser<LessonEntry> {
                 // something between two lines of '###...' is a Lesson text.
                 if (line.startsWith("###")) {
                     // read all the lines until another line of '###...'.
+                    reader.setIgnore();
+                    reader.setMergeLineWithPreviousIf();
                     List<String> lines = reader.readLinesUntilNextline(l ->
-                            !l.replaceAll(" ", "")
+                            l.replaceAll(" ", "")
                                 .matches("^#{3,}$"));
                     reader.readNextLine(); // pass the '###' line.
+                    reader.setIgnore(COMMENT_LINE, EMPTY_LINE);
+                    reader.setMergeLineWithPreviousIf(INDENTED_LINE);
+
                     Text text = new LessonTextParser(lines).parseLessonText();
                     le.getLessonElements().add(text);
                 }
