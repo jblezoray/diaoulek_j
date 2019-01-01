@@ -26,13 +26,13 @@ public class LoadAllDataApp {
         FileCache fc = new FileCache(Config.CACHE_DIR, fd);
 
         byte[] indexContent = fc.getFileContent("tot-file-tank.txt", Optional.empty());
-        List<FileIndexEntry> indexEntries = new FileIndexParser(Config.CHARSET).parse(indexContent, null);
+        List<FileIndexEntry> indexEntries = new FileIndexParser(Config.DEFAULT_CHARSET).parse(indexContent, null);
         int sizeIndex = indexEntries.size();
         LOGGER.debug("There are {} entries in the index.", sizeIndex);
 
         // reading lessons.
         int nb = 0;
-        LessonParser lessonParser = new LessonParser(Config.CHARSET);
+        LessonParser lessonParser = new LessonParser();
         AudioFileParser audioFileParser = new AudioFileParser();
         DicoParser dicoParser = new DicoParser();
         for (FileIndexEntry indexEntry : indexEntries) {

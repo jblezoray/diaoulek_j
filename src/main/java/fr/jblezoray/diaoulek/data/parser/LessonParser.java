@@ -1,5 +1,6 @@
 package fr.jblezoray.diaoulek.data.parser;
 
+import fr.jblezoray.diaoulek.core.CharsetDetector;
 import fr.jblezoray.diaoulek.data.model.FileIndexEntry;
 import fr.jblezoray.diaoulek.data.model.LessonEntry;
 import fr.jblezoray.diaoulek.data.model.Part;
@@ -23,15 +24,9 @@ import java.util.regex.Matcher;
  */
 public class LessonParser implements IParser<LessonEntry> {
 
-    private final Charset charset;
-
     private static final Predicate<String> EMPTY_LINE = l -> l.trim().length() == 0;
     private static final Predicate<String> COMMENT_LINE = l -> l.startsWith("!");
     private static final Predicate<String> INDENTED_LINE = l -> l.startsWith("  ");
-
-    public LessonParser(Charset charset) {
-         this.charset = charset;
-    }
 
     @Override
     public boolean seemsParseable(FileIndexEntry fileIndexEntry) {
@@ -42,9 +37,12 @@ public class LessonParser implements IParser<LessonEntry> {
 
     @Override
     public LessonEntry parse(byte[] fileContent, FileIndexEntry fileIndexEntry) throws DataException {
+
+        Charset charset = CharsetDetector.guessEncoding(fileContent);
+
         LessonEntry le = new LessonEntry(fileIndexEntry);
 
-        try (DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, this.charset)) {
+        try (DiaoulekFileReader reader = new DiaoulekFileReader(fileContent, charset)) {
             le.setAlias(reader.readFileAlias());
 
             reader.setIgnore(COMMENT_LINE, EMPTY_LINE);

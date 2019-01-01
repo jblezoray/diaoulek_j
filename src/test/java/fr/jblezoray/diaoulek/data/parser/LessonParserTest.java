@@ -23,7 +23,7 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("UTF-8"));
+        LessonParser lesson = new LessonParser();
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then
@@ -67,7 +67,7 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonParser lesson = new LessonParser();
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then no exception.
@@ -80,7 +80,7 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonParser lesson = new LessonParser();
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then
@@ -102,7 +102,6 @@ public class LessonParserTest {
 
 
 
-    @Disabled("TODO ! ")
     @Test
     public void testGuessEncoding() throws IOException, DataException {
         // having
@@ -110,12 +109,12 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1")); // ikes ...
+        LessonParser lesson = new LessonParser(); // ikes ...
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then
         QRCouple qr = (QRCouple) e.getLessonElements().get(2);
-        Assertions.assertEquals("mère", qr.getResponse().getParts()[0]);
+        Assertions.assertEquals("mère", qr.getResponse().getParts()[0].getRawString());
     }
 
 
@@ -126,7 +125,7 @@ public class LessonParserTest {
         FileIndexEntry fieMock = new FileIndexEntry();
 
         // when
-        LessonParser lesson = new LessonParser(Charset.forName("ISO-8859-1"));
+        LessonParser lesson = new LessonParser();
         LessonEntry e = lesson.parse(fileContent.getBytes(), fieMock);
 
         // then

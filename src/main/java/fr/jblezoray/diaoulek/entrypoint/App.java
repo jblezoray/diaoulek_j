@@ -19,8 +19,8 @@ public class App {
         FileDownloader fd = new FileDownloader(Config.URL_UPDATE);
         FileCache cache = new FileCache(Config.CACHE_DIR, fd);
 
-        LessonParser lessonParser = new LessonParser(Config.CHARSET);
-        FileIndexParser fileIndexParser = new FileIndexParser(Config.CHARSET);
+        LessonParser lessonParser = new LessonParser();
+        FileIndexParser fileIndexParser = new FileIndexParser(Config.DEFAULT_CHARSET);
         DiaoulekService service = new DiaoulekService(
                 cache, Config.FILE_INDEX_NAME, fileIndexParser, lessonParser);
 

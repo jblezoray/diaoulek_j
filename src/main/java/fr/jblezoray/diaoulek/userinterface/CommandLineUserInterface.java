@@ -73,7 +73,7 @@ public class CommandLineUserInterface {
                         printText((Text) le);
 
                     } else if (le instanceof WordReference) {
-                        printTitle("Question");
+//                        printTitle("Question");
                         // TODO
 
                     } else if (le instanceof QRCouple) {
@@ -108,11 +108,11 @@ public class CommandLineUserInterface {
     }
 
     private void printAnalysis(AnswerAnalysis aa) {
-//        this.pw.println("expected response : " + aa.getExpectedResponse());
-//        this.pw.println("      (tokenized) : " + aa.getExpectedResponseTokenized());
-//        this.pw.println("      (tokenized) : " + aa.getInputWordsTokenized());
-//        this.pw.println("  phrase accuracy : " + aa.getAnswerAccuracy());
-//        this.pw.println("   words accuracy : " + aa.getInputWordsAccuracy());
+        this.pw.println("expected response : " + aa.getExpectedResponse());
+        this.pw.println("      (tokenized) : " + aa.getExpectedResponseTokenized());
+        this.pw.println("  phrase accuracy : " + aa.getAnswerAccuracy());
+        this.pw.println("   words accuracy : " + aa.getInputWordsAccuracy());
+        this.pw.println("      (tokenized) : " + aa.getInputWordsTokenized());
         this.pw.println(new AnswerAnalysisRenderer(aa).render());
     }
 
